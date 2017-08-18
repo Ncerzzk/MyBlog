@@ -17,38 +17,7 @@
 
 [about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
 
-[README](https://github.com/Ncerzzk/MyBlog/blob/master/README.md)
-
-
-[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
-
-[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/关于2017年电设四旋翼的一些反思和总结.md)
-
-[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
+[从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 
 [README](https://github.com/Ncerzzk/MyBlog/blob/master/README.md)
-
-
-[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
-
-[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/关于2017年电设四旋翼的一些反思和总结.md)
-
-[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
-
-[README](https://github.com/Ncerzzk/MyBlog/blob/master/README.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
