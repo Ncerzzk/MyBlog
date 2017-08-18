@@ -18,7 +18,7 @@ class Blog
         a.push File.basename(filename) if File.basename(filename)  !="README.md"
       end
       a.sort_by! do |item|
-        File.mtime(item)
+        File.ctime(item)
       end
     end
     a
@@ -40,19 +40,20 @@ class Blog
 
   def update_content(articles)
     st="## Content\n"
+    text=""
    articles.each do |article|
      uri="(#{@url}/#{article})"
      title=File.basename(article,".md")
      st=st+"[#{title}]"+uri+"\n\n"
    end
-    file=File.new("README.md","r")
-    text=file.read()
-    r=Regexp.new(/## Content.*\z/m)
-    range=text=~r..text.length
-    text.slice!(range)
-    file.rewind
-    text=text+st
-    file.close
+    File.open("README.md","r") do|file|
+      text=file.read()
+      r=Regexp.new(/## Content.*\z/m)
+      range=text=~r..text.length
+      text.slice!(range)       #将Range范围内的文本删除
+      #file.rewind            #将指针重新回到文件头
+      text=text+st
+    end
     File.open("README.md","w+")do |file|
       file.write(text)
     end
