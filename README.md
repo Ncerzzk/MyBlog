@@ -19,5 +19,3 @@
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 
-[README](https://github.com/Ncerzzk/MyBlog/blob/master/README.md)
-

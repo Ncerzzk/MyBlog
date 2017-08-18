@@ -15,7 +15,7 @@ class Blog
     a=[]
     Find.find(@path) do |filename|
       if filename=~/.+?md/
-        a.push File.basename(filename)
+        a.push File.basename(filename) if File.basename(filename)  !="README.md"
       end
       a.sort_by! do |item|
         File.mtime(item)
