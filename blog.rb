@@ -2,6 +2,7 @@ require 'net/http'
 require 'open-uri'
 require 'find'
 require 'pathname'
+Encoding.default_external = Encoding.find('utf-8')
 
 class Blog
   def initialize(url)
@@ -37,6 +38,7 @@ class Blog
     puts result.body
 
   end
+
 
   def update_content(articles)
     st="## Content\n"
