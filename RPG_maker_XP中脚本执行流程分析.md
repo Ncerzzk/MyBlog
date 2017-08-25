@@ -1,4 +1,4 @@
-﻿# RPG maker XP 中脚本执行流程分析
+﻿# RPG_maker_XP中脚本执行流程分析
 
 标签（空格分隔）： ruby 技术
 
