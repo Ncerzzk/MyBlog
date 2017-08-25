@@ -21,3 +21,5 @@
 
 [作品集](https://github.com/Ncerzzk/MyBlog/blob/master/作品集.md)
 
+[RPG maker XP 中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/RPG maker XP 中脚本执行流程分析.md)
+
