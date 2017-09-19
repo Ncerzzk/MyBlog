@@ -23,3 +23,5 @@
 
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/RPG_maker_XP中脚本执行流程分析.md)
 
+[中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/中长期计划.md)
+
