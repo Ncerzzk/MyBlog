@@ -48,13 +48,14 @@ class Blog
      title=File.basename(article,".md")
      st=st+"[#{title}]"+uri+"\n\n"
    end
+   File.open("Article.rb","r")
     File.open("README.md","r") do|file|
       text=file.read()
       r=Regexp.new(/## Content.*\z/m)
       range=text=~r..text.length
       text.slice!(range)       #将Range范围内的文本删除
       #file.rewind            #将指针重新回到文件头
-      text=text+st
+      text=text.encode("utf-8")+st.encode("utf-8")
     end
     File.open("README.md","w+")do |file|
       file.write(text)
