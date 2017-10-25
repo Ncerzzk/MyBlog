@@ -18,8 +18,10 @@
     - 需要注意的是，如果使用外部晶振，即HSE。因为使用的晶振是8M的，因此应该在hal_conf.h文件中，修改`HSE_VALUE`的值。
 1. 接下来是各种外设的初始化。
     - 以串口为例子，`MX_USART2_UART_Init`为串口的初始化函数。需要注意的是，这个函数只设置了串口的“抽象层”，然后调用`HAL_UART_Init(&huart2)`进行抽象层的配置。至于IO口、时钟、中断等设置，在hal_msp.c文件中，会重定义一个函数`void HAL_UART_MspInit(UART_HandleTypeDef* huart)`。`HAL_UART_Init()`会在一个隐秘的角落调用这个底层初始化函数。这些是QubeMX帮你干的事，但实际上，要使串口正常工作，还需要设置串口的中断优先级，并使能串口中断。即
-```	HAL_NVIC_SetPriority(USART2_IRQn,	10,0);
-	HAL_NVIC_EnableIRQ( USART2_IRQn);```
+```
+HAL_NVIC_SetPriority(USART2_IRQn,	10,0);
+HAL_NVIC_EnableIRQ( USART2_IRQn);
+```
 中断服务函数在it.c中，一般是调用一个统一的串口中断服务函数`HAL_UART_IRQHandler(&huart2);`，将串口指针传入即可。该函数中处理了发送、接受、DMA中断等。
 
 
