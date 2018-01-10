@@ -4,3 +4,5 @@
 !*.MD
 !*.rb
 !*.gitignore
+!*.jpg
+!*.png
