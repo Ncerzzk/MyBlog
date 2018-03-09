@@ -11,11 +11,19 @@
 
 ---
 ## Content
+<<<<<<< HEAD
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
 
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/关于2017年电设四旋翼的一些反思和总结.md)
 
 [about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
+=======
+[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
+
+[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/关于2017年电设四旋翼的一些反思和总结.md)
+
+[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
+>>>>>>> df7470828a1ab704a8529a77c0f6497bff64e60d
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 
@@ -27,6 +35,7 @@
 
 [中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/中长期计划.md)
 
+<<<<<<< HEAD
 [最近](https://github.com/Ncerzzk/MyBlog/blob/master/最近.md)
 
 [最近遇到的一些坑](https://github.com/Ncerzzk/MyBlog/blob/master/最近遇到的一些坑.md)
@@ -36,4 +45,13 @@
 [陀螺仪、ENC03、MPU6050、I2C等知识科普](https://github.com/Ncerzzk/MyBlog/blob/master/陀螺仪、ENC03、MPU6050、I2C等知识科普.md)
 
 [从头搭建一个“个人工房”](https://github.com/Ncerzzk/MyBlog/blob/master/从头搭建一个“个人工房”.md)
+=======
+[STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/STM32HAL库记录.md)
+
+[最近遇到的一些坑](https://github.com/Ncerzzk/MyBlog/blob/master/最近遇到的一些坑.md)
+
+[最近](https://github.com/Ncerzzk/MyBlog/blob/master/最近.md)
+
+[姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/姿态解算-四元数学习笔记.md)
+>>>>>>> df7470828a1ab704a8529a77c0f6497bff64e60d
 
