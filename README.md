@@ -11,11 +11,11 @@
 
 ---
 ## Content
-[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
-
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/关于2017年电设四旋翼的一些反思和总结.md)
 
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
+
+[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 
@@ -44,4 +44,6 @@
 [STM32使用DMA来接收不定长的串口信息](https://github.com/Ncerzzk/MyBlog/blob/master/STM32使用DMA来接收不定长的串口信息.md)
 
 [使用TI官方元件库方法](https://github.com/Ncerzzk/MyBlog/blob/master/使用TI官方元件库方法.md)
+
+[航模的一些理论知识](https://github.com/Ncerzzk/MyBlog/blob/master/航模的一些理论知识.md)
 
