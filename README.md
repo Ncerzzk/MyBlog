@@ -51,5 +51,5 @@
 
 [使用TI官方元件库方法](https://github.com/Ncerzzk/MyBlog/blob/master/使用TI官方元件库方法.md)
 
-[御风杯 — 北邮红警2018毕业季邀请赛 参赛记录](https://github.com/Ncerzzk/MyBlog/blob/master/御风杯 — 北邮红警2018毕业季邀请赛 参赛记录.md)
+[御风杯—北邮红警2018毕业季邀请赛参赛记录](https://github.com/Ncerzzk/MyBlog/blob/master/御风杯—北邮红警2018毕业季邀请赛参赛记录.md)
 
