@@ -65,3 +65,5 @@
 
 [有感无刷电机驱动笔记](https://github.com/Ncerzzk/MyBlog/blob/master/有感无刷电机驱动笔记.md)
 
+[古剑三！](https://github.com/Ncerzzk/MyBlog/blob/master/古剑三！.md)
+
