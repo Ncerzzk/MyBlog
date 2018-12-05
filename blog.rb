@@ -19,7 +19,7 @@ class Blog
         a.push File.basename(filename) if File.basename(filename)  !="README.md"
       end
       a.sort_by! do |item|
-        File.ctime(item)
+        get_time item
       end
     end
     a
@@ -40,7 +40,7 @@ class Blog
   end
 
 
-  def update_content(articles)
+  def update_content(articles)   # 更新目录
     st="## Content\n"
     text=""
    articles.each do |article|
@@ -65,9 +65,28 @@ class Blog
     update_tag
   end
 
+  def update_time(file_name)
+    text=String.new
+    File.open(file_name) do |f|
+      text=f.read
+      time=File.ctime(f).to_s+"|"+File.ctime(f).to_i.to_s
+      if text.sub!(/ctime:.+?\n/,"ctime:#{time}\n")==nil
+        text.sub!(/\n/,"\nctime:#{time}\n")
+      end
+    end
+    File.open(file_name,"w+") do |f|
+      f.write text
+    end
+    text
+  end
+
+  def get_time(file_name)
+    File.open(file_name) do |f|
+      text=f.read
+      text=~/ctime:.+?\|([0-9]+?)\n/
+      $1.to_i
+    end
+  end
 end
 
-a=Blog.new('https://github.com/Ncerzzk/MyBlog/blob/master')
-as=a.get_articles
-puts as
-a.update_content(as)
+
