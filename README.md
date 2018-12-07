@@ -19,11 +19,11 @@
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 
-[中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/中长期计划.md)
+[作品集](https://github.com/Ncerzzk/MyBlog/blob/master/作品集.md)
 
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/RPG_maker_XP中脚本执行流程分析.md)
 
-[作品集](https://github.com/Ncerzzk/MyBlog/blob/master/作品集.md)
+[中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/中长期计划.md)
 
 [特殊人才保研始末](https://github.com/Ncerzzk/MyBlog/blob/master/特殊人才保研始末.md)
 
@@ -66,4 +66,6 @@
 [有感无刷电机驱动笔记](https://github.com/Ncerzzk/MyBlog/blob/master/有感无刷电机驱动笔记.md)
 
 [古剑三！](https://github.com/Ncerzzk/MyBlog/blob/master/古剑三！.md)
+
+[丧](https://github.com/Ncerzzk/MyBlog/blob/master/丧.md)
 
