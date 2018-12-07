@@ -70,9 +70,12 @@ class Blog
     File.open(file_name) do |f|
       text=f.read
       time=File.ctime(f).to_s+"|"+File.ctime(f).to_i.to_s
-      if text.sub!(/ctime:.+?\n/,"ctime:#{time}\n")==nil
-        text.sub!(/\n/,"\nctime:#{time}\n")
-      end
+			if not text=~(/ctime:.+?\n/)   # 没有时间信息
+				text.sub!(/\n/,"\nctime:#{time}\n") # 在第二行插入
+      else
+        return text  # 有时间信息了，直接返回
+			end
+
     end
     File.open(file_name,"w+") do |f|
       f.write text
