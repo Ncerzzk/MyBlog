@@ -17,6 +17,7 @@ class Blog
     Find.find(@path) do |filename|
       if filename=~/.+?md/
         a.push File.basename(filename) if File.basename(filename)  !="README.md"
+        update_time filename
       end
       a.sort_by! do |item|
         get_time item
