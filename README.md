@@ -22,9 +22,9 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/RPG_maker_XP中脚本执行流程分析.md)
 
-[中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/中长期计划.md)
-
 [作品集](https://github.com/Ncerzzk/MyBlog/blob/master/作品集.md)
+
+[中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/中长期计划.md)
 
 [特殊人才保研始末](https://github.com/Ncerzzk/MyBlog/blob/master/特殊人才保研始末.md)
 
@@ -71,4 +71,10 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 [丧](https://github.com/Ncerzzk/MyBlog/blob/master/丧.md)
 
 [ARM学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/ARM学习笔记.md)
+
+[ARM学习笔记3——指令系统](https://github.com/Ncerzzk/MyBlog/blob/master/ARM学习笔记3——指令系统.md)
+
+[ARM学习笔记2——异常返回](https://github.com/Ncerzzk/MyBlog/blob/master/ARM学习笔记2——异常返回.md)
+
+[ARM学习笔记4——具体arm指令](https://github.com/Ncerzzk/MyBlog/blob/master/ARM学习笔记4——具体arm指令.md)
 
