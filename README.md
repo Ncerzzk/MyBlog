@@ -80,3 +80,5 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [电设四旋翼入门](https://github.com/Ncerzzk/MyBlog/blob/master/电设四旋翼入门.md)
 
+[Arm嵌入式近期一些记录](https://github.com/Ncerzzk/MyBlog/blob/master/Arm嵌入式近期一些记录.md)
+
