@@ -88,3 +88,5 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [ArduPilot中beacon](https://github.com/Ncerzzk/MyBlog/blob/master/ArduPilot中beacon.md)
 
+[Ardupilot中新增beacon设备](https://github.com/Ncerzzk/MyBlog/blob/master/Ardupilot中新增beacon设备.md)
+
