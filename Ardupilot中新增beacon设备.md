@@ -1,5 +1,5 @@
 ﻿# Ardupilot中新增beacon设备
-ctime:2019-04-02 16:10:11 +0800|1554192611
+ctime:2019-04-02 16:12:54 +0800|1554192774
 
 标签（空格分隔）： 技术
 
@@ -29,7 +29,7 @@ _LATITUDE 和 _LONGITUDE 可以在这里直接设置，也可以在MP里设置�
                 	               256,
                 	               128);
 					break;
-					```
+```
 					
 ### 指定INF使用的串口
 在AP_SerialManager的var_info数组初始化中，修改串口3的协议为SerialProtocol_UWB_INF，波特率为921。
