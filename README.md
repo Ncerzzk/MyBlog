@@ -96,3 +96,5 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [日常倦怠](https://github.com/Ncerzzk/MyBlog/blob/master/日常倦怠.md)
 
+[STM32同步定时器并触发ADC DMA多路采样](https://github.com/Ncerzzk/MyBlog/blob/master/STM32同步定时器并触发ADC DMA多路采样.md)
+
