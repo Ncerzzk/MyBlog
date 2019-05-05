@@ -57,10 +57,10 @@ void MX_ADC1_Init(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 }
-  ```
+```
   
-  ### DMA配置
-    ```
+### DMA配置
+```
     hdma_adc1.Instance = DMA2_Stream0;
     hdma_adc1.Init.Channel = DMA_CHANNEL_0;
     hdma_adc1.Init.Direction = DMA_PERIPH_TO_MEMORY;
