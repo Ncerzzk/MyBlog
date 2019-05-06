@@ -2,6 +2,7 @@ require 'net/http'
 require 'open-uri'
 require 'find'
 require 'pathname'
+require File.expand_path('../article.rb', __FILE__)
 Encoding.default_external = Encoding.find('utf-8')
 
 class Blog
@@ -16,28 +17,38 @@ class Blog
     a=[]
     Find.find(@path) do |filename|
       if filename=~/.+?md/
-        a.push File.basename(filename) if File.basename(filename)  !="README.md"
-        update_time filename
+        a.push Article.new(File.basename(filename)) if File.basename(filename)  !="README.md" and File.basename(filename)  !="tags.md"
       end
       a.sort_by! do |item|
-        get_time item
+        item.time
       end
     end
     a
   end
 
-  def update_tag
-    uri="#@url/#@tag_url"
-    uri=@url
-    uri=URI.parse(uri)
-    http=Net::HTTP.new(uri.host,uri.port)
-    http.use_ssl =true
-    request=Net::HTTP::Get.new(uri)
-
-    result=http.request(request)
-
-    puts result.body
-
+  def update_tag(articles)   # 更新标签
+    tags_hash=Hash.new
+    articles.each do|article|
+      i=0
+      article.tags.each do |tag|
+        if not tags_hash.has_key? tag
+          tags_hash[tag]=Array.new
+        end
+        tags_hash[tag].push article
+      end
+    end
+    result="## 标签归档\r\n"
+    tags_hash.each_key do |key|
+      result+="### #{key}\r\n"
+      tags_hash[key].each do |article|
+        uri="#{@url}/#{article.file_name}"
+        result+="[#{article.title}](#{uri})\r\n"
+      end
+    end
+    File.open("tags.md","w+") do |f|
+      f.write result
+    end
+    p result
   end
 
 
@@ -45,11 +56,10 @@ class Blog
     st="## Content\n"
     text=""
    articles.each do |article|
-     uri="(#{@url}/#{article})"
-     title=File.basename(article,".md")
+     uri="(#{@url}/#{article.file_name})"
+     title=File.basename(article.file_name,".md")
      st=st+"[#{title}]"+uri+"\n\n"
    end
-   File.open("Article.rb","r")
     File.open("README.md","r") do|file|
       text=file.read()
       r=Regexp.new(/## Content.*\z/m)
@@ -62,27 +72,8 @@ class Blog
       file.write(text)
     end
   end
-  def update
-    update_tag
-  end
 
-  def update_time(file_name)
-    text=String.new
-    File.open(file_name) do |f|
-      text=f.read
-      time=File.ctime(f).to_s+"|"+File.ctime(f).to_i.to_s
-			if not text=~(/ctime:.+?\n/)   # 没有时间信息
-				text.sub!(/\n/,"\nctime:#{time}\n") # 在第二行插入
-      else
-        return text  # 有时间信息了，直接返回
-			end
 
-    end
-    File.open(file_name,"w+") do |f|
-      f.write text
-    end
-    text
-  end
 
   def get_time(file_name)
     File.open(file_name) do |f|
