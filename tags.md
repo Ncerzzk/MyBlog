@@ -29,6 +29,7 @@
 [Ardupilot中新增beacon设备](https://github.com/Ncerzzk/MyBlog/blob/master/Ardupilot中新增beacon设备.md)
 [STM32同步定时器并触发ADC_DMA多路采样](https://github.com/Ncerzzk/MyBlog/blob/master/STM32同步定时器并触发ADC_DMA多路采样.md)
 [解决ardupilot中使用UWB每次上电的时候坐标不一样的问题](https://github.com/Ncerzzk/MyBlog/blob/master/解决ardupilot中使用UWB每次上电的时候坐标不一样的问题.md)
+[STM32的一个狗屎bug](https://github.com/Ncerzzk/MyBlog/blob/master/STM32的一个狗屎bug.md)
 ### 硬件
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/STM32HAL库记录.md)
@@ -43,6 +44,7 @@
 [Arm嵌入式近期一些记录](https://github.com/Ncerzzk/MyBlog/blob/master/Arm嵌入式近期一些记录.md)
 [ArduPilot中串口的复用](https://github.com/Ncerzzk/MyBlog/blob/master/ArduPilot中串口的复用.md)
 [STM32同步定时器并触发ADC_DMA多路采样](https://github.com/Ncerzzk/MyBlog/blob/master/STM32同步定时器并触发ADC_DMA多路采样.md)
+[STM32的一个狗屎bug](https://github.com/Ncerzzk/MyBlog/blob/master/STM32的一个狗屎bug.md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/RPG_maker_XP中脚本执行流程分析.md)
 ### 日记

@@ -103,3 +103,5 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [解决ardupilot中使用UWB每次上电的时候坐标不一样的问题](https://github.com/Ncerzzk/MyBlog/blob/master/解决ardupilot中使用UWB每次上电的时候坐标不一样的问题.md)
 
+[STM32的一个狗屎bug](https://github.com/Ncerzzk/MyBlog/blob/master/STM32的一个狗屎bug.md)
+
