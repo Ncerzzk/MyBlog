@@ -15,11 +15,11 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 ## [标签归档](https://github.com/Ncerzzk/MyBlog/blob/master/tags.md)
 
 ## Content
-[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/关于2017年电设四旋翼的一些反思和总结.md)
+[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
 
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
 
-[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
+[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/关于2017年电设四旋翼的一些反思和总结.md)
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 
@@ -106,4 +106,6 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 [STM32的一个狗屎bug](https://github.com/Ncerzzk/MyBlog/blob/master/STM32的一个狗屎bug.md)
 
 [无刷电机foc笔记](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记.md)
+
+[无刷电机foc笔记2_V-F控制实现](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记2_V-F控制实现.md)
 
