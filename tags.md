@@ -1,7 +1,4 @@
 ## 标签归档
-### 无
-[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
-[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
 ### 经历
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/关于2017年电设四旋翼的一些反思和总结.md)
 ### 技术
@@ -32,6 +29,10 @@
 [STM32的一个狗屎bug](https://github.com/Ncerzzk/MyBlog/blob/master/STM32的一个狗屎bug.md)
 [无刷电机foc笔记](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记.md)
 [无刷电机foc笔记2_V-F控制实现](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记2_V-F控制实现.md)
+[硬件I2C死锁原因及解决办法](https://github.com/Ncerzzk/MyBlog/blob/master/硬件I2C死锁原因及解决办法.md)
+### 无
+[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
+[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
 ### 硬件
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/STM32HAL库记录.md)
@@ -49,6 +50,7 @@
 [STM32的一个狗屎bug](https://github.com/Ncerzzk/MyBlog/blob/master/STM32的一个狗屎bug.md)
 [无刷电机foc笔记](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记.md)
 [无刷电机foc笔记2_V-F控制实现](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记2_V-F控制实现.md)
+[硬件I2C死锁原因及解决办法](https://github.com/Ncerzzk/MyBlog/blob/master/硬件I2C死锁原因及解决办法.md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/RPG_maker_XP中脚本执行流程分析.md)
 ### 日记

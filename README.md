@@ -15,11 +15,11 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 ## [标签归档](https://github.com/Ncerzzk/MyBlog/blob/master/tags.md)
 
 ## Content
-[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
+[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/关于2017年电设四旋翼的一些反思和总结.md)
 
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
 
-[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/关于2017年电设四旋翼的一些反思和总结.md)
+[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 
@@ -39,9 +39,9 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/姿态解算-四元数学习笔记.md)
 
-[陀螺仪、ENC03、MPU6050、I2C等知识科普](https://github.com/Ncerzzk/MyBlog/blob/master/陀螺仪、ENC03、MPU6050、I2C等知识科普.md)
-
 [从头搭建一个“个人工房”](https://github.com/Ncerzzk/MyBlog/blob/master/从头搭建一个“个人工房”.md)
+
+[陀螺仪、ENC03、MPU6050、I2C等知识科普](https://github.com/Ncerzzk/MyBlog/blob/master/陀螺仪、ENC03、MPU6050、I2C等知识科普.md)
 
 [最近滤波心得](https://github.com/Ncerzzk/MyBlog/blob/master/最近滤波心得.md)
 
@@ -108,4 +108,6 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 [无刷电机foc笔记](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记.md)
 
 [无刷电机foc笔记2_V-F控制实现](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记2_V-F控制实现.md)
+
+[硬件I2C死锁原因及解决办法](https://github.com/Ncerzzk/MyBlog/blob/master/硬件I2C死锁原因及解决办法.md)
 
