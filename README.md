@@ -10,6 +10,10 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 这里也会同步博客的整个目录，改天写个程序自动更新到Readme.md上。
 
+博客程序更新记录:
+- 增加标签归档功能
+- 修改直接以文件名来命名文章标题（否则文件名就是中文，分享不太方便）
+
 ---
 
 ## [标签归档](https://github.com/Ncerzzk/MyBlog/blob/master/tags.md)
@@ -19,13 +23,13 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
 
-[about](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
+[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 
-[中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/中长期计划.md)
-
 [作品集](https://github.com/Ncerzzk/MyBlog/blob/master/作品集.md)
+
+[中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/中长期计划.md)
 
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/RPG_maker_XP中脚本执行流程分析.md)
 
@@ -35,9 +39,9 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [最近遇到的一些坑](https://github.com/Ncerzzk/MyBlog/blob/master/最近遇到的一些坑.md)
 
-[最近](https://github.com/Ncerzzk/MyBlog/blob/master/最近.md)
+[最近](https://github.com/Ncerzzk/MyBlog/blob/master/recently.md)
 
-[姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/姿态解算-四元数学习笔记.md)
+[姿态解算/四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/姿态解算-四元数学习笔记.md)
 
 [从头搭建一个“个人工房”](https://github.com/Ncerzzk/MyBlog/blob/master/从头搭建一个“个人工房”.md)
 
@@ -55,7 +59,7 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [还是必须承认，做无人机必须要有个遥控](https://github.com/Ncerzzk/MyBlog/blob/master/还是必须承认，做无人机必须要有个遥控.md)
 
-[御风杯—北邮红警2018毕业季邀请赛参赛记录](https://github.com/Ncerzzk/MyBlog/blob/master/御风杯—北邮红警2018毕业季邀请赛参赛记录.md)
+[御风杯 — 北邮红警2018毕业季邀请赛 参赛记录](https://github.com/Ncerzzk/MyBlog/blob/master/御风杯—北邮红警2018毕业季邀请赛参赛记录.md)
 
 [本科毕业了！](https://github.com/Ncerzzk/MyBlog/blob/master/本科毕业了！.md)
 
@@ -95,7 +99,7 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [Ardupilot中新增beacon设备](https://github.com/Ncerzzk/MyBlog/blob/master/Ardupilot中新增beacon设备.md)
 
-[托福](https://github.com/Ncerzzk/MyBlog/blob/master/托福.md)
+[托福](https://github.com/Ncerzzk/MyBlog/blob/master/tf.md)
 
 [日常倦怠](https://github.com/Ncerzzk/MyBlog/blob/master/日常倦怠.md)
 
@@ -103,11 +107,11 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [解决ardupilot中使用UWB每次上电的时候坐标不一样的问题](https://github.com/Ncerzzk/MyBlog/blob/master/解决ardupilot中使用UWB每次上电的时候坐标不一样的问题.md)
 
-[STM32的一个狗屎bug](https://github.com/Ncerzzk/MyBlog/blob/master/STM32的一个狗屎bug.md)
+[作品集](https://github.com/Ncerzzk/MyBlog/blob/master/STM32的一个狗屎bug.md)
 
-[无刷电机foc笔记](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记.md)
+[无刷电机foc笔记 ](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记.md)
 
-[无刷电机foc笔记2_V-F控制实现](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记2_V-F控制实现.md)
+[无刷电机foc笔记2（V/F控制实现)](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记2_V-F控制实现.md)
 
 [硬件I2C死锁原因及解决办法](https://github.com/Ncerzzk/MyBlog/blob/master/硬件I2C死锁原因及解决办法.md)
 

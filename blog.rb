@@ -13,11 +13,24 @@ class Blog
     @path=Pathname.new(File.dirname(__FILE__)).realpath
   end
 
+  def self.get_article_title(file_name)
+    File.open(file_name,"r") do |f|
+      text=f.read()
+      text=~/#\s*(.+)/
+      return $1
+    end
+  end
+
   def get_articles
     a=[]
     Find.find(@path) do |filename|
       if filename=~/.+?md/
-        a.push Article.new(File.basename(filename)) if File.basename(filename)  !="README.md" and File.basename(filename)  !="tags.md"
+        basename=File.basename(filename)
+        if basename !="README.md" and basename !="tags.md"
+          title=Blog.get_article_title(filename)
+          a.push Article.new(basename,title)
+        end
+        #a.push Article.new(File.basename(filename)) if File.basename(filename)  !="README.md" and File.basename(filename)  !="tags.md"
       end
       a.sort_by! do |item|
         item.time
@@ -25,6 +38,8 @@ class Blog
     end
     a
   end
+
+
 
   def update_tag(articles)   # 更新标签
     tags_hash=Hash.new
@@ -57,7 +72,8 @@ class Blog
     text=""
    articles.each do |article|
      uri="(#{@url}/#{article.file_name})"
-     title=File.basename(article.file_name,".md")
+     #title=File.basename(article.file_name,".md")
+     title=article.title
      st=st+"[#{title}]"+uri+"\n\n"
    end
     File.open("README.md","r") do|file|

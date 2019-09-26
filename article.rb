@@ -3,12 +3,16 @@ require 'find'
 
 class Article
   attr_reader :tags,:time,:file_name,:title
-  def initialize(file_name)
+  def initialize(file_name,title=nil)
     @file_name=file_name
     @tags=self.get_tags
     self.update_time # 增加时间信息，如果已有直接返回
     @time=self.get_time
-    @title=File.basename(file_name,".md")
+    if !title 
+      @title=File.basename(file_name,".md")
+    else
+      @title=title
+    end
   end
 
   def to_s
@@ -61,7 +65,7 @@ class Article
   end
 end
 
-a=Article.new("关于2017年电设四旋翼的一些反思和总结.md")
-a.get_tags
-puts a.tags
-puts a.tags.length
+#a=Article.new("关于2017年电设四旋翼的一些反思和总结.md")
+#a.get_tags
+#puts a.tags
+#puts a.tags.length
