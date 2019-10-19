@@ -115,3 +115,5 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [硬件I2C死锁原因及解决办法](https://github.com/Ncerzzk/MyBlog/blob/master/硬件I2C死锁原因及解决办法.md)
 
+[来日三周](https://github.com/Ncerzzk/MyBlog/blob/master/injapan.md)
+
