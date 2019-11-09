@@ -117,3 +117,5 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [来日三周](https://github.com/Ncerzzk/MyBlog/blob/master/injapan.md)
 
+[在霓虹的日常吐槽 ](https://github.com/Ncerzzk/MyBlog/blob/master/injapan_tucao.md)
+

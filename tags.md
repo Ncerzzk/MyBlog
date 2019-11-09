@@ -67,6 +67,7 @@
 [托福](https://github.com/Ncerzzk/MyBlog/blob/master/tf.md)
 [日常倦怠](https://github.com/Ncerzzk/MyBlog/blob/master/日常倦怠.md)
 [来日三周](https://github.com/Ncerzzk/MyBlog/blob/master/injapan.md)
+[在霓虹的日常吐槽 ](https://github.com/Ncerzzk/MyBlog/blob/master/injapan_tucao.md)
 ### 理论
 [姿态解算/四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/姿态解算-四元数学习笔记.md)
 [航模的一些理论知识](https://github.com/Ncerzzk/MyBlog/blob/master/航模的一些理论知识.md)
