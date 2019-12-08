@@ -31,6 +31,7 @@
 [无刷电机foc笔记2（V/F控制实现)](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记2_V-F控制实现.md)
 [硬件I2C死锁原因及解决办法](https://github.com/Ncerzzk/MyBlog/blob/master/硬件I2C死锁原因及解决办法.md)
 [VSCode搭建STM32的调试环境](https://github.com/Ncerzzk/MyBlog/blob/master/VScode_Stm32_IDE.md)
+[不带__weak 标志的函数（Strong函数）无法代替weak函数的问题](https://github.com/Ncerzzk/MyBlog/blob/master/weak_problem.md)
 ### 无
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
 [关于我](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
@@ -86,3 +87,5 @@
 [ArduPilot中串口的复用](https://github.com/Ncerzzk/MyBlog/blob/master/ArduPilot中串口的复用.md)
 [ArduPilot中beacon](https://github.com/Ncerzzk/MyBlog/blob/master/ArduPilot中beacon.md)
 [解决ardupilot中使用UWB每次上电的时候坐标不一样的问题](https://github.com/Ncerzzk/MyBlog/blob/master/解决ardupilot中使用UWB每次上电的时候坐标不一样的问题.md)
+### 编程
+[不带__weak 标志的函数（Strong函数）无法代替weak函数的问题](https://github.com/Ncerzzk/MyBlog/blob/master/weak_problem.md)
