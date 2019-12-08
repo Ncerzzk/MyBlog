@@ -14,13 +14,20 @@ ctime:2019-12-08 12:24:17 +0900|1575775457
 有一篇文章说到：
 
 > 多次试验和搜索，应该就是静态库的函数只有在要被用到的时候，才会被link，但weak symbol相对比较特殊，会先link到weak的function，然后再去找strong的function。因此strong的function实现在静态库里面，并且对应.o里函数也没被其他.o call 到，整个静态库都不会被link进去，因此最后只会选weak function。
-应对的方式
-A：利用—whole-archive和—no-whole-archive强制静态库被link进去，这样strong函数一定会被收到。缺点是如果lib之间有同名function会打出build error
-B：和A类似，利用link选项-u强制某个function被link，但lib和function较多时不好用
-作者：612F
-链接：https://www.jianshu.com/p/be55f46b0e5e
-来源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+> 
+>应对的方式
+>
+>A：利用—whole-archive和—no-whole-archive强制静态库被link进去，这样strong函数一定会被收到。缺点是如果lib之间有同名function会打出build error
+>
+>B：和A类似，利用link选项-u强制某个function被link，但lib和function较多时不好用
+>
+>作者：612F
+>
+>链接：https://www.jianshu.com/p/be55f46b0e5e
+>
+>来源：简书
+>
+>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 想了一下确实是，main中的函数都没被其他文件调用，都是他调用别人。
 
