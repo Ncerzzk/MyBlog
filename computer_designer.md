@@ -55,5 +55,26 @@ CPI:clock cycle per instruction(每条指令所需要的时钟周期平均数
    
 ![MIPS指令编码][1]
 
+### MIPS 过程（子程序）调用
+过程调用寄存器分配：
+- a0-a3,放置参数
+- v0,v1,放置返回值
+- ra,放置过程结束后要返回的指令地址
+
+![过程执行][2]
+
+那么，如果过程的参数超过4个，或者结果超过2个的情况如何处理呢。使用栈。栈也用来在过程调用前，保存一些寄存器的值，在过程调用后恢复。
+
+除了寄存器的值，一些局部变量也可能需要用到栈，比如临时寄存器用完之后。
+
+- 栈指针sp, 总是指向栈顶
+- 帧指针fp, 总是指向活动帧的第一个字，实际上就是指向栈底
+  - 帧指针不是必须的，因为实际上对于栈来说，它不需要知道栈底。入栈出栈只需知道栈顶即可
+  - 有些编译器使用了帧指针(GNU MIPS C),有些编译器则没有使用(MIPS C)
+  
+![内存分配][3]
 
 [1]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/mips_op_code.png
+
+[2]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/mips_process.png
+[3]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/mips_memory.png
