@@ -125,3 +125,5 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [不带__weak 标志的函数（Strong函数）无法代替weak函数的问题](https://github.com/Ncerzzk/MyBlog/blob/master/weak_problem.md)
 
+[《计算机组成与设计 硬件软件接口》 笔记](https://github.com/Ncerzzk/MyBlog/blob/master/computer_designer.md)
+

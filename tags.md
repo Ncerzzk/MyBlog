@@ -32,6 +32,7 @@
 [硬件I2C死锁原因及解决办法](https://github.com/Ncerzzk/MyBlog/blob/master/硬件I2C死锁原因及解决办法.md)
 [VSCode搭建STM32的调试环境](https://github.com/Ncerzzk/MyBlog/blob/master/VScode_Stm32_IDE.md)
 [不带__weak 标志的函数（Strong函数）无法代替weak函数的问题](https://github.com/Ncerzzk/MyBlog/blob/master/weak_problem.md)
+[《计算机组成与设计 硬件软件接口》 笔记](https://github.com/Ncerzzk/MyBlog/blob/master/computer_designer.md)
 ### 无
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/第一篇Git博客.md)
 [关于我](https://github.com/Ncerzzk/MyBlog/blob/master/about.md)
@@ -54,6 +55,7 @@
 [无刷电机foc笔记2（V/F控制实现)](https://github.com/Ncerzzk/MyBlog/blob/master/无刷电机foc笔记2_V-F控制实现.md)
 [硬件I2C死锁原因及解决办法](https://github.com/Ncerzzk/MyBlog/blob/master/硬件I2C死锁原因及解决办法.md)
 [VSCode搭建STM32的调试环境](https://github.com/Ncerzzk/MyBlog/blob/master/VScode_Stm32_IDE.md)
+[《计算机组成与设计 硬件软件接口》 笔记](https://github.com/Ncerzzk/MyBlog/blob/master/computer_designer.md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/RPG_maker_XP中脚本执行流程分析.md)
 ### 日记
