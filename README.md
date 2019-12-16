@@ -127,3 +127,5 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [《计算机组成与设计 硬件软件接口》 笔记](https://github.com/Ncerzzk/MyBlog/blob/master/computer_designer.md)
 
+[《计算机组成与设计 硬件软件接口》 笔记 二](https://github.com/Ncerzzk/MyBlog/blob/master/computer_designer2.md)
+
