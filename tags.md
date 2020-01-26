@@ -39,6 +39,7 @@
 [《计算机组成与设计 硬件软件接口》 笔记 二](https://github.com/Ncerzzk/MyBlog/blob/master/computer_designer2.md)
 [本杰明代码分析](https://github.com/Ncerzzk/MyBlog/blob/master/本杰明代码分析.md)
 [解决AS5047读取中经常出现0的问题](https://github.com/Ncerzzk/MyBlog/blob/master/as5047.md)
+[Git 将git仓库下的某个文件分离为子模块单独开发](https://github.com/Ncerzzk/MyBlog/blob/master/git_submodule.md)
 ### 硬件
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/STM32HAL库记录.md)
