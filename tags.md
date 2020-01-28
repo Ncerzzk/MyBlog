@@ -40,6 +40,7 @@
 [本杰明代码分析](https://github.com/Ncerzzk/MyBlog/blob/master/本杰明代码分析.md)
 [解决AS5047读取中经常出现0的问题](https://github.com/Ncerzzk/MyBlog/blob/master/as5047.md)
 [Git 将git仓库下的某个文件分离为子模块单独开发](https://github.com/Ncerzzk/MyBlog/blob/master/git_submodule.md)
+[STM32 ADC DMA 多通道传输时通道顺序错误问题 ](https://github.com/Ncerzzk/MyBlog/blob/master/adc_dma_order.md)
 ### 硬件
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/从头设计一个四旋翼飞行器.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/STM32HAL库记录.md)
@@ -96,3 +97,5 @@
 [解决ardupilot中使用UWB每次上电的时候坐标不一样的问题](https://github.com/Ncerzzk/MyBlog/blob/master/解决ardupilot中使用UWB每次上电的时候坐标不一样的问题.md)
 ### 编程
 [不带__weak 标志的函数（Strong函数）无法代替weak函数的问题](https://github.com/Ncerzzk/MyBlog/blob/master/weak_problem.md)
+###  硬件
+[STM32 ADC DMA 多通道传输时通道顺序错误问题 ](https://github.com/Ncerzzk/MyBlog/blob/master/adc_dma_order.md)
