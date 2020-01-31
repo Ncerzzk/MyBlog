@@ -21,6 +21,7 @@ class Article
 
   def get_tags
     tags=[]
+    print(@file_name)
     File.open(@file_name,'r') do |file|
       file.each_line do |line|
         if line=~/标签..+?/

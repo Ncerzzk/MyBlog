@@ -5,12 +5,13 @@ require 'pathname'
 require File.expand_path('../article.rb', __FILE__)
 Encoding.default_external = Encoding.find('utf-8')
 
+ARTICLE_DIR="articles"
 class Blog
   def initialize(url)
     @url=url
     @tag_url='tag.md'
     @content_url='README.md'
-    @path=Pathname.new(File.dirname(__FILE__)).realpath
+    @article_path=Pathname.new(File.dirname(__FILE__)).realpath+ARTICLE_DIR
   end
 
   def self.get_article_title(file_name)
@@ -23,12 +24,12 @@ class Blog
 
   def get_articles
     a=[]
-    Find.find(@path) do |filename|
+    Find.find(@article_path) do |filename|
       if filename=~/.+?md/
         basename=File.basename(filename)
         if basename !="README.md" and basename !="tags.md"
-          title=Blog.get_article_title(filename)
-          a.push Article.new(basename,title)
+          title=Blog.get_article_title(ARTICLE_DIR+"/"+basename)
+          a.push Article.new(ARTICLE_DIR+"/"+basename,title)
         end
         #a.push Article.new(File.basename(filename)) if File.basename(filename)  !="README.md" and File.basename(filename)  !="tags.md"
       end
