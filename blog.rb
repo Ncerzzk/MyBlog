@@ -2,6 +2,7 @@ require 'net/http'
 require 'open-uri'
 require 'find'
 require 'pathname'
+require 'ruby-pinyin'
 require File.expand_path('../article.rb', __FILE__)
 Encoding.default_external = Encoding.find('utf-8')
 
@@ -90,7 +91,15 @@ class Blog
     end
   end
 
-
+  def update_to_jekyll(articles)
+    articles.each do |article|
+      newcontent=article.get_jekyll_content
+      filename=article.get_jekyll_filename
+      File.open("./jekyll/_posts/#{filename}","w+") do |f|
+        f.write(newcontent)
+      end
+    end
+  end
 
   def get_time(file_name)
     File.open(file_name) do |f|

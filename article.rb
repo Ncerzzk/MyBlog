@@ -1,6 +1,6 @@
 require 'find'
 
-
+require 'ruby-pinyin'
 class Article
   attr_reader :tags,:time,:file_name,:title
   def initialize(file_name,title=nil)
@@ -21,7 +21,6 @@ class Article
 
   def get_tags
     tags=[]
-    print(@file_name)
     File.open(@file_name,'r') do |file|
       file.each_line do |line|
         if line=~/标签..+?/
@@ -64,7 +63,33 @@ class Article
     end
     text
   end
+
+  def get_jekyll_content
+    newhead=begin
+      "---
+layout: post
+title: #{@title}
+date: #{Time.at(@time.to_i)}
+categories: #{@tags.join(" ")}
+---"
+    end
+    File.open(@file_name) do |f|
+      text=f.read
+      text.sub!(/\#.+?ctime:.+?\-\-\-/m,newhead)
+      text
+    end
+  end
+
+  def get_jekyll_filename
+    t=Time.at(@time.to_i)
+    temptitle=@title.sub(/\//,'.')
+    temptitle.gsub!(' ','')
+    temptitle=PinYin.permlink(temptitle)
+    "#{t.year}-#{t.month}-#{t.day}-#{temptitle}.markdown"
+  end
 end
+
+
 
 #a=Article.new("关于2017年电设四旋翼的一些反思和总结.md")
 #a.get_tags
