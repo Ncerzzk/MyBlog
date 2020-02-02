@@ -6,6 +6,7 @@
 !*.gitignore
 !*.jpg
 !*.png
+!*.html
 !/img
 !/articles
 !/jekyll
