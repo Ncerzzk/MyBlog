@@ -1,0 +1,3 @@
+[submodule "jekyll/_site"]
+	path = jekyll/_site
+	url = https://github.com/Ncerzzk/myjekyll_blog.git
