@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>无刷电机foc笔记 | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="无刷电机foc笔记" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="无刷电机与永磁同步电机的区别： 反电动势不同，PMSM是正弦波反电动势，BLDC是梯形波反电动势 为了产生恒定电磁转矩，PMSM需要正弦波定子电流，BLDC需要矩形波电流" />
+<meta property="og:description" content="无刷电机与永磁同步电机的区别： 反电动势不同，PMSM是正弦波反电动势，BLDC是梯形波反电动势 为了产生恒定电磁转矩，PMSM需要正弦波定子电流，BLDC需要矩形波电流" />
+<link rel="canonical" href="/%E7%A1%AC%E4%BB%B6/%E6%8A%80%E6%9C%AF/2019/08/28/wu-shua-dian-ji-foc-bi-ji.html" />
+<meta property="og:url" content="/%E7%A1%AC%E4%BB%B6/%E6%8A%80%E6%9C%AF/2019/08/28/wu-shua-dian-ji-foc-bi-ji.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-08-28T12:35:27+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"无刷电机foc笔记","mainEntityOfPage":{"@type":"WebPage","@id":"/%E7%A1%AC%E4%BB%B6/%E6%8A%80%E6%9C%AF/2019/08/28/wu-shua-dian-ji-foc-bi-ji.html"},"datePublished":"2019-08-28T12:35:27+09:00","url":"/%E7%A1%AC%E4%BB%B6/%E6%8A%80%E6%9C%AF/2019/08/28/wu-shua-dian-ji-foc-bi-ji.html","description":"无刷电机与永磁同步电机的区别： 反电动势不同，PMSM是正弦波反电动势，BLDC是梯形波反电动势 为了产生恒定电磁转矩，PMSM需要正弦波定子电流，BLDC需要矩形波电流","dateModified":"2019-08-28T12:35:27+09:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Huangzzk's Blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">无刷电机foc笔记</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-08-28T12:35:27+09:00" itemprop="datePublished">Aug 28, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>无刷电机与永磁同步电机的区别：</p>
+<ul>
+  <li>反电动势不同，PMSM是正弦波反电动势，BLDC是梯形波反电动势</li>
+  <li>为了产生恒定电磁转矩，PMSM需要正弦波定子电流，BLDC需要矩形波电流</li>
+</ul>
+
+<p>这就有个问题，既然产生恒定电磁转矩，无刷电机需要矩形波电流，那么为什么网上大家都追求使用SVPWM，千方百计弄出正弦波电流呢？</p>
+
+<p>后来在另一篇论文中看到：</p>
+
+<ul>
+  <li>由于设计和工艺的误差，提醒波反电动势存在小于120°的情况。对于小容量的BLDCM，常采用分数槽绕组，反电动势波形更接近正弦波。</li>
+</ul>
+
+<p>所以，大家追求用SVPWM是有理可循的。对于我们平时使用的BLDC，可以使用PMSM的方式来控制。而PMSM原理又与异步感应电机十分相似，因此在矢量控制上，可以参考异步电机的控制方式。</p>
+
+<h3 id="svpwm">SVPWM</h3>
+<h4 id="为什么要使用svpwm">为什么要使用SVPWM</h4>
+<ul>
+  <li>为了产生正弦波电流</li>
+  <li>SPWM可以产生正弦波电压，但到了绕组电流上，未必是正弦波了，因此SPWM的电压利用率会比SVPWM低个15%左右</li>
+</ul>
+
+<h4 id="svpwm的目标">SVPWM的目标</h4>
+<ul>
+  <li>使电机的磁链（或者说使磁通）为圆形</li>
+</ul>
+
+<h4 id="svpwm具体实现">SVPWM具体实现</h4>
+<ul>
+  <li>三相桥有8个状态，可以生成8个电压矢量，其中2个是零矢量</li>
+  <li>磁链的公式：$\boldsymbol\Psi=\boldsymbol u\Delta t$（也可以写成积分公式)（注意 $\boldsymbol \Psi$和$\boldsymbol u$是矢量）</li>
+  <li>六个有效的电压矢量，如果每个作用一样的时间（$\frac{\pi}{3\omega}$)，由于六个电压矢量依次作用，首尾相连构成一个正六边形，也即这种情况下，磁链形状为正六边形。
+    <ul>
+      <li>注意，6个电压矢量相加=0（因为形成的图形是封闭的，易证明）</li>
+    </ul>
+  </li>
+  <li>正六边形的磁链当然不是我们想要，我们想要圆形的磁链，因此我们可以利用割圆术的思想，例如使用正24边形来逼近圆形。
+    <ul>
+      <li>正24边形如何实现呢？可以从正六边形中，每个扇区再分出4个小扇区。</li>
+      <li>形成4个小扇区如果单独用6个电压矢量是无法形成的，需要两个矢量组合而成</li>
+      <li>通过控制两个矢量分别的作用时间，再插入零矢量，即可组合出任意角度的电压矢量</li>
+      <li>
+        <h4 id="几种控制方式">几种控制方式</h4>
+        <p>变频器控制方式一般有：V/F控制、开环矢量控制、开环转矩控制、闭环矢量控制等</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>(1) V/f控制</p>
+
+<p>V/f控制是为了得到理想的转矩-速度特性，基于在改变电源频率进行调速的同时，又要保证电动机的磁通不变的思想而提出的，通用型变频器基本上都采用这种控制方式。</p>
+
+<p>V/f控制变频器结构非常简单，但是这种变频器采用开环控制方式，不能达到较高的控制性能，而且，在低频时，必须进行转矩补偿，以改变低频转矩特性。</p>
+
+<p>(2) 转差频率控制</p>
+
+<p>转差频率控制是一种直接控制转矩的控制方式，它是在V/f控制的基础上，按照知道异步电动机的实际转速对应的电源频率，并根据希望得到的转矩来调节变频器的输出频率，就可以使电动机具有对应的输出转矩。</p>
+
+<p>这种控制方式，在控制系统中需要安装速度传感器，有时还加有电流反馈，对频率和电流进行控制，因此，这是一种闭环控制方式，可以使变频器具有良好的稳定性，并对急速的加减速和负载变动有良好的响应特性。</p>
+
+<p>(3) 矢量控制</p>
+
+<p>矢量控制是通过矢量坐标电路控制电动机定子电流的大小和相位，以达到对电动机在d、q、0坐标轴系中的励磁电流和转矩电流分别进行控制，进而达到控制电动机转矩的目的。</p>
+
+<p>通过控制各矢量的作用顺序和时间以及零矢量的作用时间，又可以形成各种PWM波，达到各种不同的控制目的。例如形成开关次数最少的PWM波以减少开关损耗。目前在变频器中实际应用的矢量控制方式主要有基于转差频率控制的矢量控制方式和无速度传感器的矢量控制方式两种。</p>
+
+  </div><a class="u-url" href="/%E7%A1%AC%E4%BB%B6/%E6%8A%80%E6%9C%AF/2019/08/28/wu-shua-dian-ji-foc-bi-ji.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

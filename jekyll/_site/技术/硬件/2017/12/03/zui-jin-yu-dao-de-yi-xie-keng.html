@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>最近遇到的一些坑 | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="最近遇到的一些坑" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="最近在外面接了一个私活，其实也不是最近，在我特保答辩完之后，张总介绍的。是很久之前他接下来的，不过一直没催，他也就一直拖着。张总明年就毕业了，没时间做，于是把项目转给我了。" />
+<meta property="og:description" content="最近在外面接了一个私活，其实也不是最近，在我特保答辩完之后，张总介绍的。是很久之前他接下来的，不过一直没催，他也就一直拖着。张总明年就毕业了，没时间做，于是把项目转给我了。" />
+<link rel="canonical" href="/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2017/12/03/zui-jin-yu-dao-de-yi-xie-keng.html" />
+<meta property="og:url" content="/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2017/12/03/zui-jin-yu-dao-de-yi-xie-keng.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-12-03T01:05:28+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"最近遇到的一些坑","mainEntityOfPage":{"@type":"WebPage","@id":"/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2017/12/03/zui-jin-yu-dao-de-yi-xie-keng.html"},"datePublished":"2017-12-03T01:05:28+09:00","url":"/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2017/12/03/zui-jin-yu-dao-de-yi-xie-keng.html","description":"最近在外面接了一个私活，其实也不是最近，在我特保答辩完之后，张总介绍的。是很久之前他接下来的，不过一直没催，他也就一直拖着。张总明年就毕业了，没时间做，于是把项目转给我了。","dateModified":"2017-12-03T01:05:28+09:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Huangzzk's Blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">最近遇到的一些坑</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-12-03T01:05:28+09:00" itemprop="datePublished">Dec 3, 2017
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>最近在外面接了一个私活，其实也不是最近，在我特保答辩完之后，张总介绍的。是很久之前他接下来的，不过一直没催，他也就一直拖着。张总明年就毕业了，没时间做，于是把项目转给我了。</p>
+
+<p>说实话，一开始不是很想接的，但是张总在特保答辩的时候帮我了不少忙，不好意思拒绝，就接了下来。</p>
+
+<p>项目是做一个DEMO环境，简单说就是一个传感器黑盒，盒子中有很多传感器，还有电机。任务就是采电机运行期间各个传感器的值，然后用网口传出来。</p>
+
+<p>乍一看很容易，做的期间遇到了不少坑。</p>
+
+<ul>
+  <li>网口问题：用F407跑LWIP，一开始死活跑不通，不管是跑TCP_Server，还是跑TCP_Client，以为是买的模块的问题，在网上赶紧买了两个顺丰过来。最后发现是有个网络名放置的时候错位的，最后那个引脚和相邻的引脚短路起来，并把错误引脚设置为输入模式解决了。</li>
+  <li>TCP_Write发着发着就死了的问题。弄了半天，没解决，似乎是发的数量太多，又太频繁，导致内存分配出了问题。最后发送内容部分用UDP实现。</li>
+  <li>MPU6050、及BME280等I2C器件无法写入的问题。很奇怪，I2C居然出现可以正常读取，但是不能写入的问题。后来发现是I2C_WriteByte写的有问题。原来的写法是：
+    <ol>
+      <li>发送从机地址、写命令，发送寄存器地址</li>
+      <li>发送从机地址、写命令，发送要写入的值</li>
+    </ol>
+  </li>
+</ul>
+
+<p>后来发现正确的写法是：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 发送从机地址、写命令，发送寄存器地址及要写入的值（也就是把寄存器地址和要写入的值放在一个数组中，直接一起发过去）
+</code></pre></div></div>
+
+<p>很显然，第二种写法更符合逻辑一点。第一种写法多发了一个起始条件和从机地址，可能就使上次发过去的寄存器地址失效了，所以导致一直没有写入。</p>
+
+<p>但是，最奇怪的是，第一种写法在我F405的四旋翼上居然跑的十分正常，一点问题也没有，于是直接复制到407上面出现问题的时候，我一直没往这里怀疑，又以为是MPU6050坏了，在网上又买了两个。</p>
+
+<ul>
+  <li>编码器模式无法读取值的问题。使用编码器接口，要读入一个PWM脉冲，发现死活读不了。后来发现是，编码器接口必须是AB相都接，也就是一个脉冲相当于只有一相，无法计数，即使有计数也只是0 1之间跳变。后来用PWM输入模式解决了。</li>
+</ul>
+
+
+  </div><a class="u-url" href="/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2017/12/03/zui-jin-yu-dao-de-yi-xie-keng.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

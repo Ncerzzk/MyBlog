@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>解决AS5047读取中经常出现0的问题 | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="解决AS5047读取中经常出现0的问题" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="这个问题去年衣容颉调马的时候有发现，当时我也跟他看了半天，没发现哪里有问题，最后是在程序里处理了一下， 一旦发现读到0，就不要那个值。" />
+<meta property="og:description" content="这个问题去年衣容颉调马的时候有发现，当时我也跟他看了半天，没发现哪里有问题，最后是在程序里处理了一下， 一旦发现读到0，就不要那个值。" />
+<link rel="canonical" href="/%E6%8A%80%E6%9C%AF/2020/01/23/jie-jue-AS5047-du-qu-zhong-jing-chang-chu-xian-0-de-wen-ti.html" />
+<meta property="og:url" content="/%E6%8A%80%E6%9C%AF/2020/01/23/jie-jue-AS5047-du-qu-zhong-jing-chang-chu-xian-0-de-wen-ti.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-23T12:32:30+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"解决AS5047读取中经常出现0的问题","mainEntityOfPage":{"@type":"WebPage","@id":"/%E6%8A%80%E6%9C%AF/2020/01/23/jie-jue-AS5047-du-qu-zhong-jing-chang-chu-xian-0-de-wen-ti.html"},"datePublished":"2020-01-23T12:32:30+09:00","url":"/%E6%8A%80%E6%9C%AF/2020/01/23/jie-jue-AS5047-du-qu-zhong-jing-chang-chu-xian-0-de-wen-ti.html","description":"这个问题去年衣容颉调马的时候有发现，当时我也跟他看了半天，没发现哪里有问题，最后是在程序里处理了一下， 一旦发现读到0，就不要那个值。","dateModified":"2020-01-23T12:32:30+09:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Huangzzk's Blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">解决AS5047读取中经常出现0的问题</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-01-23T12:32:30+09:00" itemprop="datePublished">Jan 23, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>这个问题去年衣容颉调马的时候有发现，当时我也跟他看了半天，没发现哪里有问题，最后是在程序里处理了一下，
+一旦发现读到0，就不要那个值。</p>
+
+<p>最近在调无刷电机，这个问题又出现了，一开始以为是磁铁离得太远导致的，对着磁铁一顿敲，但情况似乎没有改变。</p>
+
+<p>于是将读取的寄存器从0x3FFFF（位置）改成了0x3FFFC（某个参数寄存器），这个参数寄存器和磁铁就没关系了，
+不管有没有磁铁，参数应该是固定的。但读取的时候发现，这个参数也会出现读到0的情况。</p>
+
+<p>怀疑是因为使用SPI轮询读取，设置超时时间是100ms，但我每次读取的时间是2ms。会不会是因为中间读取的某次
+超时了？但设置了一个变量来接收每次SPI操作的返回值，如果说是超时的话，应该会返回OUTTIME的错误码的，但每次
+返回的都是0(HAL_OK)。</p>
+
+<p>接下来怀疑是SPI读取的问题，SPI的配置的话，2EDGE，16位读取，都没什么问题，应该不是配置的问题。</p>
+
+<p>仔细看了下原来的读取时序：</p>
+<ul>
+  <li>发送读取错误寄存器(0x01)的命令（每次读取位置前要先读一下这个，以清空错误标志，如果不清空，读取位置会一直报错）</li>
+  <li>发送读取位置寄存器(0x3FFF)的命令，同时接收错误寄存器的值</li>
+  <li>接收位置寄存器的值</li>
+</ul>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">uint16_t</span> <span class="nf">Read_Reg</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">reg</span><span class="p">){</span>
+  <span class="kt">uint16_t</span> <span class="n">command</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="kt">uint16_t</span> <span class="n">result</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">static</span> <span class="kt">uint8_t</span> <span class="n">OK</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+  <span class="c1">//uint8_t result[2]={0};</span>
+  <span class="c1">//uint8_t command[2]={0x7F,0xFE};</span>
+  
+  <span class="n">command</span><span class="o">=</span><span class="n">Command</span><span class="p">(</span><span class="mh">0x01</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+  <span class="n">Set_CSN</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">OK</span><span class="o">=</span><span class="n">HAL_SPI_Transmit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SPI_USE</span><span class="p">,(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">command</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+  <span class="n">Set_CSN</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  
+  <span class="n">command</span><span class="o">=</span><span class="n">Command</span><span class="p">(</span><span class="n">reg</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+  <span class="n">Set_CSN</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">OK</span><span class="o">=</span><span class="n">HAL_SPI_TransmitReceive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SPI_USE</span><span class="p">,(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">command</span><span class="p">,(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">AS_5047_Err</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+  <span class="n">Set_CSN</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  
+  <span class="n">Set_CSN</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">OK</span><span class="o">=</span><span class="n">HAL_SPI_Receive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SPI_USE</span><span class="p">,(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">result</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+  <span class="n">Set_CSN</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">OK</span><span class="o">!=</span><span class="n">HAL_OK</span><span class="p">){</span>
+      <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>乍一看好像没啥问题，去年和衣容颉调的时候，我也没觉得有啥问题。今天突然发现最后一步（接收位置寄存器的值）可能有问题。</p>
+
+<p>也就是</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">OK</span><span class="o">=</span><span class="n">HAL_SPI_Receive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SPI_USE</span><span class="p">,(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">result</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+</code></pre></div></div>
+<p>SPI协议的工作原理就是一入一出，你要从机吐出点什么，你也要给他点什么。（因为有MISO与MOSI两条线，从机不仅在MISO上输出，他也检测MOSI线上的输入）。
+所以正常使用SPI应该是HAL_SPI_TransmitReceive，发送并接收。</p>
+
+<p>但有时候因为接收的东西不重要，我就会调用HAL_SPI_Transmit，单纯用来发送。</p>
+
+<p>发送的东西不重要，就调用HAL_SPI_Receive，单纯用来接收。那么HAL_SPI_Receive里，到底发送了什么呢？看了一下实现代码，发现他是把接收的变量发出去了。有点抽象，举例来说。</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">HAL_SPI_Receive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SPI_USE</span><span class="p">,(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">result</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+</code></pre></div></div>
+<p>内部实际上调用的是：</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">HAL_SPI_TransmitReceive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SPI_USE</span><span class="p">,(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">result</span><span class="p">,(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">result</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+</code></pre></div></div>
+<p>也就是说，发送和接收的指针都指向result。</p>
+
+<p>那么result在还没接收到数据的时候，值为0，如果将0发送到AS5047的话，按照它的协议，这个命令是指对寄存器0x0000，写入。</p>
+
+<p>但查了AS5047的手册，它并没有说明对寄存器0x0000写入会发生什么，（只说了对0x0000读取则相当于NOP操作），因此可能是一个未定义操作。</p>
+
+<p>问题很可能在这了，根据这个推测，修改最后一步的代码：</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">command</span><span class="o">=</span><span class="n">Command</span><span class="p">(</span><span class="mh">0x00</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+  <span class="n">Set_CSN</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">OK</span><span class="o">=</span><span class="n">HAL_SPI_TransmitReceive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SPI_USE</span><span class="p">,(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">command</span><span class="p">,(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">result</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+  <span class="c1">//OK=HAL_SPI_Receive(&amp;SPI_USE,(uint8_t *)&amp;result,1,100);</span>
+  <span class="n">Set_CSN</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div></div>
+<p>直接指定要发送的数据为Command(0x00,1)(即读取0x0000寄存器的值，手册中说此操作即为NOP)。</p>
+
+<p>经过测试，发现确实有效，数据0不再出现。What a fuck.</p>
+
+<p>再多分析几步，如果对0x0000是个可写寄存器的话，那么按照as5047的时序，先发送写命令，接下来要发送写的数据。那么写的数据是谁呢？就是下一次要发送的   读取错误寄存器(0x01)的命令(command(0x01,1))。</p>
+
+<p>也即这样的话，下一次就没有读取到错误寄存器，那么再下一步
+“发送读取位置寄存器(0x3FFF)的命令，同时接收错误寄存器的值”
+会发生什么呢，发送肯定是正常发送，但是接收会接收到往0x0000寄存器写入的值，也即command(0x01,1)。下一步又开始读取位置寄存器的值（并偷偷发送写0x0000寄存器的命令），似乎也没什么大问题，只要错误寄存器的没出错的话，应该是一直能接收到位置的才对。或者说，即使出问题，频率也应该是固定的，即每隔几次必有一次读到0。但我从波形中看到，出现读为0的值的频率是不固定的。</p>
+
+<p>所以目前只能猜测了，0x0000并不是一个可写寄存器，对其发送写入命令的话，会引发不可知的问题。</p>
+
+<p>同时，HAL_SPI_Receive我在NRF中似乎也用了，改天再去看看是否也会因此出现问题。无线手柄之前一直有出现读到0的情况，说不定真的于此有关。</p>
+
+  </div><a class="u-url" href="/%E6%8A%80%E6%9C%AF/2020/01/23/jie-jue-AS5047-du-qu-zhong-jing-chang-chu-xian-0-de-wen-ti.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

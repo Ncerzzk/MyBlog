@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>无刷电机foc笔记2（V/F控制实现) | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="无刷电机foc笔记2（V/F控制实现)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="VF控制实际上是一种开环的驱动方式。在前一篇博文中已经讲了，实际上只要对无刷电机或者PMSM通入三相的正弦交流电，电机即可转动。" />
+<meta property="og:description" content="VF控制实际上是一种开环的驱动方式。在前一篇博文中已经讲了，实际上只要对无刷电机或者PMSM通入三相的正弦交流电，电机即可转动。" />
+<link rel="canonical" href="/%E7%A1%AC%E4%BB%B6/%E6%8A%80%E6%9C%AF/2019/09/06/dian-ji-foc-bi-ji-2-V-F-kong-zhi-shi-xian.html" />
+<meta property="og:url" content="/%E7%A1%AC%E4%BB%B6/%E6%8A%80%E6%9C%AF/2019/09/06/dian-ji-foc-bi-ji-2-V-F-kong-zhi-shi-xian.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-06T19:42:18+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"无刷电机foc笔记2（V/F控制实现)","mainEntityOfPage":{"@type":"WebPage","@id":"/%E7%A1%AC%E4%BB%B6/%E6%8A%80%E6%9C%AF/2019/09/06/dian-ji-foc-bi-ji-2-V-F-kong-zhi-shi-xian.html"},"datePublished":"2019-09-06T19:42:18+09:00","url":"/%E7%A1%AC%E4%BB%B6/%E6%8A%80%E6%9C%AF/2019/09/06/dian-ji-foc-bi-ji-2-V-F-kong-zhi-shi-xian.html","description":"VF控制实际上是一种开环的驱动方式。在前一篇博文中已经讲了，实际上只要对无刷电机或者PMSM通入三相的正弦交流电，电机即可转动。","dateModified":"2019-09-06T19:42:18+09:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Huangzzk's Blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">无刷电机foc笔记2（V/F控制实现)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-09-06T19:42:18+09:00" itemprop="datePublished">Sep 6, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>VF控制实际上是一种开环的驱动方式。在前一篇博文中已经讲了，实际上只要对无刷电机或者PMSM通入三相的正弦交流电，电机即可转动。</p>
+
+<p>VF控制就是这种方式，他无需知道电机当前的旋转角度，仅仅需要无脑输入三相交流电即可。
+那么通过改变电压与频率的比值，也就是V/F，就可以进行调速以及调力矩</p>
+
+<ul>
+  <li>在基频以下，电机为恒力矩运行（因为还未到额定功率）</li>
+  <li>在基频以上，电机为恒功率运行（此时速度越快，电机力矩越小）,也叫做弱磁扩速</li>
+</ul>
+
+<p>VF控制的实现方式有多种，比较常见的是使用SPWM或者SVPWM。
+SVPWM的方式对于母线电压利用率可以比SPWM高个15%左右(推导详情请看书)</p>
+
+<p>实际上，几乎所有没有编码器的云台都是用这种方式驱动的电机,用这种方式驱动云台电机有一个好处，就是
+机械结构很简单，毕竟多安装一个编码器，磁编码器也好，光电码盘也好，都需要额外的结构，有点麻烦</p>
+
+<p>这里用的是SVPWM来实现的V-F控制。为什么这里要实现一个V-F控制呢。因为实际上FOC比较复杂，但原理与
+VF有相似之处（相似的地方在于SVPWM，但如何使用SVPWM，二者不太相似），且VF较为简单，可以先测试一下SVPWM
+写得对不对。当然了，我一开始仅仅只是为了测试一下SVPWM，并不知道这种方式就是VF控制。</p>
+
+<h3 id="实现思路">实现思路</h3>
+<h4 id="实现svpwm">实现SVPWM</h4>
+<ul>
+  <li>SVPWM的输入是期望电压矢量，形式可以是极坐标形式（幅度，theta），也可以是三角坐标形式（X,Y）
+    <ul>
+      <li>两种方式各有优劣，看之后计算怎么写吧</li>
+    </ul>
+  </li>
+  <li>然后判断期望电压矢量落在哪个扇区。如果使用极坐标计算的话，这里就很简单了，直接把theta/6，然后判断即可。如果是XY可能就麻烦一点了。</li>
+  <li>判断是什么扇区之后，通过查表查出这个扇区的两个电压矢量是哪两个,分别记为u1 u2。</li>
+  <li>判断出来之后，就可以计算出这两个电压矢量分别需要作用的时间t1 t2,t1 t2我是用百分比表示的，后来证明这个表示方式对简化计算很有帮助</li>
+  <li>计算出t1 和t2后，就可以计算出t0和t7（分别是两个零矢量作用时间，000和111）</li>
+  <li>有了t1 t2 和t7，(t0可以不用（因为实际上t0对CCR无贡献)),接下来可以计算CCR了。
+    <ul>
+      <li>CCRA=u1.a<em>t1+u2.a</em>t2+u7.a*a</li>
+      <li>CCRB和CCRC同理，这样实际上是计算出某一相需要导通的占空比</li>
+    </ul>
+  </li>
+  <li>然后真正赋给定时器的CCR1 CCR2 CCR3的时候，乘以定时器的ARR就行了。</li>
+  <li>定时器方面需要注意的几个点：
+    <ul>
+      <li>定时器的频率如何计算，这个留在后面讲</li>
+      <li>定时器需设置为中心对称模式，且开启互补模式</li>
+      <li>需要注意设置为PWM1模式或者是PWM2模式，按照我上面写的算法，设置为PWM2模式会简单一点</li>
+      <li>RCR（重复计数器需要设置成1），也就是一次上溢+一次下溢才触发一次定时器更新</li>
+      <li>定时器需要开启预装载，这样每次修改完CCR的值，不是立即更新，而是等到更新事件发生后再修改。参考手册中把那个实际起作用的叫做影子寄存器，而用户平时修改的并不是影子寄存器。当然了，如果没开启预装载，那么用户的修改就直接修改到影子寄存器上了。</li>
+    </ul>
+  </li>
+  <li>这样可以说就是一次SVPWM运算周期了，我用示波器测了一下运行时间，大概是2us。(STM32F405，开启浮点库，三角运算使用浮点库)</li>
+</ul>
+
+<h4 id="v-f">V-F</h4>
+<p>终于到V-F了，前面讲了这么多可惜都和V-F没啥关系，VF实际上比SVPWM的实现还简单，毕竟他是SVPWM的上层。</p>
+<ul>
+  <li>V-F的思路是，刚上电的theta为0，每次增加一个小增量作为期望电压矢量,如果上面使用极坐标的形式，那么这里只要每次把theta加一下就好了。</li>
+  <li>那么这个小增量是多少呢？
+    <ul>
+      <li>实际上这也跟奈奎斯特采样定理有关系，需要采集多少个点才可以恢复出波形？理论上来说只需要2步（2倍原频率），但实际上这样恢复出来的肯定不是正弦波了，因此这个划分多少步是越多越好（在处理器能处理的情况下）</li>
+    </ul>
+  </li>
+  <li>还有一个问题，就是前面所说的，定时器的频率应该是多少？
+    <ul>
+      <li>我们先计算一下电机旋转的频率，因为我们通过SVPWM产生的正弦波的频率就是电机运转的频率，也叫（载波频率，电源频率）
+        <ul>
+          <li>我们希望的转速是1rps</li>
+          <li>再把极对数考虑进去，假设电机为7对极，那么电机转一圈实际上要划分的实际步数为7<em>1</em>一圈的步数,这就是定时器1s的中断频率</li>
+          <li>但考虑到定时器是时中心对称模式，因此实际上写进去的ARR还需要再除以2</li>
+          <li>需要注意的是，这个定时器的频率也叫开关频率，也就是我们平时PWM的频率。这个频率最好超过20K，这样人耳就听不到了，否则如果频率太低，就会听到嗡嗡的声音，让你误以为你SVPWM或者什么地方有问题</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>现在有一个问题是，定时器的频率与 划分粒度和 转速相关，如果改变转速的话，定时器的频率会变，解决办法也简单，同步改变划分粒度就是了，低转速下划分粒度就大点，高转速下划分粒度就小点</li>
+</ul>
+
+  </div><a class="u-url" href="/%E7%A1%AC%E4%BB%B6/%E6%8A%80%E6%9C%AF/2019/09/06/dian-ji-foc-bi-ji-2-V-F-kong-zhi-shi-xian.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

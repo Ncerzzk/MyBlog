@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>航模的一些理论知识 | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="航模的一些理论知识" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="在这里记录一些航模的理论知识：（大部分来自于《模型飞机空气动力学》）" />
+<meta property="og:description" content="在这里记录一些航模的理论知识：（大部分来自于《模型飞机空气动力学》）" />
+<link rel="canonical" href="/%E7%90%86%E8%AE%BA/2018/04/24/hang-mo-de-yi-xie-li-lun-zhi-shi.html" />
+<meta property="og:url" content="/%E7%90%86%E8%AE%BA/2018/04/24/hang-mo-de-yi-xie-li-lun-zhi-shi.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-04-24T21:15:33+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"航模的一些理论知识","mainEntityOfPage":{"@type":"WebPage","@id":"/%E7%90%86%E8%AE%BA/2018/04/24/hang-mo-de-yi-xie-li-lun-zhi-shi.html"},"datePublished":"2018-04-24T21:15:33+09:00","url":"/%E7%90%86%E8%AE%BA/2018/04/24/hang-mo-de-yi-xie-li-lun-zhi-shi.html","description":"在这里记录一些航模的理论知识：（大部分来自于《模型飞机空气动力学》）","dateModified":"2018-04-24T21:15:33+09:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Huangzzk's Blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">航模的一些理论知识</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-04-24T21:15:33+09:00" itemprop="datePublished">Apr 24, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>在这里记录一些航模的理论知识：（大部分来自于《模型飞机空气动力学》）</p>
+
+<ul>
+  <li>
+    <p>有弯度的机翼都会产生一个低头力矩</p>
+  </li>
+  <li>
+    <p>机翼的气动中心（即升力的作用点）一般认为在机翼的25%弦点处，而航模的重心一般在33%处，因此升力会导致一个抬头力矩，当配平完美的时候，这个抬头力矩可以和机翼的低头力矩平衡</p>
+  </li>
+  <li>中性点：除了机翼有气动中心，包括尾翼、机身等甚至都有气动中心，整个飞机的总的气动中心称为中性点。此时飞行器上所有的升力都认为集中作用在中性点上。
+    <ul>
+      <li>当重心位于中性点之前，飞行器是稳定的</li>
+      <li>当重心位于中性点之后，飞行器发散</li>
+      <li>分析：当重心位于中性点之后，则假设有突风导致升力突然增大，则会有一个抬头力矩，导致飞行器迎角增大，而飞行器迎角增大又会进一步导致升力增大，相当于进入了正反馈，使飞行器很快发散。</li>
+      <li>令人遗憾的是，中性点位置的确定比较麻烦，我没看懂。</li>
+    </ul>
+  </li>
+  <li>拉力线、推力线：主要是指电机的轴线
+    <ul>
+      <li>拉力线是前拉机的概念。一般而言，前拉机的拉力线应该是：右拉、下拉。右拉是由于螺旋桨顺时针旋转（从后往前看），飞行器会产生一个逆时针旋转的扭矩，导致飞机左倾，因此将电机靠右装来抵消这个扭矩。下拉是由于。在平飞状态下，当油门增大时，如果没有下拉角，飞行器的升力会增大（如果是非对称翼型），从而带来一个抬头力矩。飞机不由自主地抬头，这显然不是我们所希望的，因此会设置一个下拉角来抵消这个抬头力矩。</li>
+      <li>推力线是腰推和背推机的概念。无论下推角的大小是多少，一般腰推机的电机都高于重心，因此只要增加油门，就会有一个低头力矩。需要调整合适的下推角，让这个低头力矩与增加的升力导致的抬头力矩相抵消。</li>
+    </ul>
+  </li>
+</ul>
+
+
+  </div><a class="u-url" href="/%E7%90%86%E8%AE%BA/2018/04/24/hang-mo-de-yi-xie-li-lun-zhi-shi.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
