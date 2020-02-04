@@ -10,7 +10,7 @@
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32HAL库记录.md)
 [最近遇到的一些坑](https://github.com/Ncerzzk/MyBlog/blob/master/articles/最近遇到的一些坑.md)
-[姿态解算/四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
+[姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 [陀螺仪、ENC03、MPU6050、I2C等知识科普](https://github.com/Ncerzzk/MyBlog/blob/master/articles/陀螺仪、ENC03、MPU6050、I2C等知识科普.md)
 [最近滤波心得](https://github.com/Ncerzzk/MyBlog/blob/master/articles/最近滤波心得.md)
 [STM32使用DMA来接收不定长的串口信息](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32使用DMA来接收不定长的串口信息.md)
@@ -41,6 +41,7 @@
 [解决AS5047读取中经常出现0的问题](https://github.com/Ncerzzk/MyBlog/blob/master/articles/as5047.md)
 [Git 将git仓库下的某个文件分离为子模块单独开发](https://github.com/Ncerzzk/MyBlog/blob/master/articles/git_submodule.md)
 [STM32 ADC DMA 多通道传输时通道顺序错误问题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/adc_dma_order.md)
+[无感FOC滑膜观测器学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SMO.md)
 ### 硬件
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32HAL库记录.md)
@@ -62,6 +63,7 @@
 [VSCode搭建STM32的调试环境](https://github.com/Ncerzzk/MyBlog/blob/master/articles/VScode_Stm32_IDE.md)
 [《计算机组成与设计 硬件软件接口》 笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/computer_designer.md)
 [《计算机组成与设计 硬件软件接口》 笔记 二](https://github.com/Ncerzzk/MyBlog/blob/master/articles/computer_designer2.md)
+[无感FOC滑膜观测器学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SMO.md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
 ### 日记
@@ -81,7 +83,7 @@
 [在霓虹的日常吐槽 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/injapan_tucao.md)
 [开题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/open_graduation.md)
 ### 理论
-[姿态解算/四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
+[姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 [航模的一些理论知识](https://github.com/Ncerzzk/MyBlog/blob/master/articles/航模的一些理论知识.md)
 ### 经验
 [使用TI官方元件库方法](https://github.com/Ncerzzk/MyBlog/blob/master/articles/使用TI官方元件库方法.md)

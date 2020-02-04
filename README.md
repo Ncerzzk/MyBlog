@@ -27,11 +27,11 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 
-[作品集](https://github.com/Ncerzzk/MyBlog/blob/master/articles/作品集.md)
-
 [中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/articles/中长期计划.md)
 
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
+
+[作品集](https://github.com/Ncerzzk/MyBlog/blob/master/articles/作品集.md)
 
 [特殊人才保研始末](https://github.com/Ncerzzk/MyBlog/blob/master/articles/特殊人才保研始末.md)
 
@@ -41,7 +41,7 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [最近](https://github.com/Ncerzzk/MyBlog/blob/master/articles/recently.md)
 
-[姿态解算/四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
+[姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 
 [从头搭建一个“个人工房”](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头搭建一个“个人工房”.md)
 
@@ -136,4 +136,6 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 [Git 将git仓库下的某个文件分离为子模块单独开发](https://github.com/Ncerzzk/MyBlog/blob/master/articles/git_submodule.md)
 
 [STM32 ADC DMA 多通道传输时通道顺序错误问题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/adc_dma_order.md)
+
+[无感FOC滑膜观测器学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SMO.md)
 

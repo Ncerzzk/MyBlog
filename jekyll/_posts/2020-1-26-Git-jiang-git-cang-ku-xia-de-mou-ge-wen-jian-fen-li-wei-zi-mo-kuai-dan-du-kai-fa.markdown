@@ -20,6 +20,11 @@ git pull </path/to/big-repo> <name-of-new-branch>
 ```
 - 推到github的一个新仓库下
 ---
+- 删除原来的cache
+```
+git rm -r --cached <name-of-folder>
+```
+---
 - 添加子模块
 ```
 git submodule add <git@github.com:my-user/new-repo.git <name-of-folder>
