@@ -42,6 +42,7 @@
 [Git 将git仓库下的某个文件分离为子模块单独开发](https://github.com/Ncerzzk/MyBlog/blob/master/articles/git_submodule.md)
 [STM32 ADC DMA 多通道传输时通道顺序错误问题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/adc_dma_order.md)
 [无感FOC滑膜观测器学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SMO.md)
+[近期FOC无刷驱动总结备忘](https://github.com/Ncerzzk/MyBlog/blob/master/articles/foc_recently.md)
 ### 硬件
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32HAL库记录.md)
@@ -64,6 +65,7 @@
 [《计算机组成与设计 硬件软件接口》 笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/computer_designer.md)
 [《计算机组成与设计 硬件软件接口》 笔记 二](https://github.com/Ncerzzk/MyBlog/blob/master/articles/computer_designer2.md)
 [无感FOC滑膜观测器学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SMO.md)
+[近期FOC无刷驱动总结备忘](https://github.com/Ncerzzk/MyBlog/blob/master/articles/foc_recently.md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
 ### 日记

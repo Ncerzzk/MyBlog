@@ -27,11 +27,11 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 
-[中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/articles/中长期计划.md)
-
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
 
 [作品集](https://github.com/Ncerzzk/MyBlog/blob/master/articles/作品集.md)
+
+[中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/articles/中长期计划.md)
 
 [特殊人才保研始末](https://github.com/Ncerzzk/MyBlog/blob/master/articles/特殊人才保研始末.md)
 
@@ -138,4 +138,6 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 [STM32 ADC DMA 多通道传输时通道顺序错误问题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/adc_dma_order.md)
 
 [无感FOC滑膜观测器学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SMO.md)
+
+[近期FOC无刷驱动总结备忘](https://github.com/Ncerzzk/MyBlog/blob/master/articles/foc_recently.md)
 
