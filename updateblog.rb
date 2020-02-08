@@ -11,9 +11,5 @@ a.update_content(as)
 a.update_tag as
 a.update_to_jekyll as
 
-exec "git add ."
-exec "git commit -m 'update'"
-exec "git push"
-exec "cd ./jekyll"
-exec "jekyll build"
+system("bash update_jekyll_git.sh")
 
