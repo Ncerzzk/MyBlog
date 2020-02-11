@@ -1,8 +1,11 @@
 ﻿---
+
 layout: page
 title: About
 permalink: /about/
+
 ---
+
 
 邮电类大学在读，以后可能是个邮递员？
 
