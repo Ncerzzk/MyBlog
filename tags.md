@@ -1,7 +1,7 @@
 ## 标签归档
 ### 无
-[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
+[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
 ### 经历
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 技术
@@ -84,6 +84,7 @@
 [来日三周](https://github.com/Ncerzzk/MyBlog/blob/master/articles/injapan.md)
 [在霓虹的日常吐槽 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/injapan_tucao.md)
 [开题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/open_graduation.md)
+[说说最近 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/说说最近.md)
 ### 理论
 [姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 [航模的一些理论知识](https://github.com/Ncerzzk/MyBlog/blob/master/articles/航模的一些理论知识.md)
