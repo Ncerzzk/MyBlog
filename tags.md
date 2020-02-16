@@ -85,6 +85,7 @@
 [在霓虹的日常吐槽 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/injapan_tucao.md)
 [开题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/open_graduation.md)
 [说说最近 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/说说最近.md)
+[2.16日记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/216日记.md)
 ### 理论
 [姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 [航模的一些理论知识](https://github.com/Ncerzzk/MyBlog/blob/master/articles/航模的一些理论知识.md)

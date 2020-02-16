@@ -27,11 +27,11 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 
-[作品集](https://github.com/Ncerzzk/MyBlog/blob/master/articles/作品集.md)
-
 [中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/articles/中长期计划.md)
 
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
+
+[作品集](https://github.com/Ncerzzk/MyBlog/blob/master/articles/作品集.md)
 
 [特殊人才保研始末](https://github.com/Ncerzzk/MyBlog/blob/master/articles/特殊人才保研始末.md)
 
@@ -142,4 +142,6 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 [近期FOC无刷驱动总结备忘](https://github.com/Ncerzzk/MyBlog/blob/master/articles/foc_recently.md)
 
 [说说最近 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/说说最近.md)
+
+[2.16日记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/216日记.md)
 

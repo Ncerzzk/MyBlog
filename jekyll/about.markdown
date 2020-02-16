@@ -1,23 +1,18 @@
 ﻿---
-layout: page
+layout: post
 title: About
-permalink: /about/ 
+permalink: /about
 ---
 
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
-邮电类大学在读，以后可能是个邮递员？
+You can find the source code for Minima at GitHub:
+[jekyll][jekyll-organization] /
+[minima](https://github.com/jekyll/minima)
 
-喜欢硬件，也喜欢软件。
-
-学过电路，只会三极管和mos管。
-
-学过控制，只懂得反馈。
-
-学过很多门语言，大部分只会hello,world。
-
-买过很多技术书，至今没看完一本。
+You can find the source code for Jekyll at GitHub:
+[jekyll][jekyll-organization] /
+[jekyll](https://github.com/jekyll/jekyll)
 
 
-
-
-
+[jekyll-organization]: https://github.com/jekyll
