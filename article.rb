@@ -6,7 +6,7 @@ class Article
   def initialize(file_name,title=nil)
     @file_name=file_name
     @tags=self.get_tags
-    self.update_time # 增加时间信息，如果已有直接返回
+    self.update_time_and_img # 增加时间信息，如果已有直接返回
     @time=self.get_time
     if !title 
       @title=File.basename(file_name,".md")
@@ -46,10 +46,18 @@ class Article
     end
   end
 
-  def update_time
+  def update_time_and_img
     text=String.new
     File.open(@file_name) do |f|
       text=f.read
+      imgpattern=/\[img:(.+?)\]/
+      img_result=text.scan(imgpattern)
+      img_result.each_with_index do |img_,index|
+        img_file_name=img_[0]
+        text.sub!(imgpattern,"![此处输入图片的描述][#{index+1}]
+[#{index+1}]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/#{img_file_name}")
+      end
+      p text
       time=File.ctime(f).to_s+"|"+File.ctime(f).to_i.to_s
       if not text=~(/ctime:.+?\n/)   # 没有时间信息
         text.sub!(/\n/,"\nctime:#{time}\n") # 在第二行插入
@@ -95,3 +103,4 @@ end
 #a.get_tags
 #puts a.tags
 #puts a.tags.length
+#a=Article.new("articles/217.md")
