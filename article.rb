@@ -57,7 +57,6 @@ class Article
         text.sub!(imgpattern,"![此处输入图片的描述][#{index+1}]
 [#{index+1}]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/#{img_file_name}")
       end
-      p text
       time=File.ctime(f).to_s+"|"+File.ctime(f).to_i.to_s
       if not text=~(/ctime:.+?\n/)   # 没有时间信息
         text.sub!(/\n/,"\nctime:#{time}\n") # 在第二行插入
