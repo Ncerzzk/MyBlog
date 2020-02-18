@@ -31,6 +31,7 @@ categories: 日记
 附上飞机的空难图，做个纪念吧。
 
 ![此处输入图片的描述][1]
+
 [1]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/217.jpg
 
 ---
