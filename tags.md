@@ -107,3 +107,5 @@
 [不带__weak 标志的函数（Strong函数）无法代替weak函数的问题](https://github.com/Ncerzzk/MyBlog/blob/master/articles/weak_problem.md)
 ###  硬件
 [STM32 ADC DMA 多通道传输时通道顺序错误问题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/adc_dma_order.md)
+### 博客
+[博客程序更新，增加评论功能 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/博客程序更新，增加评论功能.md)
