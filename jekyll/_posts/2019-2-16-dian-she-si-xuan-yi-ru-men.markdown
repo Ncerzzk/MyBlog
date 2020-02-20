@@ -3,7 +3,7 @@ layout: post
 title: 电设四旋翼入门
 date: 2019-02-16 22:10:18 +0900
 categories: 技术
-issue_id: 0
+issue_id: 47
 ---
 时间过得真快，很快又是一年全国电设。
 

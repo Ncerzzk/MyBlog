@@ -3,7 +3,7 @@ layout: post
 title: ARM学习笔记
 date: 2018-12-08 13:07:49 +0900
 categories: 技术 硬件
-issue_id: 0
+issue_id: 43
 ---
 ### arm架构基本知识
 cortex实际上是ARMV7架构的，分为cortex-A,cortex-M,cortex-R三类。前者性能较强，可跑linux等系统，中间是单片机，后者性能介于两者之间，跑实时操作系统。

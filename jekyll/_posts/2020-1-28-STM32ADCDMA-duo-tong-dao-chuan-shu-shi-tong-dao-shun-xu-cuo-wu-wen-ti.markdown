@@ -3,7 +3,7 @@ layout: post
 title: STM32 ADC DMA 多通道传输时通道顺序错误问题 
 date: 2020-01-28 19:15:33 +0900
 categories: 技术  硬件
-issue_id: 0
+issue_id: 72
 --- 
 
 问题终于解决了，折磨了好几天。

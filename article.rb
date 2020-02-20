@@ -87,23 +87,27 @@ class Article
 
 
   def get_jekyll_content
+
+    issueid=0
+    read_issue_file do |issue_data,file|
+      if issue_data.has_key?(@title)
+        issueid=issue_data[@title]
+      else
+        issueid=create_issue(@title)
+        issue_data[@title]=issueid.to_s
+      end
+      file.rewind
+      file.write(issue_data.to_s)
+    end
     newhead=begin
       "---
 layout: post
 title: #{@title}
 date: #{Time.at(@time.to_i)}
 categories: #{@tags.join(" ")}
-issue_id: 0
+issue_id: #{issueid}
 ---"
     end
-    read_issue_file do |issue_data,file|
-      if not issue_data.has_key?(@title)
-        issueid=create_issue(@title)
-        issue_data[@title]=issueid.to_s
-      end
-      file.write(issue_data.to_s)
-    end
-
     File.open(@file_name) do |f|
       text=f.read
       text.sub!(/\#.+?ctime:.+?\-\-\-/m,newhead)
@@ -112,19 +116,13 @@ issue_id: 0
   end
 
   def read_issue_file
-    text=''
-
-    if not FileTest::exist?("issue.csv") do
-      File.open("issue.csv","w") do |f|
-        data={}
-        f.write(data.to_s)
-      end
-    end
-    File.open("issue.csv","a+") do |f|
+    File.open("issue.csv","r+") do |f|
       text=f.read
-      yield  eval(text),f
-    end
+      if text==""
+        text="{}"
+      end
 
+      yield  eval(text),f
     end
   end
 
@@ -144,5 +142,5 @@ end
 #a.get_tags
 #puts a.tags
 #puts a.tags.length
-a=Article.new("articles/217.md")
+#a=Article.new("articles/217.md")
 

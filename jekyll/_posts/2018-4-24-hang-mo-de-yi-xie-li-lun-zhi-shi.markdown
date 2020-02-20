@@ -3,7 +3,7 @@ layout: post
 title: 航模的一些理论知识
 date: 2018-04-24 21:15:33 +0900
 categories: 理论
-issue_id: 0
+issue_id: 31
 ---
 
 在这里记录一些航模的理论知识：（大部分来自于《模型飞机空气动力学》）

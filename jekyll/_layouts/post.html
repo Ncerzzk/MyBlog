@@ -33,6 +33,45 @@ layout: default
 	position:relative;
 	top:1px;
 }
+
+.comment_username{
+font-size:14px;
+margin-left:5px;
+}
+.comment_time{
+font-size:14px;	
+	float:right;
+	margin-right:5px;
+}
+.comment{
+	list-style:none;
+}
+.comment_username{
+	color: #24292e;
+	text-decoration: none;
+	}
+	.comment_user_img{
+	float:left;
+}
+.comment_box{
+	margin-left:40px;
+    color: #24292e;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+}
+.comment_content{
+margin:10px 10px 10px 10px;
+}
+
+#comment{
+	margin-top:30px;
+}
+
+.comment{
+	margin-top:30px;
+}
+
 /* CSS按钮生成器 */
 </style>
 
@@ -58,10 +97,48 @@ layout: default
     {%- include disqus_comments.html -%}
   {%- endif -%}
   
-	<a href="https://github.com/Ncerzzk/MyBlog/issues/new?title={{page.title | escape }}" class="css_btn_class">添加留言</a>
-	<a>{% assign filenames=page.path | split:"/" %}{{ filenames[1] }}
-</a>
+	<a href="https://github.com/{{ site.Comment_Github_User }}/{{ site.Comment_Github_Repo}}/issues/{{ page.issue_id }}" class="css_btn_class">添加留言</a>
+	
+<div id="comment">
+<li class="comment">
+	
+	<img class="comment_user_img"  height="40" width="40" src="https://avatars2.githubusercontent.com/u/9284611?v=4"></img>
+	<div class="comment_box">
+	<a class="comment_username" href="#">Username</a>
+	<span class="comment_time">Comment at 2019.5.13</span>
+	<div class="comment_content">Here is the Content</div>
+	</div>
+</li>
+</div>
 		
 	
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+</script>
+
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).hide();
+  });
+});
+var h=$("#comment").html();
+var user="{{ site.Comment_Github_User }}";
+var repo="{{ site.Comment_Github_Repo }}";
+var issueid="{{ page.issue_id }}";
+$("#comment").html("");
+$.getJSON("https://api.github.com/repos/"+user+"/"+repo+"/issues/"+issueid+"/comments", function(json){
+  for(i in json){
+	  $("#comment").append(h);
+	  $(".comment_username:last").text(json[i].user.login);
+	  $(".comment_username:last").attr("href",json[i].user.html_url);
+	  $(".comment_content:last").text(json[i].body);
+	  $(".comment_time:last").text(json[i].created_at);
+	  $(".comment_user_img:last").attr("src",json[i].user.avatar_url);
+  }
+});
+</script>
+

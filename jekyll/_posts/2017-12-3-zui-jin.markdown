@@ -3,7 +3,7 @@ layout: post
 title: 最近
 date: 2017-12-03 01:06:13 +0900
 categories: 日记
-issue_id: 0
+issue_id: 24
 ---
 
 最近过的挺滋润的，说实话。

@@ -3,7 +3,7 @@ layout: post
 title: 预备队
 date: 2018-08-31 14:09:15 +0900
 categories: 日记
-issue_id: 0
+issue_id: 38
 ---
 好久好久没写日记了，这估计已经算月记了吧。
 

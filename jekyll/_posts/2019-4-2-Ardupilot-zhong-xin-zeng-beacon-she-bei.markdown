@@ -3,7 +3,7 @@ layout: post
 title: Ardupilot中新增beacon设备
 date: 2019-04-02 17:15:52 +0900
 categories: 技术
-issue_id: 0
+issue_id: 53
 ---
 
 ardupilot的串口与beacon大致情况在之前都写过了。这里不再赘述，直接写我新增的INF（无穷未来）的驱动手册吧。

@@ -3,7 +3,7 @@ layout: post
 title: 从头设计一个四旋翼飞行器
 date: 2017-08-17 00:46:48 +0900
 categories: 技术 硬件
-issue_id: 0
+issue_id: 17
 ---
 
 打算从头设计一个四旋翼，以下是一些想法或者设计：

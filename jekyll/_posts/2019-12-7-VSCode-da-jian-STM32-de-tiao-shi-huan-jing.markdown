@@ -3,7 +3,7 @@ layout: post
 title: VSCode搭建STM32的调试环境
 date: 2019-12-07 18:38:13 +0900
 categories: 技术 硬件
-issue_id: 0
+issue_id: 65
 ---
 大家都知道VScode是个好用的编辑器，通过配置也能成为IDE。
 

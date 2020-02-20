@@ -3,7 +3,7 @@ layout: post
 title: 最近滤波心得
 date: 2018-03-13 18:10:21 +0900
 categories: 技术
-issue_id: 0
+issue_id: 28
 ---
 
 这几天在写四轴的定高。

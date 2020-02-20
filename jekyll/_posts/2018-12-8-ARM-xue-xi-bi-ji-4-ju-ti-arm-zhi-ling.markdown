@@ -3,7 +3,7 @@ layout: post
 title: ARM学习笔记4——具体arm指令
 date: 2018-12-08 23:50:01 +0900
 categories: 技术 硬件 arm
-issue_id: 0
+issue_id: 46
 ---
 这里就不把书上所有指令抄下来了，仅记录常见或者重要的。
 

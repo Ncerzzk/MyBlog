@@ -3,7 +3,7 @@ layout: post
 title: 无感FOC滑膜观测器学习
 date: 2020-02-04 20:40:32 +0900
 categories: 技术 硬件
-issue_id: 0
+issue_id: 73
 ---
 
 目标是要通过滑膜观测器来获取电机转子位置

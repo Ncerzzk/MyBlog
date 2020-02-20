@@ -3,7 +3,7 @@ layout: post
 title: 中长期计划
 date: 2017-10-25 11:18:37 +0900
 categories: 
-issue_id: 0
+issue_id: 20
 ---
 
 一些计划，希望能在研究生毕业前完成，不定时更新：

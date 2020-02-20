@@ -3,7 +3,7 @@ layout: post
 title: 解决ardupilot中使用UWB每次上电的时候坐标不一样的问题
 date: 2019-08-02 23:41:07 +0900
 categories: 技术 飞控
-issue_id: 0
+issue_id: 57
 ---
 
 在GCS_Common.cpp中，找到send_local_position函数，这个函数用来发送local_position给树莓派

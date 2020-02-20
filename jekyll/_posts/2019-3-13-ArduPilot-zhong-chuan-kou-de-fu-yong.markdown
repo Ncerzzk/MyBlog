@@ -3,7 +3,7 @@ layout: post
 title: ArduPilot中串口的复用
 date: 2019-03-13 15:45:17 +0900
 categories: 技术 硬件 飞控
-issue_id: 0
+issue_id: 50
 ---
 ardupilot中因为项目太庞大，初看串口的复用很是疑惑。
 
