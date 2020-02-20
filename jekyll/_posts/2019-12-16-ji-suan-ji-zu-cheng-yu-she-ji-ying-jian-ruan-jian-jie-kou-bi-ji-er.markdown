@@ -3,6 +3,7 @@ layout: post
 title: 《计算机组成与设计 硬件软件接口》 笔记 二
 date: 2019-12-16 16:00:32 +0900
 categories: 技术 硬件
+issue_id: 0
 ---
 
 ## 计算机算数运算

@@ -3,6 +3,7 @@ layout: post
 title: 常用总线概述
 date: 2018-09-01 10:55:08 +0900
 categories: 硬件
+issue_id: 0
 ---
 
 # 概述

@@ -1,6 +1,9 @@
 require 'find'
 
 require 'ruby-pinyin'
+
+require File.expand_path('../issue.rb', __FILE__)
+
 class Article
   attr_reader :tags,:time,:file_name,:title
   def initialize(file_name,title=nil)
@@ -90,14 +93,41 @@ layout: post
 title: #{@title}
 date: #{Time.at(@time.to_i)}
 categories: #{@tags.join(" ")}
+issue_id: 0
 ---"
     end
+    read_issue_file do |issue_data,file|
+      if not issue_data.has_key?(@title)
+        issueid=create_issue(@title)
+        issue_data[@title]=issueid.to_s
+      end
+      file.write(issue_data.to_s)
+    end
+
     File.open(@file_name) do |f|
       text=f.read
       text.sub!(/\#.+?ctime:.+?\-\-\-/m,newhead)
       text
     end
   end
+
+  def read_issue_file
+    text=''
+
+    if not FileTest::exist?("issue.csv") do
+      File.open("issue.csv","w") do |f|
+        data={}
+        f.write(data.to_s)
+      end
+    end
+    File.open("issue.csv","a+") do |f|
+      text=f.read
+      yield  eval(text),f
+    end
+
+    end
+  end
+
 
   def get_jekyll_filename
     t=Time.at(@time.to_i)

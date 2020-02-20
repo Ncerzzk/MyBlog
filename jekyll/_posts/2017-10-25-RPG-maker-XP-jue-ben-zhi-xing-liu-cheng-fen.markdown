@@ -3,6 +3,7 @@ layout: post
 title: RPG_maker_XP中脚本执行流程分析
 date: 2017-10-25 11:18:37 +0900
 categories: ruby 技术
+issue_id: 0
 ---
 从小到大，一直想好好学一下rpg maker，这几天总算有点时间，于是就下了个RMXP来看看。
 

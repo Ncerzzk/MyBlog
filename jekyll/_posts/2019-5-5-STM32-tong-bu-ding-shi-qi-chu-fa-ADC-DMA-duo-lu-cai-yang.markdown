@@ -3,6 +3,7 @@ layout: post
 title: STM32同步定时器并触发ADC_DMA多路采样
 date: 2019-05-05 17:53:06 +0900
 categories: 技术 硬件
+issue_id: 0
 ---
 需求是这样的：
 

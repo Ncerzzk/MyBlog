@@ -3,6 +3,7 @@ layout: post
 title: STM32的一个狗屎BUG 
 date: 2019-08-26 12:36:43 +0900
 categories: 技术 硬件
+issue_id: 0
 ---
 
 机器人招新二面打算让他们调调飞机，前几天抽时间把以前那个F405的小飞机MCU改成了F103C8，

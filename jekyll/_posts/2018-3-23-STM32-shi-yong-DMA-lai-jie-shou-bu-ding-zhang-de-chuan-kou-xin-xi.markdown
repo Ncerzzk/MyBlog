@@ -3,6 +3,7 @@ layout: post
 title: STM32使用DMA来接收不定长的串口信息
 date: 2018-03-23 21:13:16 +0900
 categories: 技术 硬件
+issue_id: 0
 ---
 使用HAL库。
 

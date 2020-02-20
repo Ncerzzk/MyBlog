@@ -3,6 +3,7 @@ layout: post
 title: ARM学习笔记3——指令系统
 date: 2018-12-08 16:25:30 +0900
 categories: 硬件 技术
+issue_id: 0
 ---
 若无特别说明，说的是arm指令集（32位）
 

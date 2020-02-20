@@ -3,6 +3,7 @@ layout: post
 title: 关于我
 date: 2017-08-17 00:37:54 +0900
 categories: 无
+issue_id: 0
 ---
 
 邮电类大学在读，以后可能是个邮递员？

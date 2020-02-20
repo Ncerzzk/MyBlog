@@ -3,6 +3,7 @@ layout: post
 title: 无刷电机foc笔记 
 date: 2019-08-28 12:35:27 +0900
 categories: 硬件 技术
+issue_id: 0
 ---
 
 无刷电机与永磁同步电机的区别：

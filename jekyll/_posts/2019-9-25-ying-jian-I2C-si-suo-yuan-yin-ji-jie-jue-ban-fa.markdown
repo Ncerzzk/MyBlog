@@ -3,6 +3,7 @@ layout: post
 title: 硬件I2C死锁原因及解决办法
 date: 2019-09-25 00:49:23 +0900
 categories: 硬件 技术
+issue_id: 0
 ---
 ### 一些基础知识：
 - I2C通信的两条信号线需要使用OD方式，连接上拉电阻

@@ -3,6 +3,7 @@ layout: post
 title: ArduPilot中beacon
 date: 2019-03-13 15:45:31 +0900
 categories: 技术 飞控
+issue_id: 0
 ---
 初始化过程：
 

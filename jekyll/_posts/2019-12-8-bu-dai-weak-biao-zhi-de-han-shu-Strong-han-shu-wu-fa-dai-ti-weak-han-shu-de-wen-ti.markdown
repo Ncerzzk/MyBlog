@@ -3,6 +3,7 @@ layout: post
 title: 不带__weak 标志的函数（Strong函数）无法代替weak函数的问题
 date: 2019-12-08 12:24:17 +0900
 categories: 技术 编程
+issue_id: 0
 ---
 
 在C编程中，有时候需要写一些weak函数，用来给用户进行覆盖。

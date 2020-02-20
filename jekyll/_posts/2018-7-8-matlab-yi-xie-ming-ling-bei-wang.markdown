@@ -3,6 +3,7 @@ layout: post
 title: matlab一些命令备忘
 date: 2018-07-08 18:30:26 +0900
 categories: 技术
+issue_id: 0
 ---
 - pretty 用来将分式变成上下横线
 

@@ -3,6 +3,7 @@ layout: post
 title: 日常倦怠
 date: 2019-04-28 07:30:23 +0900
 categories: 日记
+issue_id: 0
 ---
 
 上周二把交换的材料交了，进入了日常倦怠期，啥也不想干

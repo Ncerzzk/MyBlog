@@ -3,6 +3,7 @@ layout: post
 title: 在霓虹的日常吐槽 
 date: 2019-10-23 18:05:22 +0900
 categories: 日记
+issue_id: 0
 ---
 不定时更新。
 

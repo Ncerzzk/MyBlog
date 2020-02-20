@@ -3,6 +3,7 @@ layout: post
 title: 陀螺仪、ENC03、MPU6050、I2C等知识科普
 date: 2018-03-12 19:30:28 +0900
 categories: 技术
+issue_id: 0
 ---
 
 ## 陀螺仪：
