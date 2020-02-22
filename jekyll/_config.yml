@@ -32,6 +32,7 @@ Comment_Github_Repo: Myblog
 
 # Build settings
 theme: minima
+
 plugins:
   - jekyll-feed
 
