@@ -32,5 +32,9 @@ Linux下需要可以通过打一些补丁patch来启用这些功能，也可以�
 - https://github.com/seemoo-lab/nexmon
 
 
+关于网卡的一些工作模式：
+- https://blog.csdn.net/weixin_30432579/article/details/99553172?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
+- 
+
 
 

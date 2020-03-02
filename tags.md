@@ -1,7 +1,7 @@
 ## 标签归档
 ### 无
-[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
 [关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
+[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
 ### 经历
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 技术
@@ -45,6 +45,7 @@
 [近期FOC无刷驱动总结备忘](https://github.com/Ncerzzk/MyBlog/blob/master/articles/foc_recently.md)
 [基于Wifibroadcast的图传](https://github.com/Ncerzzk/MyBlog/blob/master/articles/基于wifibrocast的图传.md)
 [基于Wifibroadcast的图传2](https://github.com/Ncerzzk/MyBlog/blob/master/articles/# 基于Wifibroadcast的图传2.md)
+[通过数据手册快速生成Altium Designer的原理图库(schlib) ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/通过数据手册快速生成Altium Designer的原理图库(schlib).md)
 ### 硬件
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32HAL库记录.md)
@@ -68,6 +69,7 @@
 [《计算机组成与设计 硬件软件接口》 笔记 二](https://github.com/Ncerzzk/MyBlog/blob/master/articles/computer_designer2.md)
 [无感FOC滑膜观测器学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SMO.md)
 [近期FOC无刷驱动总结备忘](https://github.com/Ncerzzk/MyBlog/blob/master/articles/foc_recently.md)
+[通过数据手册快速生成Altium Designer的原理图库(schlib) ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/通过数据手册快速生成Altium Designer的原理图库(schlib).md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
 ### 日记
