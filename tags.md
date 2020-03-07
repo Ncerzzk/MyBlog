@@ -44,8 +44,9 @@
 [无感FOC滑膜观测器学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SMO.md)
 [近期FOC无刷驱动总结备忘](https://github.com/Ncerzzk/MyBlog/blob/master/articles/foc_recently.md)
 [基于Wifibroadcast的图传](https://github.com/Ncerzzk/MyBlog/blob/master/articles/基于wifibrocast的图传.md)
-[基于Wifibroadcast的图传2](https://github.com/Ncerzzk/MyBlog/blob/master/articles/# 基于Wifibroadcast的图传2.md)
-[通过数据手册快速生成Altium Designer的原理图库(schlib) ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/通过数据手册快速生成Altium Designer的原理图库(schlib).md)
+[基于Wifibroadcast的图传2](https://github.com/Ncerzzk/MyBlog/blob/master/articles/基于Wifibroadcast的图传2.md)
+[通过数据手册快速生成Altium Designer的原理图库(schlib) ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/通过数据手册快速生成AltiumDesigner的原理图库(schlib).md)
+[ROS学习笔记1 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/ROS学习笔记1.md)
 ### 硬件
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32HAL库记录.md)
@@ -69,7 +70,7 @@
 [《计算机组成与设计 硬件软件接口》 笔记 二](https://github.com/Ncerzzk/MyBlog/blob/master/articles/computer_designer2.md)
 [无感FOC滑膜观测器学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SMO.md)
 [近期FOC无刷驱动总结备忘](https://github.com/Ncerzzk/MyBlog/blob/master/articles/foc_recently.md)
-[通过数据手册快速生成Altium Designer的原理图库(schlib) ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/通过数据手册快速生成Altium Designer的原理图库(schlib).md)
+[通过数据手册快速生成Altium Designer的原理图库(schlib) ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/通过数据手册快速生成AltiumDesigner的原理图库(schlib).md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
 ### 日记
@@ -94,6 +95,7 @@
 [218219 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/218219.md)
 [无事发生 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/无事发生.md)
 [223 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/223.md)
+[没有告别 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/没有告别.md)
 ### 理论
 [姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 [航模的一些理论知识](https://github.com/Ncerzzk/MyBlog/blob/master/articles/航模的一些理论知识.md)
@@ -117,4 +119,4 @@
 [博客程序更新，增加评论功能 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/博客程序更新，增加评论功能.md)
 ### 兴趣
 [基于Wifibroadcast的图传](https://github.com/Ncerzzk/MyBlog/blob/master/articles/基于wifibrocast的图传.md)
-[基于Wifibroadcast的图传2](https://github.com/Ncerzzk/MyBlog/blob/master/articles/# 基于Wifibroadcast的图传2.md)
+[基于Wifibroadcast的图传2](https://github.com/Ncerzzk/MyBlog/blob/master/articles/基于Wifibroadcast的图传2.md)
