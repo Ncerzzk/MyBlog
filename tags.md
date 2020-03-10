@@ -47,6 +47,8 @@
 [基于Wifibroadcast的图传2](https://github.com/Ncerzzk/MyBlog/blob/master/articles/基于Wifibroadcast的图传2.md)
 [通过数据手册快速生成Altium Designer的原理图库(schlib) ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/通过数据手册快速生成AltiumDesigner的原理图库(schlib).md)
 [ROS学习笔记1 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/ROS学习笔记1.md)
+[一些专业名词的英文翻译](https://github.com/Ncerzzk/MyBlog/blob/master/articles/一些专业名词的英文翻译.md)
+[直升机倾斜器研究总结 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/倾斜器研究总结.md)
 ### 硬件
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32HAL库记录.md)
