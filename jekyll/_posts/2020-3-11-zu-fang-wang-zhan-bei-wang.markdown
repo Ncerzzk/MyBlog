@@ -11,3 +11,5 @@ issue_id: 89
 https://bbs.byr.cn/#!article/Home/122662?p=1
 
 北京租房：http://uz.yurixu.com/manage/beijing.php
+
+826f162c653dd1c2c5f4737f81989be6
