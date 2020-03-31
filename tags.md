@@ -1,4 +1,7 @@
 ## 标签归档
+### 无
+[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
+[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
 ### 经历
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 技术
@@ -48,9 +51,7 @@
 [直升机倾斜器研究总结 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/倾斜器研究总结.md)
 [Python元编程 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/Python元编程.md)
 [C#中OOP平时的一些反思与思考 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/OOP平时的一些反思与思考.md)
-### 无
-[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
-[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
+[战棋系统的UI逻辑记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/战棋系统的UI逻辑记录.md)
 ### 硬件
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32HAL库记录.md)
