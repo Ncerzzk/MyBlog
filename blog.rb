@@ -38,7 +38,7 @@ class Blog
         item.time
       end
     end
-    a
+    a.reverse  
   end
 
 
