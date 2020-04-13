@@ -1,5 +1,6 @@
 ## 标签归档
 ### 日记
+[鸡毛飞上天](https://github.com/Ncerzzk/MyBlog/blob/master/articles/鸡毛飞上天.md)
 [最近面试经验记录 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/最近面试经验记录.md)
 [租房网站备忘 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/租房网站备忘.md)
 [没有告别 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/没有告别.md)
@@ -123,8 +124,8 @@
 [姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
+### 经历
+[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 无
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
 [关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
-### 经历
-[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
