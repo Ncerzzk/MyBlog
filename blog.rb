@@ -73,6 +73,9 @@ class Blog
     st="## Content\n"
     text=""
    articles.each do |article|
+     if article.is_diary?
+       next
+     end
      uri="(#{@url}/#{article.file_name})"
      #title=File.basename(article.file_name,".md")
      title=article.title

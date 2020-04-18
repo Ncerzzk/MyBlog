@@ -9,6 +9,10 @@ class Article
   def initialize(file_name,title=nil)
     @file_name=file_name
     @tags=self.get_tags
+    File.open(@file_name) do |f|
+      @text=f.read
+    end
+
     self.update_time # 增加时间信息，如果已有直接返回
     self.update_img_mark
     @time=self.get_time
@@ -42,12 +46,22 @@ class Article
     result
   end
 
-  def get_time
-    File.open(@file_name) do |f|
-      text=f.read
-      text=~/ctime:.+?\|([0-9]+?)\n/
-      $1.to_i
+  def is_diary?
+    if @text=~/日记/
+      return true
     end
+    false
+  end
+
+  def get_time
+
+    #File.open(@file_name) do |f|
+    #  text=f.read
+    #  text=~/ctime:.+?\|([0-9]+?)\n/
+    #  $1.to_i
+    #end
+    @text=~/ctime:.+?\|([0-9]+?)\n/
+    $1.to_i
   end
 
   def update_time
