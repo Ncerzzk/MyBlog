@@ -1,6 +1,6 @@
 ## 标签归档
 ### 技术
-[ARM学习笔记5——Flash](https://github.com/Ncerzzk/MyBlog/blob/master/articles/ARM学习笔记5.md)
+[ARM学习笔记5——Flash、MMU](https://github.com/Ncerzzk/MyBlog/blob/master/articles/ARM学习笔记5.md)
 [战棋系统的UI逻辑记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/战棋系统的UI逻辑记录.md)
 [C#中OOP平时的一些反思与思考 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/OOP平时的一些反思与思考.md)
 [Python元编程 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/Python元编程.md)
@@ -48,8 +48,10 @@
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
+[操作系统笔记（一）](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记.md)
+[《计算机组成与设计 硬件软件接口》 笔记 三](https://github.com/Ncerzzk/MyBlog/blob/master/articles/《计算机组成与设计 硬件软件接口》 笔记 三.md)
 ### arm
-[ARM学习笔记5——Flash](https://github.com/Ncerzzk/MyBlog/blob/master/articles/ARM学习笔记5.md)
+[ARM学习笔记5——Flash、MMU](https://github.com/Ncerzzk/MyBlog/blob/master/articles/ARM学习笔记5.md)
 [Arm嵌入式近期一些记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/Arm嵌入式近期一些记录.md)
 [ARM学习笔记4——具体arm指令](https://github.com/Ncerzzk/MyBlog/blob/master/articles/ARM学习笔记4——具体arm指令.md)
 ### 日记
@@ -106,6 +108,7 @@
 [最近遇到的一些坑](https://github.com/Ncerzzk/MyBlog/blob/master/articles/最近遇到的一些坑.md)
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32HAL库记录.md)
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
+[《计算机组成与设计 硬件软件接口》 笔记 三](https://github.com/Ncerzzk/MyBlog/blob/master/articles/《计算机组成与设计 硬件软件接口》 笔记 三.md)
 ### 兴趣
 [基于Wifibroadcast的图传2](https://github.com/Ncerzzk/MyBlog/blob/master/articles/基于Wifibroadcast的图传2.md)
 [基于Wifibroadcast的图传](https://github.com/Ncerzzk/MyBlog/blob/master/articles/基于wifibrocast的图传.md)
@@ -126,8 +129,10 @@
 [姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
-### 经历
-[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 无
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
 [关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
+### 经历
+[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
+### 操作系统
+[操作系统笔记（一）](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记.md)
