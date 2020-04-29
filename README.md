@@ -22,8 +22,6 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 ## Content
 [操作系统笔记（一）](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记.md)
 
-[《计算机组成与设计 硬件软件接口》 笔记 三](https://github.com/Ncerzzk/MyBlog/blob/master/articles/《计算机组成与设计 硬件软件接口》 笔记 三.md)
-
 [《计算机组成与设计 硬件软件接口》 笔记 三](https://github.com/Ncerzzk/MyBlog/blob/master/articles/《计算机组成与设计_硬件软件接口》_笔记三.md)
 
 [ARM学习笔记5——Flash、MMU](https://github.com/Ncerzzk/MyBlog/blob/master/articles/ARM学习笔记5.md)
@@ -116,9 +114,9 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [最近滤波心得](https://github.com/Ncerzzk/MyBlog/blob/master/articles/最近滤波心得.md)
 
-[从头搭建一个“个人工房”](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头搭建一个“个人工房”.md)
-
 [陀螺仪、ENC03、MPU6050、I2C等知识科普](https://github.com/Ncerzzk/MyBlog/blob/master/articles/陀螺仪、ENC03、MPU6050、I2C等知识科普.md)
+
+[从头搭建一个“个人工房”](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头搭建一个“个人工房”.md)
 
 [姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 
@@ -134,9 +132,11 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 
-[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
+[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
 
-[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
+[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
+
+[操作系统笔记（二）](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记(二).md)
 

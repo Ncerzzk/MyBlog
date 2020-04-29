@@ -1,7 +1,6 @@
 ## 标签归档
 ### 技术
 [操作系统笔记（一）](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记.md)
-[《计算机组成与设计 硬件软件接口》 笔记 三](https://github.com/Ncerzzk/MyBlog/blob/master/articles/《计算机组成与设计 硬件软件接口》 笔记 三.md)
 [《计算机组成与设计 硬件软件接口》 笔记 三](https://github.com/Ncerzzk/MyBlog/blob/master/articles/《计算机组成与设计_硬件软件接口》_笔记三.md)
 [ARM学习笔记5——Flash、MMU](https://github.com/Ncerzzk/MyBlog/blob/master/articles/ARM学习笔记5.md)
 [战棋系统的UI逻辑记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/战棋系统的UI逻辑记录.md)
@@ -51,10 +50,11 @@
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
+[操作系统笔记（二）](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记(二).md)
 ### 操作系统
 [操作系统笔记（一）](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记.md)
+[操作系统笔记（二）](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记(二).md)
 ### 硬件
-[《计算机组成与设计 硬件软件接口》 笔记 三](https://github.com/Ncerzzk/MyBlog/blob/master/articles/《计算机组成与设计 硬件软件接口》 笔记 三.md)
 [《计算机组成与设计 硬件软件接口》 笔记 三](https://github.com/Ncerzzk/MyBlog/blob/master/articles/《计算机组成与设计_硬件软件接口》_笔记三.md)
 [通过数据手册快速生成Altium Designer的原理图库(schlib) ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/通过数据手册快速生成AltiumDesigner的原理图库(schlib).md)
 [近期FOC无刷驱动总结备忘](https://github.com/Ncerzzk/MyBlog/blob/master/articles/foc_recently.md)
@@ -133,8 +133,8 @@
 [姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
-### 无
-[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
-[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
 ### 经历
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
+### 无
+[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
+[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
