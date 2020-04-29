@@ -13,7 +13,7 @@ class Article
       @text=f.read
     end
 
-    self.update_time # 增加时间信息，如果已有直接返回
+    @text=self.update_time # 增加时间信息，如果已有直接返回
     self.update_img_mark
     @time=self.get_time
     if !title 
