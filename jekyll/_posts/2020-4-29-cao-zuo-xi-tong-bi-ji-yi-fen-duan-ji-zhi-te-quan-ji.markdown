@@ -1,8 +1,9 @@
-# 操作系统笔记（一）分段机制、特权级
-ctime:2020-04-29 12:08:05 +0900|1588129685
-
-标签（空格分隔）： 技术 操作系统
-
+---
+layout: post
+title: 操作系统笔记（一）分段机制、特权级
+date: 2020-04-29 12:08:05 +0900
+categories: 技术 操作系统
+issue_id: 104
 ---
 
 ## 课程实验手册地址：https://legacy.gitbook.com/book/chyyuu/ucore_os_docs

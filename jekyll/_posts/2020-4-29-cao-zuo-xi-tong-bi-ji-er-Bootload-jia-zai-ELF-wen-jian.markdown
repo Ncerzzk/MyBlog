@@ -1,8 +1,9 @@
-# 操作系统笔记（二）Bootload加载ELF文件
-ctime:2020-04-29 15:34:46 +0900|1588142086
-
-标签（空格分隔）： 技术 操作系统
-
+---
+layout: post
+title: 操作系统笔记（二）Bootload加载ELF文件
+date: 2020-04-29 15:34:46 +0900
+categories: 技术 操作系统
+issue_id: 103
 ---
 
 ## 练习4 分析bootloader如何加载ELF文件
