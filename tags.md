@@ -1,5 +1,6 @@
 ## 标签归档
 ### 技术
+[操作系统笔记（九）用户进程](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记（九）用户进程.md)
 [x86架构的一些冗余 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/x86.md)
 [操作系统笔记（八）进程与线程一](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记（八）进程与线程.md)
 [操作系统笔记（七）虚存管理](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记（七）虚存管理.md)
@@ -58,9 +59,8 @@
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
-###  CPU
-[x86架构的一些冗余 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/x86.md)
 ### 操作系统
+[操作系统笔记（九）用户进程](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记（九）用户进程.md)
 [操作系统笔记（八）进程与线程一](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记（八）进程与线程.md)
 [操作系统笔记（七）虚存管理](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记（七）虚存管理.md)
 [操作系统笔记（六）内存管理_划分页、设定状态](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记（六）内存管理_划分页、设定状态.md)
@@ -69,6 +69,8 @@
 [操作系统笔记（三）函数堆栈](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记（三）.md)
 [操作系统笔记（二）Bootload加载ELF文件](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记(二).md)
 [操作系统笔记（一）分段机制、特权级](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记.md)
+###  CPU
+[x86架构的一些冗余 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/x86.md)
 ### 硬件
 [《计算机组成与设计 硬件软件接口》 笔记 三](https://github.com/Ncerzzk/MyBlog/blob/master/articles/《计算机组成与设计_硬件软件接口》_笔记三.md)
 [通过数据手册快速生成Altium Designer的原理图库(schlib) ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/通过数据手册快速生成AltiumDesigner的原理图库(schlib).md)
@@ -148,8 +150,8 @@
 [姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
+### 无
+[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
+[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
 ### 经历
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
-### 无
-[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
-[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
