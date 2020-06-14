@@ -1,5 +1,6 @@
 ## 标签归档
 ### 技术
+[SpinalHDL学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SpinalHDL学习.md)
 [HDL在线综合查看RTL的一个工具](https://github.com/Ncerzzk/MyBlog/blob/master/articles/HDL在线综合查看RTL的工具.md)
 [verilog 笔记 N](https://github.com/Ncerzzk/MyBlog/blob/master/articles/计算机组成原理笔记（一）.md)
 [操作系统笔记（十三）文件系统](https://github.com/Ncerzzk/MyBlog/blob/master/articles/操作系统笔记（十三）文件系统.md)
@@ -65,6 +66,8 @@
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
+### HDL
+[SpinalHDL学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SpinalHDL学习.md)
 ### 硬件
 [verilog 笔记 N](https://github.com/Ncerzzk/MyBlog/blob/master/articles/计算机组成原理笔记（一）.md)
 [《计算机组成与设计 硬件软件接口》 笔记 三](https://github.com/Ncerzzk/MyBlog/blob/master/articles/《计算机组成与设计_硬件软件接口》_笔记三.md)

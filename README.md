@@ -20,6 +20,8 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 ## [标签归档](https://github.com/Ncerzzk/MyBlog/blob/master/tags.md)
 
 ## Content
+[SpinalHDL学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SpinalHDL学习.md)
+
 [HDL在线综合查看RTL的一个工具](https://github.com/Ncerzzk/MyBlog/blob/master/articles/HDL在线综合查看RTL的工具.md)
 
 [verilog 笔记 N](https://github.com/Ncerzzk/MyBlog/blob/master/articles/计算机组成原理笔记（一）.md)
@@ -154,11 +156,11 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [STM32HAL库记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32HAL库记录.md)
 
-[中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/articles/中长期计划.md)
-
 [作品集](https://github.com/Ncerzzk/MyBlog/blob/master/articles/作品集.md)
 
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
+
+[中长期计划](https://github.com/Ncerzzk/MyBlog/blob/master/articles/中长期计划.md)
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 
