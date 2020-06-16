@@ -53,9 +53,32 @@ SpinalHDL是Scala的一个用于描述硬件的方言，与chisel类似，但听
     ```scala
         singleShot(config)(gen)
     ```
+  ```scala
+    def singleShot[T <: Component](config: SpinalConfig)(gen : => T): SpinalReport[T] ={
+
+    val pc = new PhaseContext(config) // 这里创建了上下文，上下文主要是为了模块嵌套的时候，防止名称冲突
+    pc.globalData.phaseContext = pc
+    pc.globalData.anonymSignalPrefix = if(config.anonymSignalPrefix == null) "_zz" else config.anonymSignalPrefix
+
+    ...
+
+    SpinalProgress("Elaborate components")
+
+    val phases = ArrayBuffer[Phase]()
+
+    // 以下开始创建一堆任务
+    phases += new PhaseCreateComponent(gen)(pc)
+    phases += new PhaseDummy(SpinalProgress("Checks and transforms"))
+    ...
+    ...
+    for(phase <- phases){
+      if(config.verbose) SpinalProgress(s"${phase.getClass.getSimpleName}")
+      pc.doPhase(phase)
+    }
+    ...
+  }
+  ```
   
-- 在main中，调用SpinalVerilog函数生成RTL
-  - 实际上调用SpinalVerilogBoot（或者VHDLBoot）
 
 ## 一些基本的SpinaHDL例子
 
@@ -140,3 +163,30 @@ class MyComponent extends Component {
       ```
     - 有了这个隐式转换，scala会自动将Int类转为IntBuilder类（如果有需要的话）
   - 通过上面说的这些方式，实现了`4 bits`这个程序员看起来有点奇怪，但是可读性非常强的语法。scala真是强阿。
+- when语法，实际上when是一个单例对象，是通过scala的语法自定义的控制结构。
+  ```scala
+  object when {
+
+  def apply(cond: Bool)(block: => Unit): WhenContext = {
+
+    val whenStatement = new WhenStatement(cond)
+    val whenContext   = new WhenContext(whenStatement)
+
+    cond.globalData.dslScope.head.append(whenStatement)
+
+    whenStatement.whenTrue.push()
+    block
+    whenStatement.whenTrue.pop()
+
+    whenContext
+  }
+  }
+  ```
+  - 在scala中，有两个参数分别用括号括起来，表示curry化。
+  - 如果只有一个参数的话，可以使用大括号来代替小括号，从而更接近于一个原生的控制结构，如
+    ```scala
+    if(cond){
+      ...
+    }
+    ```
+  - when最后返回的`whenContext`是一个`WhenContext`类型，这个类型中还有一个方法叫做`otherwise`，很巧妙地构成了整个控制结构。
