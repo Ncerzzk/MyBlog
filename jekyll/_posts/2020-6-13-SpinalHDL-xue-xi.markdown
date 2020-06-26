@@ -191,3 +191,22 @@ class MyComponent extends Component {
     }
     ```
   - when最后返回的`whenContext`是一个`WhenContext`类型，这个类型中还有一个方法叫做`otherwise`，很巧妙地构成了整个控制结构。
+
+### 惰性赋值
+```scala
+val a, b, c = UInt(8 bits) // Define 3 combinatorial signals
+c := a + b   // c will be set to 7
+b := 2       // b will be set to 2
+a := b + 3   // a will be set to 5
+```
+
+和
+
+```scala
+val a, b, c = UInt(8 bits) // Define 3 combinatorial signals
+b := 2     // b will be set to 2
+a := b + 3 // a will be set to 5
+c := a + b // c will be set to 7
+```
+
+是等效的，因为比如`c := a+b` 并没有立刻计算出值，此时也算不出值，而只是将a+b这个函数赋值给c，等到之后再计算。
