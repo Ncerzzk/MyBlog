@@ -1,6 +1,6 @@
 ## 标签归档
 ### 技术
-[用scala写一个基本五级流水线CPU (二) 解决数据冒险](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU (二) 解决数据冒险.md)
+[用scala写一个基本五级流水线CPU(二)解决数据冒险](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(二)解决数据冒险.md)
 [用scala写一个基本五级流水线CPU](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU.md)
 [SpinalHDL学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SpinalHDL学习.md)
 [HDL在线综合查看RTL的一个工具](https://github.com/Ncerzzk/MyBlog/blob/master/articles/HDL在线综合查看RTL的工具.md)
@@ -69,7 +69,7 @@
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 硬件
-[用scala写一个基本五级流水线CPU (二) 解决数据冒险](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU (二) 解决数据冒险.md)
+[用scala写一个基本五级流水线CPU(二)解决数据冒险](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(二)解决数据冒险.md)
 [用scala写一个基本五级流水线CPU](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU.md)
 [verilog 笔记 N](https://github.com/Ncerzzk/MyBlog/blob/master/articles/计算机组成原理笔记（一）.md)
 [《计算机组成与设计 硬件软件接口》 笔记 三](https://github.com/Ncerzzk/MyBlog/blob/master/articles/《计算机组成与设计_硬件软件接口》_笔记三.md)

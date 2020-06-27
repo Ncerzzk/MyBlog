@@ -20,7 +20,7 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 ## [标签归档](https://github.com/Ncerzzk/MyBlog/blob/master/tags.md)
 
 ## Content
-[用scala写一个基本五级流水线CPU (二) 解决数据冒险](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU (二) 解决数据冒险.md)
+[用scala写一个基本五级流水线CPU(二)解决数据冒险](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(二)解决数据冒险.md)
 
 [用scala写一个基本五级流水线CPU](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU.md)
 
