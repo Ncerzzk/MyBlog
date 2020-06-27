@@ -24,12 +24,12 @@ ctime:2020-06-26 20:09:48 +0900|1593169788
 - 数据总线宽度 32bit
 - 寄存器数量 32个
 
-### 总体框图
+## 总体框图
 ![此处输入图片的描述][1]
 
 [1]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/simplecpu1.jpg
 
-### 流水线两级中间的缓冲实现
+## 流水线两级中间的缓冲实现
 
 每两级流水线之间，会有一组缓冲寄存器。在书《自己动手写CPU》中，是对所有的缓冲寄存器一个一个实现，受限于verilog贫瘠的表达能力。
 
@@ -63,11 +63,11 @@ class Stage[T <: Bundle](gen: => T) extends Component{
 
 这里手动调用了`valCallbackRec(a,i._1)`来给Bundle中增加元素，也算是一个小小的hack，不知道是否有更优雅的方式。之前尝试直接定义val不行
 
-### 取指IF
+## 取指IF
 
 取值由一个存放指令的ROM和PC寄存器组成，ROM根据PC传来的地址，将指令读出，传给取值与译码这两级中间的缓冲寄存器。
 
-#### InstRom实现
+### InstRom实现
 
 instRomCellNum是ROM可以存放的指令条数，目前只定义为16条
 
@@ -87,7 +87,7 @@ class InstRom extends Component {
 }
 ```
 
-#### PC寄存器实现
+### PC寄存器实现
 
 ```scala
 // 每一个cycle，PC寄存器会+1（表示加一个字）
@@ -102,10 +102,10 @@ class PC extends Component{
 }
 ```
 
-### 译码ID
+## 译码ID
 译码阶段由译码模块和寄存器组组成
 
-#### 寄存器组实现
+### 寄存器组实现
 
 这里将RegHeap的接口分成一个读接口和一个写接口也是出于DRY的考虑，因为寄存器的读在译码阶段，写在写回阶段，如果将读写定义成一个接口，势必到时候在译码和写回阶段需要重新定义接口（或者空置接口）。
 
@@ -153,7 +153,7 @@ class RegHeap(regNum: Int = 32) extends  Component {
 }
 ```
 
-#### 译码模块实现
+### 译码模块实现
 
 译码模块几个模块中最复杂的，光写一个指令就这么多代码了，之后要考虑将指令与对应操作抽象出来。
 
@@ -220,7 +220,8 @@ class ID extends Component{
 
 }
 ```
-### 执行EX
+## 执行EX
+
 执行级比较简单，因为目前就一条指令。指令的定义使用枚举来区分。
 
 ```scala
@@ -258,7 +259,7 @@ object OpLogic extends SpinalEnum{
 }
 ```
 
-### 访存MEM
+## 访存MEM
 
 由于当前实现的指令ORI不需要访问内存，因此访存模块啥也没干，直接将输入输出连接起来。
 
@@ -275,7 +276,7 @@ class MEM extends Component{
 }
 ```
 
-### 写回WB
+## 写回WB
 
 写回也没干什么事，只是将要写入的寄存器地址和数据准备好，传给寄存器组接口
 
@@ -295,7 +296,7 @@ class WB extends Component{
 }
 ```
 
-### CPU整体连接
+## CPU整体连接
 
 目前看起来还稍显凌乱，之后再继续优化，两个模块之间的连接，尽量不要手动连接两个信号。
 
@@ -340,7 +341,7 @@ class CPU extends Component  with BusMasterContain {
 }
 ```
 
-### 顶层文件
+## 顶层文件
 
 最后是顶层文件，除了CPU，还有个ROM
 
@@ -357,7 +358,7 @@ class SOC extends Component {
 }
 ```
 
-### 测试
+## 测试
 
 测试指令为 h34011100
 
