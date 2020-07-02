@@ -52,6 +52,7 @@ endmodule
 
 ### case
 
+```c
 module top_module( input a,input b,input [1:0] sel, output out );
     always @ (*) begin
         out<=1'b00;
@@ -64,6 +65,7 @@ module top_module( input a,input b,input [1:0] sel, output out );
 
     end
 endmodule
+```
 
 ![此处输入图片的描述][3]
 
