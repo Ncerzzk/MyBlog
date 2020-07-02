@@ -20,6 +20,10 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 ## [标签归档](https://github.com/Ncerzzk/MyBlog/blob/master/tags.md)
 
 ## Content
+[verilog中if和case优先级的问题](https://github.com/Ncerzzk/MyBlog/blob/master/articles/verilog中if和case优先级的问题.md)
+
+[用scala写一个基本五级流水线CPU(六)第一次重构](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(六)第一次重构.md)
+
 [用scala写一个基本五级流水线CPU(五)加入分支指令(B)](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(五)加入分支指令(B).md)
 
 [用scala写一个基本五级流水线CPU(四)加入J指令](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(四)加入J指令.md)
@@ -174,9 +178,9 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 
-[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
-
 [关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
+
+[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
 

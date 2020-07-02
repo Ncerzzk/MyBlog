@@ -1,5 +1,7 @@
 ## 标签归档
 ### 技术
+[verilog中if和case优先级的问题](https://github.com/Ncerzzk/MyBlog/blob/master/articles/verilog中if和case优先级的问题.md)
+[用scala写一个基本五级流水线CPU(六)第一次重构](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(六)第一次重构.md)
 [用scala写一个基本五级流水线CPU(五)加入分支指令(B)](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(五)加入分支指令(B).md)
 [用scala写一个基本五级流水线CPU(四)加入J指令](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(四)加入J指令.md)
 [用scala写一个基本五级流水线CPU(三)增加R型指令](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(三)增加R型指令.md)
@@ -72,6 +74,8 @@
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 硬件
+[verilog中if和case优先级的问题](https://github.com/Ncerzzk/MyBlog/blob/master/articles/verilog中if和case优先级的问题.md)
+[用scala写一个基本五级流水线CPU(六)第一次重构](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(六)第一次重构.md)
 [用scala写一个基本五级流水线CPU(五)加入分支指令(B)](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(五)加入分支指令(B).md)
 [用scala写一个基本五级流水线CPU(四)加入J指令](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(四)加入J指令.md)
 [用scala写一个基本五级流水线CPU(三)增加R型指令](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(三)增加R型指令.md)
@@ -175,8 +179,8 @@
 [姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
-### 经历
-[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 无
 [关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
 [第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
+### 经历
+[关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
