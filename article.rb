@@ -86,13 +86,16 @@ class Article
     text=''
     File.open(@file_name,"r+") do |f|
       text=f.read
+      oldimgpattern = /\!\[.+?\]\[(\d+)\]/
+      oldimgresult = text.scan(oldimgpattern)
+      start = $1.to_i | 0
       imgpattern=/\[img:(.+?)\]/
       img_result=text.scan(imgpattern)
       img_result.each_with_index do |img_,index|
         img_file_name=img_[0]
-        text.sub!(imgpattern,"![此处输入图片的描述][#{index+1}]
+        text.sub!(imgpattern,"![此处输入图片的描述][#{start+index+1}]
 
-[#{index+1}]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/#{img_file_name}")
+[#{start+index+1}]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/#{img_file_name}")
       end
       f.rewind
       f.write(text)

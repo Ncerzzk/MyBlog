@@ -32,6 +32,7 @@ endmodule
 [1]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/ifnoelse.jpg
 
 ### IF（带else)
+注意，此处最后是else if ，而不是else。注意比较和下面的差别
 ```c
 module top_module( input a,input b,input [1:0] sel, output out );
     always @ (*) begin
@@ -51,8 +52,30 @@ endmodule
 
 [2]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/ifcase.jpg
 
+### IF（带else)2
+
+```c
+module top_module( input a,input b,input [1:0] sel, output out );
+    always @ (*) begin
+        out<=1'b00;
+        if(sel==2'b00)
+            out <= a&b;
+        else if(sel==2'b01)
+            out<= a|b;
+        else if(sel==2'b10)
+            out<= a^b;
+        else
+            out<= ~a&b;
+    end
+endmodule
+```
+![此处输入图片的描述][4]
+
+[4]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/case2.jpg
+
 ### case
 
+```c
 module top_module( input a,input b,input [1:0] sel, output out );
     always @ (*) begin
         out<=1'b00;
@@ -65,6 +88,7 @@ module top_module( input a,input b,input [1:0] sel, output out );
 
     end
 endmodule
+```
 
 ![此处输入图片的描述][3]
 
