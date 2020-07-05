@@ -73,6 +73,7 @@ endmodule
 
 [4]: https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/case2.jpg
 
+(注意，理论上来说这种方式也是无优先级的结构，但是在yosys中仍旧生成了优先级RTL，不知何故。)
 ### case
 
 ```c

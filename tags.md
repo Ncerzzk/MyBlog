@@ -1,5 +1,6 @@
 ## 标签归档
 ### 技术
+[SpinalHDL中一个匪夷所思的报错(Object中信号的定义)](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SpinalHDL中一个匪夷所思的报错.md)
 [verilog中if和case优先级的问题](https://github.com/Ncerzzk/MyBlog/blob/master/articles/verilog中if和case优先级的问题.md)
 [用scala写一个基本五级流水线CPU(六)第一次重构](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(六)第一次重构.md)
 [用scala写一个基本五级流水线CPU(五)加入分支指令(B)](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(五)加入分支指令(B).md)
@@ -74,6 +75,7 @@
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 硬件
+[SpinalHDL中一个匪夷所思的报错(Object中信号的定义)](https://github.com/Ncerzzk/MyBlog/blob/master/articles/SpinalHDL中一个匪夷所思的报错.md)
 [verilog中if和case优先级的问题](https://github.com/Ncerzzk/MyBlog/blob/master/articles/verilog中if和case优先级的问题.md)
 [用scala写一个基本五级流水线CPU(六)第一次重构](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(六)第一次重构.md)
 [用scala写一个基本五级流水线CPU(五)加入分支指令(B)](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(五)加入分支指令(B).md)
