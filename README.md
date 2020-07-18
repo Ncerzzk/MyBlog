@@ -20,7 +20,7 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 ## [标签归档](https://github.com/Ncerzzk/MyBlog/blob/master/tags.md)
 
 ## Content
-[用scala写一个基本五级流水线CPU(九) CP0协处理器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九) CP0协处理器.md)
+[用scala写一个基本五级流水线CPU(九)CP0协处理器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九) CP0协处理器.md)
 
 [用scala写一个基本五级流水线CPU(九)超标量](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九)双发射.md)
 

@@ -1,6 +1,6 @@
 ## 标签归档
 ### 技术
-[用scala写一个基本五级流水线CPU(九) CP0协处理器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九) CP0协处理器.md)
+[用scala写一个基本五级流水线CPU(九)CP0协处理器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九) CP0协处理器.md)
 [用scala写一个基本五级流水线CPU(九)超标量](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九)双发射.md)
 [毕设题目改动及相关笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/毕设题目改动及相关笔记.md)
 [用scala写一个基本五级流水线CPU(八)流水线控制](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(八)流水线控制.md)
@@ -80,7 +80,7 @@
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 硬件
-[用scala写一个基本五级流水线CPU(九) CP0协处理器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九) CP0协处理器.md)
+[用scala写一个基本五级流水线CPU(九)CP0协处理器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九) CP0协处理器.md)
 [用scala写一个基本五级流水线CPU(九)超标量](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九)双发射.md)
 [毕设题目改动及相关笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/毕设题目改动及相关笔记.md)
 [用scala写一个基本五级流水线CPU(八)流水线控制](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(八)流水线控制.md)

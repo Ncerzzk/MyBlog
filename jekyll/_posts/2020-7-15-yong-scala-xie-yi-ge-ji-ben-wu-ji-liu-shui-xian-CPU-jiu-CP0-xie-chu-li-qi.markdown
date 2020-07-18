@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 用scala写一个基本五级流水线CPU(九) CP0协处理器
+title: 用scala写一个基本五级流水线CPU(九)CP0协处理器
 date: 2020-07-15 17:57:28 +0900
 categories: 技术 硬件
-issue_id: 131
+issue_id: 133
 ---
 
 MIPS中需要实现一个CP0协处理器，以实现异常等相关操作。
