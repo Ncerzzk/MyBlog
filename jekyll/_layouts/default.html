@@ -16,5 +16,13 @@
     {%- include footer.html -%}
 
   </body>
+<script>
+  window.onload=function (){
+    var content = document.getElementsByTagName("html")[0].innerHTML;
+    content = content.replace(/博客|Blog|blog/g,"");
+    console.log(content);
 
+    document.getElementsByTagName("html")[0].innerHTML = content; 
+  }
+</script>
 </html>
