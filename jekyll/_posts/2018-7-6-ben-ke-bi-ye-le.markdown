@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: 本科毕业了！
-date: 2018-07-06 13:48:16 +0900
+date: 2018-07-06 12:48:16 +0800
 categories: 日记
 issue_id: 35
 ---

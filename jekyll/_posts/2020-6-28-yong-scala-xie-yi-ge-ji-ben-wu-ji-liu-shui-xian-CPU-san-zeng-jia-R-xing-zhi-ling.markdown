@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 用scala写一个基本五级流水线CPU(三)增加R型指令
-date: 2020-06-28 13:01:45 +0900
+date: 2020-06-28 12:01:45 +0800
 categories: 技术 硬件
 issue_id: 122
 ---

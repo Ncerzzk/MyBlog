@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: 解决ardupilot中使用UWB每次上电的时候坐标不一样的问题
-date: 2019-08-02 23:41:07 +0900
+date: 2019-08-02 22:41:07 +0800
 categories: 技术 飞控
 issue_id: 57
 ---

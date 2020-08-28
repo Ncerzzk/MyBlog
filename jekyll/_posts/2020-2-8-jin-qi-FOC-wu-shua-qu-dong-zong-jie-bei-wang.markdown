@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 近期FOC无刷驱动总结备忘
-date: 2020-02-08 15:32:02 +0900
+date: 2020-02-08 14:32:02 +0800
 categories: 技术 硬件
 issue_id: 74
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 一些专业名词的英文翻译
-date: 2020-03-07 20:14:23 +0900
+date: 2020-03-07 19:14:23 +0800
 categories: 技术
 issue_id: 87
 ---

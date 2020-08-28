@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 通过数据手册快速生成Altium Designer的原理图库(schlib) 
-date: 2020-03-02 12:50:50 +0900
+date: 2020-03-02 11:50:50 +0800
 categories: 技术 硬件
 issue_id: 84
 ---

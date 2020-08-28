@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: 常用总线概述
-date: 2018-09-01 10:55:08 +0900
+date: 2018-09-01 09:55:08 +0800
 categories: 硬件
 issue_id: 39
 ---

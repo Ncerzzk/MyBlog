@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: 预备队
-date: 2018-08-31 14:09:15 +0900
+date: 2018-08-31 13:09:15 +0800
 categories: 日记
 issue_id: 38
 ---

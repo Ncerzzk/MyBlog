@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: 第十四届智能车第二次热身赛
-date: 2019-03-25 23:04:23 +0900
+date: 2019-03-25 22:04:23 +0800
 categories: 日记
 issue_id: 52
 ---

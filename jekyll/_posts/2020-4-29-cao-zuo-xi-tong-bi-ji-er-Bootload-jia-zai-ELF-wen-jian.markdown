@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 操作系统笔记（二）Bootload加载ELF文件
-date: 2020-04-29 15:34:46 +0900
+date: 2020-04-29 14:34:46 +0800
 categories: 技术 操作系统
 issue_id: 103
 ---

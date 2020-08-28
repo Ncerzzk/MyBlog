@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C#中OOP平时的一些反思与思考 
-date: 2020-03-26 13:02:19 +0900
+date: 2020-03-26 12:02:19 +0800
 categories: 技术
 issue_id: 91
 ---

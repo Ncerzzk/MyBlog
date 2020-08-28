@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: 特殊人才保研始末
-date: 2017-10-25 12:10:05 +0900
+date: 2017-10-25 11:10:05 +0800
 categories: 日记
 issue_id: 21
 ---

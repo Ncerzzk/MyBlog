@@ -1,7 +1,7 @@
 ---
 layout: post
 title: verilog 笔记 N
-date: 2020-06-02 21:36:50 +0900
+date: 2020-06-02 20:36:50 +0800
 categories: 技术 硬件
 issue_id: 116
 ---

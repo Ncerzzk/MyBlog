@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: 航模的一些理论知识
-date: 2018-04-24 21:15:33 +0900
+date: 2018-04-24 20:15:33 +0800
 categories: 理论
 issue_id: 31
 ---

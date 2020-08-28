@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SpinalHDL学习
-date: 2020-06-13 22:08:06 +0900
+date: 2020-06-13 21:08:06 +0800
 categories: 技术 HDL
 issue_id: 118
 ---

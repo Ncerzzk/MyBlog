@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 无刷电机foc笔记2（V/F控制实现)
-date: 2019-09-06 19:42:18 +0900
+date: 2019-09-06 18:42:18 +0800
 categories: 硬件 技术
 issue_id: 60
 ---

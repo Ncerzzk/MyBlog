@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: ArduPilot中串口的复用
-date: 2019-03-13 15:45:17 +0900
+date: 2019-03-13 14:45:17 +0800
 categories: 技术 硬件 飞控
 issue_id: 50
 ---

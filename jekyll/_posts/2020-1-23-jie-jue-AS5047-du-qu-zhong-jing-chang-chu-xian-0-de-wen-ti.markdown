@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 解决AS5047读取中经常出现0的问题
-date: 2020-01-23 12:32:30 +0900
+date: 2020-01-23 11:32:30 +0800
 categories: 技术
 issue_id: 70
 ---

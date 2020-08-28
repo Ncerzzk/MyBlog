@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ROS学习笔记1 
-date: 2020-03-04 17:59:00 +0900
+date: 2020-03-04 16:59:00 +0800
 categories: 技术
 issue_id: 86
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HDL在线综合查看RTL的一个工具
-date: 2020-06-08 10:29:24 +0900
+date: 2020-06-08 09:29:24 +0800
 categories: 技术
 issue_id: 115
 ---

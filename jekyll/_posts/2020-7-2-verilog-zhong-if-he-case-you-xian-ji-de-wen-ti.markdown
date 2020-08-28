@@ -1,7 +1,7 @@
 ---
 layout: post
 title: verilog中if和case优先级的问题
-date: 2020-07-02 19:38:16 +0900
+date: 2020-07-02 18:38:16 +0800
 categories: 技术 硬件
 issue_id: 125
 ---

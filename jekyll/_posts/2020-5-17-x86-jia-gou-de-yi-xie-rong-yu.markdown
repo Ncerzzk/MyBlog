@@ -1,7 +1,7 @@
 ---
 layout: post
 title: x86架构的一些冗余 
-date: 2020-05-17 11:56:56 +0900
+date: 2020-05-17 10:56:56 +0800
 categories: 技术  CPU
 issue_id: 108
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 2.16日记
-date: 2020-02-16 13:32:16 +0900
+date: 2020-02-16 12:32:16 +0800
 categories: 日记
 issue_id: 76
 ---

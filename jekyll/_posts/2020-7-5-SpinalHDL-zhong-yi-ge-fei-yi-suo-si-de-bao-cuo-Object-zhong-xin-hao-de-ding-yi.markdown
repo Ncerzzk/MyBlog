@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SpinalHDL中一个匪夷所思的报错(Object中信号的定义)
-date: 2020-07-05 14:16:09 +0900
+date: 2020-07-05 13:16:09 +0800
 categories: 技术 硬件
 issue_id: 127
 ---

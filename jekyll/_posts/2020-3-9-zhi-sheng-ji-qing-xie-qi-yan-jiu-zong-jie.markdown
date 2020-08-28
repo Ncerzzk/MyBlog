@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 直升机倾斜器研究总结 
-date: 2020-03-09 13:50:26 +0900
+date: 2020-03-09 12:50:26 +0800
 categories: 技术
 issue_id: 88
 ---

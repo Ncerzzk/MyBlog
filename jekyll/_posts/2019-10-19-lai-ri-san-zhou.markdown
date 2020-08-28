@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 来日三周
-date: 2019-10-19 19:53:25 +0900
+date: 2019-10-19 18:53:25 +0800
 categories: 日记
 issue_id: 62
 ---

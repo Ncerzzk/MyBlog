@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 战棋系统的UI逻辑记录
-date: 2020-03-31 11:15:47 +0900
+date: 2020-03-31 10:15:47 +0800
 categories: 技术
 issue_id: 92
 ---

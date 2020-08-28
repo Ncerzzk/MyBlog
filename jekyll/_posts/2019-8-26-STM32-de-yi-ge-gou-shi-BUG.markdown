@@ -1,7 +1,7 @@
 ---
 layout: post
 title: STM32的一个狗屎BUG 
-date: 2019-08-26 12:36:43 +0900
+date: 2019-08-26 11:36:43 +0800
 categories: 技术 硬件
 issue_id: 58
 ---

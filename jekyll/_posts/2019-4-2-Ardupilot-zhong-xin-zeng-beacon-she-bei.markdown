@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: Ardupilot中新增beacon设备
-date: 2019-04-02 17:15:52 +0900
+date: 2019-04-02 16:15:52 +0800
 categories: 技术
 issue_id: 53
 ---

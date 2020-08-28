@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: 古剑三！
-date: 2018-12-05 17:46:26 +0900
+date: 2018-12-05 16:46:26 +0800
 categories: 日记
 issue_id: 41
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 博客程序更新，增加评论功能 
-date: 2020-02-20 19:44:00 +0900
+date: 2020-02-20 18:44:00 +0800
 categories: 博客
 issue_id: 79
 ---

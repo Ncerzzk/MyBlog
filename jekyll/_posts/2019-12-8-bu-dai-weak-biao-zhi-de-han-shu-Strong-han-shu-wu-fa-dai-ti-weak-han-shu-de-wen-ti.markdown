@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 不带__weak 标志的函数（Strong函数）无法代替weak函数的问题
-date: 2019-12-08 12:24:17 +0900
+date: 2019-12-08 11:24:17 +0800
 categories: 技术 编程
 issue_id: 66
 ---

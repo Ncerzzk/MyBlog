@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 无刷电机foc笔记 
-date: 2019-08-28 12:35:27 +0900
+date: 2019-08-28 11:35:27 +0800
 categories: 硬件 技术
 issue_id: 59
 ---
