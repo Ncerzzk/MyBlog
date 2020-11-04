@@ -20,6 +20,8 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 ## [标签归档](https://github.com/Ncerzzk/MyBlog/blob/master/tags.md)
 
 ## Content
+[3D打印机的入门与维护 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/3D打印机的入门与维护.md)
+
 [研究生期间折腾过的玩具总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/研究生期间折腾过的玩具总结.md)
 
 [解决STM32使用HAL库时，RCR寄存器写入时机与参考手册不符的问题](https://github.com/Ncerzzk/MyBlog/blob/master/articles/解决STM32使用HAL库时，RCR寄存器写入时机与参考手册不符的问题.md)
@@ -30,9 +32,9 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 
 [用scala写一个基本五级流水线CPU(九)CP0协处理器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九)CP0协处理器.md)
 
-[用scala写一个基本五级流水线CPU(九)超标量](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九)双发射.md)
-
 [毕设题目改动及相关笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/毕设题目改动及相关笔记.md)
+
+[用scala写一个基本五级流水线CPU(九)超标量](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(九)双发射.md)
 
 [用scala写一个基本五级流水线CPU(八)流水线控制](https://github.com/Ncerzzk/MyBlog/blob/master/articles/用scala写一个基本五级流水线CPU(八)流水线控制.md)
 
