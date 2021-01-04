@@ -1,5 +1,6 @@
 ## 标签归档
 ### 技术
+[VESC测量电感的方式分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/VESC测量电感分析.md)
 [3D打印机的入门与维护 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/3D打印机的入门与维护.md)
 [研究生期间折腾过的玩具总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/研究生期间折腾过的玩具总结.md)
 [解决STM32使用HAL库时，RCR寄存器写入时机与参考手册不符的问题](https://github.com/Ncerzzk/MyBlog/blob/master/articles/解决STM32使用HAL库时，RCR寄存器写入时机与参考手册不符的问题.md)
@@ -85,6 +86,7 @@
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 硬件
+[VESC测量电感的方式分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/VESC测量电感分析.md)
 [3D打印机的入门与维护 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/3D打印机的入门与维护.md)
 [研究生期间折腾过的玩具总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/研究生期间折腾过的玩具总结.md)
 [解决STM32使用HAL库时，RCR寄存器写入时机与参考手册不符的问题](https://github.com/Ncerzzk/MyBlog/blob/master/articles/解决STM32使用HAL库时，RCR寄存器写入时机与参考手册不符的问题.md)

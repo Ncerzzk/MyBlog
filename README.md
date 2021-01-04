@@ -20,6 +20,8 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 ## [标签归档](https://github.com/Ncerzzk/MyBlog/blob/master/tags.md)
 
 ## Content
+[VESC测量电感的方式分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/VESC测量电感分析.md)
+
 [3D打印机的入门与维护 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/3D打印机的入门与维护.md)
 
 [研究生期间折腾过的玩具总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/研究生期间折腾过的玩具总结.md)
