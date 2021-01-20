@@ -20,6 +20,8 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 ## [标签归档](https://github.com/Ncerzzk/MyBlog/blob/master/tags.md)
 
 ## Content
+[STM32从机SPI通信的CRC、错位问题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32从机SPI通信的CRC、错位问题.md)
+
 [VESC测量电感的方式分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/VESC测量电感分析.md)
 
 [3D打印机的入门与维护 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/3D打印机的入门与维护.md)
