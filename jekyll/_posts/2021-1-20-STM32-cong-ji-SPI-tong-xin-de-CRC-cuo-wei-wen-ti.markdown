@@ -49,9 +49,12 @@ void SPI_Slave_Fast_CSN_Handler(uint8_t flag){
     //flag 代表是上升沿中断(1)还是下降沿中断(0)
     if(flag){
         if(SPI_Slave_Err){
-            HAL_SPI_Abort(&hspi1); // 发生错误之后，需将之前的DMA终止掉，不能直接重新开始新的DMA，因为此时DMA的State还是Busy
+            while(__HAL_SPI_GET_FLAG(&hspi1,SPI_FLAG_BSY)!=RESET);  // 必须在SPI没在通信的过程中处理，否则下次还是错误
+            HAL_SPI_DeInit(&hspi1);
+            HAL_SPI_Init(&hspi1);
+            __HAL_SPI_CLEAR_OVRFLAG(&hspi1);
+            HAL_SPI_TransmitReceive_DMA(SPI_Use,Tx_Buffer,Rx_Buffer,13);
             SPI_Slave_Err=0;
-            HAL_SPI_TransmitReceive_DMA(SPI_Use,Tx_Buffer,Rx_Buffer,13); 
             return ;
         }
         FOC_Flag = Rx_Buffer[0];
@@ -66,15 +69,11 @@ void SPI_Slave_Fast_CSN_Handler(uint8_t flag){
 }
 ```
 
-上面帖子的哥们用`HAL_SPI_DeInit()`和`MX_SPI_Init()`来重新初始化,有点累赘了。经过测试，只需要Abort原来的DMA就行了。有一个猜测，直接失能（DISABLE)DMA，然后将NDTR改为原来的值（我这里是13），再重新使能，理论上应该是可以的，但是我测试好像不太行。
-
 这样修改之后，就能从SPI错位错误中恢复过来了。
 
 再分析之前用SPI_SLAVE协议为什么是疯转，而SPI_SLAVE_FAST协议是直接停止。主要原因是SPI_SLAVE_FAST中，第一个字节来标志电机的启动，为1就启动，为0就停止。如果为0，那么后面发的什么东西都无所谓了。而发生错位错误的话，基本上就是把1给移位移到后面去了，导致第一个字节收的都是0，于是电机就停了。
 
 而SPI_SLAVE协议中，电机启动和停止只在某个地方启动停止一次，之后就单纯修改占空比等等了，因此收到错误数据疯转很正常。
-
-后面知道是错位问题之后仍旧卡了一下午和一晚上，主要是我测试方法的问题。为了方便的复现问题，应该是用镊子碰MI MO 或者SCK，来造成（CRC错误或者错位错误），但我前面一直是碰CSN，导致CSN的中断疯狂嵌套等等，从而一直以为恢复方法不对。
 
 留念一下当时的分析草稿，当时万念俱灰，都没心思好好写字了。
 
