@@ -1,5 +1,6 @@
 ## 标签归档
 ### 技术
+[近期硬件上的设计失误记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/近期硬件上的设计失误记录.md)
 [STM32从机SPI通信的CRC、错位问题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32从机SPI通信的CRC、错位问题.md)
 [VESC测量电感的方式分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/VESC测量电感分析.md)
 [3D打印机的入门与维护 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/3D打印机的入门与维护.md)
@@ -87,6 +88,7 @@
 [从头设计一个四旋翼飞行器](https://github.com/Ncerzzk/MyBlog/blob/master/articles/从头设计一个四旋翼飞行器.md)
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
 ### 硬件
+[近期硬件上的设计失误记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/近期硬件上的设计失误记录.md)
 [STM32从机SPI通信的CRC、错位问题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32从机SPI通信的CRC、错位问题.md)
 [VESC测量电感的方式分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/VESC测量电感分析.md)
 [3D打印机的入门与维护 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/3D打印机的入门与维护.md)
@@ -210,8 +212,8 @@
 [姿态解算-四元数学习笔记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/姿态解算-四元数学习笔记.md)
 ### ruby
 [RPG_maker_XP中脚本执行流程分析](https://github.com/Ncerzzk/MyBlog/blob/master/articles/RPG_maker_XP中脚本执行流程分析.md)
+### 无
+[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
+[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
 ### 经历
 [关于2017年电设四旋翼的一些反思和总结](https://github.com/Ncerzzk/MyBlog/blob/master/articles/关于2017年电设四旋翼的一些反思和总结.md)
-### 无
-[第一篇Git博客](https://github.com/Ncerzzk/MyBlog/blob/master/articles/第一篇Git博客.md)
-[关于我](https://github.com/Ncerzzk/MyBlog/blob/master/articles/about.md)
