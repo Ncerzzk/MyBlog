@@ -24,8 +24,9 @@ void init_once()
 }
 ```
 
-## Work Queues Init
 除了第一句以外，其他的看起来都跟调度可能有关，挨个去看看。
+
+## Work Queues Init
 
 ```cpp
 void work_queues_init(void)
@@ -55,9 +56,9 @@ void work_queues_init(void)
 }
 ```
 
-其中，$px4_task_spawn_cmd$是用来新建一个可调度的task，SCHED_DEFAULT是一个宏定义，定义为：SCHED_FIFO，对linux比较熟悉的应该知道，这是一种实时调度策略，
+其中，`px4_task_spawn_cmd`是用来新建一个可调度的task，SCHED_DEFAULT是一个宏定义，定义为：SCHED_FIFO，对linux比较熟悉的应该知道，这是一种实时调度策略，
 高优先级线程可以抢占低优先级线程，并且如果高优先级线程不主动释放CPU，低优先级线程是无法执行的。
-$px4_task_spawn_cmd$函数声明为:
+`px4_task_spawn_cmd`函数声明为:
 ```cpp
 px4_task_t px4_task_spawn_cmd(const char *name, int scheduler, int priority, int stack_size, px4_main_t entry,
 			      char *const argv[])
@@ -203,10 +204,10 @@ static void work_process(struct wqueue_s *wqueue, int lock_id)
 ```
 
 到这里，调度的逻辑已经比较清晰了，即通过两个work_queue，这两个work_queue自身通过linux得SCHED_FIFO来调度，在它们内部，会自己进行调度。
-刚刚分析的主要是$work_hpthread$,但实际上$work_lpthread$、$work_hrtthread$的流程也几乎是一样的，这里就不再分析了。
+刚刚分析的主要是`work_hpthread`,但实际上`work_lpthread`、`work_hrtthread`的流程也几乎是一样的，这里就不再分析了。
 
 
-总结一下这一部分，基本就是三种work queue的初始化，分别是hpthread（高优先级） lphread（低优先级） hrtthread（hrt应该翻译为高分辨率定时器、还是翻译为高实时性呢，我倾向于后者，因为这种线程的优先级比hpthread还高。但是又由于PX4其他地方的hrt都是关于高分辨率定时器的，因此可能确实指的是定时器）
+总结一下这一部分，基本就是三种work queue的初始化，分别是hpthread（高优先级） lphread（低优先级）和hrtthread(依赖高分辨率定时器的workqueue)
 
 ## Platform Init
 接下来是平台级的一些初始化，
@@ -268,7 +269,7 @@ WorkQueueManagerRun(int, char **)
 }
 ```
 
-那么什么时候会往$_wq_manager_create_queue$添加元素呢？首先是$WorkQueueFindOrCreate$，该函数会往$_wq_manager_create_queue$ push 一个新元素。
+那么什么时候会往`_wq_manager_create_queue`添加元素呢？首先是`WorkQueueFindOrCreate`，该函数会往`_wq_manager_create_queue` push 一个新元素。
 
 ```cpp
 WorkQueue *
@@ -308,7 +309,7 @@ WorkQueueFindOrCreate(const wq_config_t &new_wq)
 }
 ```
 
-而$WorkQueueFindOrCreate$ 又在$WorkItem::Init$中被调用
+而`WorkQueueFindOrCreate` 又在`WorkItem::Init`中被调用
 
 ```cpp
 bool WorkItem::Init(const wq_config_t &config)
@@ -329,7 +330,7 @@ bool WorkItem::Init(const wq_config_t &config)
 }
 ```
 
-什么是$WorkItem$？随手举个例子，如固定翼的控制模块：
+什么是`WorkItem`？随手举个例子，如固定翼的控制模块：
 
 ```cpp
 FixedwingPositionControl::FixedwingPositionControl(bool vtol) :
@@ -343,7 +344,7 @@ FixedwingPositionControl::FixedwingPositionControl(bool vtol) :
 
 也就是说，在PX4的一些组件模块初始化的时候，会创建一个WorkItem，然后将与该WorkItem关联的workqueue加到待初始化的work queue列表中，由WorkQueueManager来实际地创建线程。
 
-不过，需要注意的是，这里创建的都是*线程*，也就是和一开始讨论的hpthread lpthread等线程都是同级的关系。有哪些操作是通过线程直接调度的，可以查看$wq_configurations$。可以看到，里面大部分都是一些接口，如I2C、SPI（另外高度、速度控制也作为一个work queue）。可以推测，每种接口都是一个work queue，如一个I2C总线下挂多个设备，那么每个设备的操作就是该work queue的一项work。每项work的调度就是最开始hpthread那样地调度了。
+不过，需要注意的是，这里创建的都是*线程*，也就是和一开始讨论的hpthread lpthread等线程都是同级的关系。有哪些操作是通过线程直接调度的，可以查看`wq_configurations`。可以看到，里面大部分都是一些接口，如I2C、SPI（另外高度、速度控制也作为一个work queue）。可以推测，每种接口都是一个work queue，如一个I2C总线下挂多个设备，那么每个设备的操作就是该work queue的一项work。每项work的调度就是最开始hpthread那样地调度了。
 
 
 ## 总结
@@ -354,8 +355,9 @@ FixedwingPositionControl::FixedwingPositionControl(bool vtol) :
 
 一个workqueue下会有多个work，workqueue也是通过FIFO的方式来调度，但是与linux的SCHED_FIFO不同，这里的FIFO不会发生抢占（因为这里面的每项work已经没有优先级的区分了）。
 
-那么，这种方式有缺点吗？我想应该是有的，每个线程（或者说workqueue）都要仔细考虑其优先级，如果高优先级的workqueue中有太多的work，那么显然它是不会将CPU释放给低优先级的workqueue的，因此如果处理器性能不够，高优先级的线程实时性能够得到保证，但是低优先级的线程实时性可能就无法保证了。（但是，低优先级线程的实时性重要吗？如果重要，怎么不设置为高优先级呢？）
+那么，这种方式有缺点吗？我想应该是有的，每个线程（或者说workqueue）都要仔细考虑其优先级，如果高优先级的workqueue中有太多的work，那么显然它是不会将CPU释放给低优先级的workqueue的，因此如果处理器性能不够，高优先级的线程实时性能够得到保证，但是低优先级的线程实时性可能就无法保证了。（但是，低优先级线程的实时性重要吗？如果重要，怎么不设置为高优先级呢？）另外，其他rtos的实现不也是如此吗，如果有一个高优先级的线程在执行，其他低优先级的线程同样无法抢占（在抢占式调度下），因此这样说来，实际上这种方式并不比rtos在调度上逊色太多。
 
+此外，linux上要运行PX4，也是要打实时性补丁的，虽然PX4官方没提到，但是其提供的在树莓派上运行的一个OS，实际上是已经打过补丁的了。
 
 ## 函数声明、变量类型备查
 
