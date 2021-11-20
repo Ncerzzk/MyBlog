@@ -1,5 +1,8 @@
 ## 标签归档
+###  飞控
+[PX4的linux调度](https://github.com/Ncerzzk/MyBlog/blob/master/articles/PX4的linux调度.md)
 ### 技术
+[一些备忘](https://github.com/Ncerzzk/MyBlog/blob/master/articles/一些备忘.md)
 [Nuttx学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/Nuttx学习.md)
 [近期硬件上的设计失误记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/近期硬件上的设计失误记录.md)
 [STM32从机SPI通信的CRC、错位问题 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/STM32从机SPI通信的CRC、错位问题.md)

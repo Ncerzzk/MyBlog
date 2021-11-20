@@ -20,6 +20,10 @@ ctime:2018-12-05 11:07:17 +0800|1543979237
 ## [标签归档](https://github.com/Ncerzzk/MyBlog/blob/master/tags.md)
 
 ## Content
+[PX4的linux调度](https://github.com/Ncerzzk/MyBlog/blob/master/articles/PX4的linux调度.md)
+
+[一些备忘](https://github.com/Ncerzzk/MyBlog/blob/master/articles/一些备忘.md)
+
 [Nuttx学习](https://github.com/Ncerzzk/MyBlog/blob/master/articles/Nuttx学习.md)
 
 [近期硬件上的设计失误记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/近期硬件上的设计失误记录.md)
