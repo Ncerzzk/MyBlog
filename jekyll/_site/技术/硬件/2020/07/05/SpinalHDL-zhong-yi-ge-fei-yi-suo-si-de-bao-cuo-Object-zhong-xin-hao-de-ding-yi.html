@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>SpinalHDL中一个匪夷所思的报错(Object中信号的定义) | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="SpinalHDL中一个匪夷所思的报错(Object中信号的定义)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="这几天在重构CPU，免不了要对之前写的代码动刀。" />
+<meta property="og:description" content="这几天在重构CPU，免不了要对之前写的代码动刀。" />
+<link rel="canonical" href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/07/05/SpinalHDL-zhong-yi-ge-fei-yi-suo-si-de-bao-cuo-Object-zhong-xin-hao-de-ding-yi.html" />
+<meta property="og:url" content="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/07/05/SpinalHDL-zhong-yi-ge-fei-yi-suo-si-de-bao-cuo-Object-zhong-xin-hao-de-ding-yi.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-05T13:16:09+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/07/05/SpinalHDL-zhong-yi-ge-fei-yi-suo-si-de-bao-cuo-Object-zhong-xin-hao-de-ding-yi.html"},"url":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/07/05/SpinalHDL-zhong-yi-ge-fei-yi-suo-si-de-bao-cuo-Object-zhong-xin-hao-de-ding-yi.html","headline":"SpinalHDL中一个匪夷所思的报错(Object中信号的定义)","dateModified":"2020-07-05T13:16:09+08:00","datePublished":"2020-07-05T13:16:09+08:00","description":"这几天在重构CPU，免不了要对之前写的代码动刀。","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://ncerzzk.github.io/feed.xml" title="Huangzzk's Blog" /><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9a0d201458675d03a87e467407e4889b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/aboutme/">关于</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <style type="text/css">
+.css_btn_class {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #dcdcdc;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffffff), color-stop(100%, #f6f6f6) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
+	background:-ms-linear-gradient( top, #ffffff 5%, #f6f6f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
+	background-color:#ffffff;
+	color:#666666;
+	display:inline-block;
+	text-shadow:1px 1px 0px #ffffff;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	box-shadow:inset 1px 1px 0px 0px #ffffff;
+}.css_btn_class:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background-color:#f6f6f6;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+.comment_username{
+font-size:14px;
+margin-left:5px;
+}
+.comment_time{
+font-size:14px;	
+	float:right;
+	margin-right:5px;
+}
+.comment{
+	list-style:none;
+}
+.comment_username{
+	color: #24292e;
+	text-decoration: none;
+	}
+	.comment_user_img{
+	float:left;
+}
+.comment_box{
+	margin-left:40px;
+    color: #24292e;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+}
+.comment_content{
+margin:10px 10px 10px 10px;
+}
+
+#comment{
+	margin-top:30px;
+}
+
+.comment{
+	margin-top:30px;
+}
+
+/* CSS按钮生成器 */
+</style>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">SpinalHDL中一个匪夷所思的报错(Object中信号的定义)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-07-05T13:16:09+08:00" itemprop="datePublished">Jul 5, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>这几天在重构CPU，免不了要对之前写的代码动刀。</p>
+
+<p>今天尝试修改了一些东西后，发现编译能过，但是生成verilog一直失败，报错报的是：Hierarchy violation</p>
+
+<p>如：</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">HIERARCHY</span> <span class="nc">VIOLATION</span> <span class="k">:</span> <span class="o">(</span><span class="kt">toplevel/io_a</span> <span class="kt">:</span> <span class="kt">in</span> <span class="kt">UInt</span><span class="o">[</span><span class="kt">???</span> <span class="kt">bits</span><span class="o">])</span> <span class="n">is</span> <span class="n">drived</span> <span class="n">by</span> <span class="nc">XXX</span> <span class="o">,</span> <span class="n">but</span> <span class="n">isn</span><span class="ss">'t </span><span class="n">accessible</span> <span class="n">in</span> <span class="n">the</span> <span class="nc">XXX</span> <span class="n">component</span><span class="o">.</span>
+</code></pre></div></div>
+
+<p>依照之前的经验，报这个错应该是因为把两个层级不一致的信号给连接起来了， 如a := b ，但由于b可能定义在更低的层级里，导致赋值失败。</p>
+
+<p>然而我去看一下报错相关的信号，我今天重构的东西跟他并没有半毛钱关系阿？到底为何这样。</p>
+
+<p>我先把今天增加的东西都删掉（早知道昨天晚上提交一下git了），重新编译运行，还是报错。奇怪。又把代码改回昨天重构的第一个版本，还是失败。
+奇怪，重构的第一个版本肯定是对的的，不然我怎么会继续往下重构呢。于是我接着把重构的代码都删了，改回没重构的样子。编译运行，虽然还是报错，
+但是这次它提示我，是某个静态枚举中，有两个值重复了……</p>
+
+<p>如:</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">object</span> <span class="nc">InstOPEnum</span> <span class="k">extends</span> <span class="nc">SpinalEnum</span><span class="o">{</span>  <span class="c1">// 指令操作码枚举</span>
+  <span class="k">val</span> <span class="nv">a</span><span class="o">,</span><span class="n">b</span> <span class="k">=</span><span class="nf">newElement</span><span class="o">()</span>
+  <span class="n">defaultEncoding</span> <span class="k">=</span> <span class="nc">SpinalEnumEncoding</span><span class="o">(</span><span class="s">"static"</span><span class="o">)(</span>
+      <span class="n">a</span><span class="o">-&gt;</span><span class="mh">0x01</span><span class="o">,</span>
+      <span class="n">b</span><span class="o">-&gt;</span><span class="mh">0x01</span>
+  <span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>我突然想起来，是因为昨天晚上想把J指令全加上，但是J指令有两个是用OP区别（J JAL)，有两个是用FUNC区别（JALR JR），这对于我现在的指令系统来说，
+需要改动一些东西，于是今天早上就开始重构，准备改变译码方式，但是昨天晚上写上的错误枚举没有删掉，导致这个静态枚举生成失败。</p>
+
+<p>于是我把静态枚举改正，再加上今天和昨天晚上的重构内容，编译运行，正常了。What a fuck! 但是，为什么一个静态枚举生成失败，反而会影响到其他代码？导致它报别的地方的错误呢？</p>
+
+<p>经过仔细分析，发现原因如下：</p>
+
+<p>最主要的原因是我在一个object中，定义了某些信号，类似于<code class="highlighter-rouge">val xx = True</code>或者定义<code class="highlighter-rouge">val xxx=B(0)</code>这样的语句。而我在译码模块中，会用到这个object。
+如果说object的第一次调用是在ID模块中，那么正常情况下这样写是没问题的。在scala中，object在第一次使用的时候被创建，也就是说这个object被创建的时候，把那些信号也都定义了，此时那些信号的层级就在ID模块下。</p>
+
+<p>但是，但是来了。但是由于我在object中用到了上面那个错误的枚举。而那个静态枚举生成失败，导致这个object没有在ID中被创建，具体在哪里被创建我就没有仔细去看了，于是上面定义的信号显然就不在ID模块的层级下。</p>
+
+<p>而我在ID模块中，就是使用这些信号来驱动ID模块的某些端口，在这种情况，当然会报出Hierarchy violation的错误，这不冤。</p>
+
+<p>那么如何修改这样的问题呢？现在把那个错误枚举修复了，可以正常生成了，但这就解决问题了么？显然没有，下次可能某个地方写错了，或者在不小心在其他地方用到这个object，也会导致相同的问题。那</p>
+
+<p>是否在spinalHDL中不应该使用object？显然不是，SpinalHDL官方的VexRiscv中，也大量使用了object。当然了，把所有的object都改成普通类，然后在用的地方实例化，是可以解决这样的问题，但显得过于累赘，增加代码的丑陋度。</p>
+
+<p>最好的解决办法是：不要在object中用<code class="highlighter-rouge">val</code>直接定义信号，而应使用<code class="highlighter-rouge">def</code>来定义信号。这样，这个信号的定义的地方，就取决于这个信号使用的地方，而不是object创建的地方了（毕竟有很多因素会影响object在什么时候创建）<strong>（当然了，这只是针对SpinalHDL中的”HardType”，如Bits,Bool这些，如果只是定义普通的Int之类的，无所谓）</strong></p>
+
+<p>在SpinalHDL的Core中关于True和Flase的定义中：</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cm">/**
+    * True / False definition
+    */</span>
+  <span class="k">def</span> <span class="nf">True</span>  <span class="k">=</span> <span class="nc">Bool</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="c1">//Should be def, not val, else it will create cross hierarchy usage of the same instance</span>
+  <span class="k">def</span> <span class="nf">False</span> <span class="k">=</span> <span class="nc">Bool</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>有这样一句注释，我第一次看的时候不懂什么意思，现在懂了。</p>
+
+
+  </div><!--
+	<a href="https://github.com/Ncerzzk/Myblog/issues/127" class="css_btn_class">添加留言</a>
+	-->
+	
+<div id="comment">
+<li class="comment">
+	
+	<img class="comment_user_img"  height="40" width="40" src="https://avatars2.githubusercontent.com/u/9284611?v=4"></img>
+	<div class="comment_box">
+	<a class="comment_username" href="#">Username</a>
+	<span class="comment_time">Comment at 2019.5.13</span>
+	<div class="comment_content">Here is the Content</div>
+	</div>
+</li>
+</div>
+		
+	
+  <a class="u-url" href="/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/07/05/SpinalHDL-zhong-yi-ge-fei-yi-suo-si-de-bao-cuo-Object-zhong-xin-hao-de-ding-yi.html" hidden></a>
+</article>
+
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+</script>
+
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).hide();
+  });
+});
+var h=$("#comment").html();
+var user="Ncerzzk";
+var repo="Myblog";
+var issueid="127";
+$("#comment").html("");
+$.getJSON("https://api.github.com/repos/"+user+"/"+repo+"/issues/"+issueid+"/comments", function(json){
+  for(i in json){
+	  $("#comment").append(h);
+	  $(".comment_username:last").text(json[i].user.login);
+	  $(".comment_username:last").attr("href",json[i].user.html_url);
+	  $(".comment_content:last").text(json[i].body);
+	  $(".comment_time:last").text(json[i].created_at);
+	  $(".comment_user_img:last").attr("src",json[i].user.avatar_url);
+  }
+});
+</script>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Hello,world!</p>
+      </div>
+    </div>
+	<div>
+		<a href="http://beian.miit.gov.cn/">闽ICP备20002143号</a>
+	</div>
+  </div>
+
+</footer>
+</body>
+<script>
+  window.onload=function (){
+    var content = document.getElementsByTagName("html")[0].innerHTML;
+    content = content.replace(/博客|Blog|blog/g,"");
+    console.log(content);
+
+    document.getElementsByTagName("html")[0].innerHTML = content; 
+  }
+</script>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>STM32从机SPI通信的CRC、错位问题 | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="STM32从机SPI通信的CRC、错位问题" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="最近在调飞机，飞控需要发送电机转速命令给驱动板，使用SPI协议。之前在学校的时候我已经写好一个SPI_Slave的协议，用于STM32 主从通信。" />
+<meta property="og:description" content="最近在调飞机，飞控需要发送电机转速命令给驱动板，使用SPI协议。之前在学校的时候我已经写好一个SPI_Slave的协议，用于STM32 主从通信。" />
+<link rel="canonical" href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/20/STM32-cong-ji-SPI-tong-xin-de-CRC-cuo-wei-wen-ti.html" />
+<meta property="og:url" content="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/20/STM32-cong-ji-SPI-tong-xin-de-CRC-cuo-wei-wen-ti.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-20T22:11:44+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/20/STM32-cong-ji-SPI-tong-xin-de-CRC-cuo-wei-wen-ti.html"},"url":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/20/STM32-cong-ji-SPI-tong-xin-de-CRC-cuo-wei-wen-ti.html","headline":"STM32从机SPI通信的CRC、错位问题","dateModified":"2021-01-20T22:11:44+08:00","datePublished":"2021-01-20T22:11:44+08:00","description":"最近在调飞机，飞控需要发送电机转速命令给驱动板，使用SPI协议。之前在学校的时候我已经写好一个SPI_Slave的协议，用于STM32 主从通信。","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://ncerzzk.github.io/feed.xml" title="Huangzzk's Blog" /><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9a0d201458675d03a87e467407e4889b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/aboutme/">关于</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <style type="text/css">
+.css_btn_class {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #dcdcdc;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffffff), color-stop(100%, #f6f6f6) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
+	background:-ms-linear-gradient( top, #ffffff 5%, #f6f6f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
+	background-color:#ffffff;
+	color:#666666;
+	display:inline-block;
+	text-shadow:1px 1px 0px #ffffff;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	box-shadow:inset 1px 1px 0px 0px #ffffff;
+}.css_btn_class:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background-color:#f6f6f6;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+.comment_username{
+font-size:14px;
+margin-left:5px;
+}
+.comment_time{
+font-size:14px;	
+	float:right;
+	margin-right:5px;
+}
+.comment{
+	list-style:none;
+}
+.comment_username{
+	color: #24292e;
+	text-decoration: none;
+	}
+	.comment_user_img{
+	float:left;
+}
+.comment_box{
+	margin-left:40px;
+    color: #24292e;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+}
+.comment_content{
+margin:10px 10px 10px 10px;
+}
+
+#comment{
+	margin-top:30px;
+}
+
+.comment{
+	margin-top:30px;
+}
+
+/* CSS按钮生成器 */
+</style>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">STM32从机SPI通信的CRC、错位问题</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-01-20T22:11:44+08:00" itemprop="datePublished">Jan 20, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>最近在调飞机，飞控需要发送电机转速命令给驱动板，使用SPI协议。之前在学校的时候我已经写好一个SPI_Slave的协议，用于STM32 主从通信。</p>
+
+<p>基于该协议，可以实现主机读取、写入从机的某些变量（相当于某些SPI协议芯片的的寄存器），从而修改驱动板中关于速度等等变量，通过直接修改串口的Rx_buffer等变量，还可以实现SPI转串口，从而通过飞控直接发送串口命令给驱动板。</p>
+
+<p>但回来实际使用的时候发现，稍微提高一下转速，电机就会卡住、或者疯转，总之再也无法收到SPI命令。但是如果低速或者不变速运行，不会发生错误。</p>
+
+<p>于是这两天都在调试这个问题。</p>
+
+<p>一开始我以为是我的协议过于臃肿了，毕竟为了实现读取某个变量，需要主机先发送要读|写的变量Index，然后发送要写入的指或者接收从机发来的数据。而主控发送一个封包，需要修改占空比、相位、加减速占空比三个变量，每修改一个变量之间还需要一定的延时。
+又或者是CSN拉低之后，等待的时间太少就直接发起通信了，从机还没反应过来。</p>
+
+<p>基于这些猜测，我重新写了个SPI_Slave_Fast，直接使用固定长度的13字节封包来进行通信。从机也就是驱动板使用SPI的DMA来发送和接收，主机直接使用轮询发送接收。但是测试后发现问题依旧，只是SPI出错后，不会疯转了，电机直接停止（也不是卡住）。</p>
+
+<p>由于想要保证驱动板接收的命令或者数据的正确性，我开启了CRC校验，出现这个问题后，以为是CRC校验错了，导致什么不可恢复。于是先将CRC去掉了，问题依旧。猜测是否是发生了溢出（OVR），因为调试的时候发现进入SPI中断的时候，溢出标志位都为1，据手册讲，如果发生了溢出，在清除溢出标志位之前，DR寄存器的值不会更新。尽管在HAL库的SPI中断已经清除了标志位，还是开始在各种地方疯狂清除溢出标志位，收效甚微。后面分析应该不是发生了OVR，调试的时候发生OVR是因为单步调试使DR寄存器来不及读出，从而导致溢出。全速跑的时候在SPI中断打了log也支持这一推理。</p>
+
+<p>排除溢出后，突然想到之前在STM32 SPI DMA CRC等关键词时，有人提到错位的问题。仔细思考了一下，发现极有可能是这个问题。在无CRC的情况下，多接收或者少接收了几个SCLK。假设一共要收13个字节，从机多收了几个SCLK，那么在13个字节还没收完的时候，它就觉得自己收完了，开始触发DMA完成中断。而我在DMA完成中断中又开启DMA的下一轮接收，因此周而复始，会永远多收了几个SCLK，导致数据不对。</p>
+
+<p>开始搜索相关问题，发现有相同问题的人不少，但是鲜有人提出解决方法。</p>
+
+<p>ST中文社区的一个哥们给了我不少启发，原帖地址：
+https://www.stmcu.org.cn/module/forum/thread-611901-1-1.html</p>
+
+<p>根据之前的分析，不能直接在DMA完成的时候直接又把DMA开了，因为此时可能已经多收或者漏收了几个SCLK。需要在发现数据错误的时候进行恢复，恢复完再重开DMA。如果不开CRC的话，是无法方便发现数据错误的，可能只能在机毁人亡的时候才发现。而开启CRC的话，数据不对会触发SPI错误中断。因此在错误中断回调中稍微立了个标志位：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static</span> <span class="kt">uint8_t</span> <span class="n">SPI_Slave_Err</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">HAL_SPI_ErrorCallback</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span> <span class="o">*</span><span class="n">hspi</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">hspi</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">SPI1</span><span class="p">){</span>
+      <span class="n">uprintf</span><span class="p">(</span><span class="s">"CRC!</span><span class="se">\r\n</span><span class="s">"</span><span class="p">);</span>
+      <span class="n">__HAL_SPI_CLEAR_CRCERRFLAG</span><span class="p">(</span><span class="n">hspi</span><span class="p">);</span>
+      <span class="n">__HAL_SPI_CLEAR_OVRFLAG</span><span class="p">(</span><span class="n">hspi</span><span class="p">);</span>   <span class="c1">// 在HAL的SPI中断中实际上已经处理过了，但是有可能清空OVR后关闭中断前，又来SPI数据，导致又溢出了，因此这里需要再清一下</span>
+      <span class="n">SPI_Slave_Err</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>   <span class="c1">// 主要是立个标志，让我们知道数据错了</span>
+      <span class="k">return</span> <span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>在CSN的中断中处理错误</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">SPI_Slave_Fast_CSN_Handler</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">flag</span><span class="p">){</span>
+    <span class="c1">//flag 代表是上升沿中断(1)还是下降沿中断(0)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">flag</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">SPI_Slave_Err</span><span class="p">){</span>
+            <span class="k">while</span><span class="p">(</span><span class="n">__HAL_SPI_GET_FLAG</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hspi1</span><span class="p">,</span><span class="n">SPI_FLAG_BSY</span><span class="p">)</span><span class="o">!=</span><span class="n">RESET</span><span class="p">);</span>  <span class="c1">// 必须在SPI没在通信的过程中处理，否则下次还是错误</span>
+            <span class="n">HAL_SPI_DeInit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hspi1</span><span class="p">);</span>
+            <span class="n">HAL_SPI_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hspi1</span><span class="p">);</span>
+            <span class="n">__HAL_SPI_CLEAR_OVRFLAG</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hspi1</span><span class="p">);</span>
+            <span class="n">HAL_SPI_TransmitReceive_DMA</span><span class="p">(</span><span class="n">SPI_Use</span><span class="p">,</span><span class="n">Tx_Buffer</span><span class="p">,</span><span class="n">Rx_Buffer</span><span class="p">,</span><span class="mi">13</span><span class="p">);</span>
+            <span class="n">SPI_Slave_Err</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+            <span class="k">return</span> <span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">FOC_Flag</span> <span class="o">=</span> <span class="n">Rx_Buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Base_Duty</span><span class="p">,</span><span class="n">Rx_Buffer</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+        <span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Duty_Amp</span><span class="p">,</span><span class="n">Rx_Buffer</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+        <span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Phi</span><span class="p">,</span><span class="n">Rx_Buffer</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="mi">4</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+        <span class="n">TX_Data_Install</span><span class="p">();</span>
+        <span class="n">HAL_SPI_TransmitReceive_DMA</span><span class="p">(</span><span class="n">SPI_Use</span><span class="p">,</span><span class="n">Tx_Buffer</span><span class="p">,</span><span class="n">Rx_Buffer</span><span class="p">,</span><span class="mi">13</span><span class="p">);</span>
+        <span class="c1">//uprintf("n");</span>
+        <span class="c1">//uprintf("%d %f %f %f \r\n",FOC_Flag,Base_Duty,Duty_Amp,Phi);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>这样修改之后，就能从SPI错位错误中恢复过来了。</p>
+
+<p>再分析之前用SPI_SLAVE协议为什么是疯转，而SPI_SLAVE_FAST协议是直接停止。主要原因是SPI_SLAVE_FAST中，第一个字节来标志电机的启动，为1就启动，为0就停止。如果为0，那么后面发的什么东西都无所谓了。而发生错位错误的话，基本上就是把1给移位移到后面去了，导致第一个字节收的都是0，于是电机就停了。</p>
+
+<p>而SPI_SLAVE协议中，电机启动和停止只在某个地方启动停止一次，之后就单纯修改占空比等等了，因此收到错误数据疯转很正常。</p>
+
+<p>留念一下当时的分析草稿，当时万念俱灰，都没心思好好写字了。</p>
+
+<p><img src="https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/stm32crc.jpg" alt="此处输入图片的描述" /></p>
+
+
+  </div><!--
+	<a href="https://github.com/Ncerzzk/Myblog/issues/145" class="css_btn_class">添加留言</a>
+	-->
+	
+<div id="comment">
+<li class="comment">
+	
+	<img class="comment_user_img"  height="40" width="40" src="https://avatars2.githubusercontent.com/u/9284611?v=4"></img>
+	<div class="comment_box">
+	<a class="comment_username" href="#">Username</a>
+	<span class="comment_time">Comment at 2019.5.13</span>
+	<div class="comment_content">Here is the Content</div>
+	</div>
+</li>
+</div>
+		
+	
+  <a class="u-url" href="/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/20/STM32-cong-ji-SPI-tong-xin-de-CRC-cuo-wei-wen-ti.html" hidden></a>
+</article>
+
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+</script>
+
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).hide();
+  });
+});
+var h=$("#comment").html();
+var user="Ncerzzk";
+var repo="Myblog";
+var issueid="145";
+$("#comment").html("");
+$.getJSON("https://api.github.com/repos/"+user+"/"+repo+"/issues/"+issueid+"/comments", function(json){
+  for(i in json){
+	  $("#comment").append(h);
+	  $(".comment_username:last").text(json[i].user.login);
+	  $(".comment_username:last").attr("href",json[i].user.html_url);
+	  $(".comment_content:last").text(json[i].body);
+	  $(".comment_time:last").text(json[i].created_at);
+	  $(".comment_user_img:last").attr("src",json[i].user.avatar_url);
+  }
+});
+</script>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Hello,world!</p>
+      </div>
+    </div>
+	<div>
+		<a href="http://beian.miit.gov.cn/">闽ICP备20002143号</a>
+	</div>
+  </div>
+
+</footer>
+</body>
+<script>
+  window.onload=function (){
+    var content = document.getElementsByTagName("html")[0].innerHTML;
+    content = content.replace(/博客|Blog|blog/g,"");
+    console.log(content);
+
+    document.getElementsByTagName("html")[0].innerHTML = content; 
+  }
+</script>
+</html>

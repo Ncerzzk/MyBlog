@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>ArduPilot中串口的复用 | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="ArduPilot中串口的复用" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="ardupilot中因为项目太庞大，初看串口的复用很是疑惑。" />
+<meta property="og:description" content="ardupilot中因为项目太庞大，初看串口的复用很是疑惑。" />
+<link rel="canonical" href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/%E9%A3%9E%E6%8E%A7/2019/03/13/ArduPilot-zhong-chuan-kou-de-fu-yong.html" />
+<meta property="og:url" content="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/%E9%A3%9E%E6%8E%A7/2019/03/13/ArduPilot-zhong-chuan-kou-de-fu-yong.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-03-13T14:45:17+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/%E9%A3%9E%E6%8E%A7/2019/03/13/ArduPilot-zhong-chuan-kou-de-fu-yong.html"},"url":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/%E9%A3%9E%E6%8E%A7/2019/03/13/ArduPilot-zhong-chuan-kou-de-fu-yong.html","headline":"ArduPilot中串口的复用","dateModified":"2019-03-13T14:45:17+08:00","datePublished":"2019-03-13T14:45:17+08:00","description":"ardupilot中因为项目太庞大，初看串口的复用很是疑惑。","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://ncerzzk.github.io/feed.xml" title="Huangzzk's Blog" /><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9a0d201458675d03a87e467407e4889b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/aboutme/">关于</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <style type="text/css">
+.css_btn_class {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #dcdcdc;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffffff), color-stop(100%, #f6f6f6) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
+	background:-ms-linear-gradient( top, #ffffff 5%, #f6f6f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
+	background-color:#ffffff;
+	color:#666666;
+	display:inline-block;
+	text-shadow:1px 1px 0px #ffffff;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	box-shadow:inset 1px 1px 0px 0px #ffffff;
+}.css_btn_class:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background-color:#f6f6f6;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+.comment_username{
+font-size:14px;
+margin-left:5px;
+}
+.comment_time{
+font-size:14px;	
+	float:right;
+	margin-right:5px;
+}
+.comment{
+	list-style:none;
+}
+.comment_username{
+	color: #24292e;
+	text-decoration: none;
+	}
+	.comment_user_img{
+	float:left;
+}
+.comment_box{
+	margin-left:40px;
+    color: #24292e;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+}
+.comment_content{
+margin:10px 10px 10px 10px;
+}
+
+#comment{
+	margin-top:30px;
+}
+
+.comment{
+	margin-top:30px;
+}
+
+/* CSS按钮生成器 */
+</style>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">ArduPilot中串口的复用</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-03-13T14:45:17+08:00" itemprop="datePublished">Mar 13, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>ardupilot中因为项目太庞大，初看串口的复用很是疑惑。</p>
+
+<p>仔细一看的话，其实人家的实现挺有技巧性的。</p>
+
+<p>所有需要从串口中读取数据的设备，一般要实现一个Backend类（后端类）的子类，用于与底层打交道。如<code class="highlighter-rouge">AP_Beacon_Pozyx</code>继承自<code class="highlighter-rouge">AP_Beacon_Backend</code>。</p>
+
+<p>同时，这个底层设备类的构造函数中，还要传入一个<code class="highlighter-rouge">AP_SerialManager</code>类的对象的引用，实际上使用的时候就是传入全局的串口管理对象
+<code class="highlighter-rouge">AP_SerialManager serial_manager; //定义在rover.h中</code></p>
+
+<p><code class="highlighter-rouge">AP_SerialManger</code> 负责管理整机使用的所有串口，其初始化是这样的：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void AP_SerialManager::init()
+{
+    // initialise pointers to serial ports
+    state[1].uart = hal.uartC;  // serial1, uartC, normally telem1
+    state[2].uart = hal.uartD;  // serial2, uartD, normally telem2
+    state[3].uart = hal.uartB;  // serial3, uartB, normally 1st GPS
+    state[4].uart = hal.uartE;  // serial4, uartE, normally 2nd GPS
+    state[5].uart = hal.uartF;  // serial5
+    state[6].uart = hal.uartG;  // serial6
+
+    if (state[0].uart == nullptr) {
+        init_console();   // 初始化serial0给console使用
+    }
+    
+    // initialise serial ports
+    for (uint8_t i=1; i&lt;SERIALMANAGER_NUM_PORTS; i++) {
+        // 接下来根据每个串口的宏定义（波特率、协议等），对每个串口进行设置。
+        case SerialProtocol_Console:
+        case SerialProtocol_MAVLink:
+        case SerialProtocol_MAVLink2:
+            state[i].uart-&gt;begin(map_baudrate(state[i].baud),                           AP_SERIALMANAGER_MAVLINK_BUFSIZE_RX, AP_SERIALMANAGER_MAVLINK_BUFSIZE_TX);
+        break;
+    }
+</code></pre></div></div>
+
+<p>回到刚刚说的要用到串口的设备，在初始化函数中，因为已经传入了全局的串口管理对象，此时只要在串口管理对象中搜索与当前这个设备对应的协议即可。</p>
+
+<p>一个pozyx的例子：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AP_Beacon_Pozyx::AP_Beacon_Pozyx(AP_Beacon &amp;frontend, AP_SerialManager &amp;serial_manager) :
+    AP_Beacon_Backend(frontend),
+    linebuf_len(0)
+{
+    uart = serial_manager.find_serial(AP_SerialManager::SerialProtocol_Beacon, 0);
+    if (uart != nullptr) {
+        uart-&gt;begin(serial_manager.find_baudrate(AP_SerialManager::SerialProtocol_Beacon, 0));
+    }
+}
+</code></pre></div></div>
+<p>uart是一个指向串口对象的指针，如果找到了响应的协议，那么uart即指向对应串口，否则uart的默认值是nullptr。</p>
+
+<p>在各个设备的update函数中，读取串口数据之前，需要先检查以下uart是否为空指针，如果为空指针直接返回。</p>
+
+<p>这样的话，整个项目对串口的管理就很灵活，当因为某种需要修改某个串口为它用之时，只需在SerialManger文件，及相关宏定义中，修改某个串口对应的协议即可，然后新设备即可使用这个串口。旧设备也不会再读取这个串口，因为对旧设备而言，此时uart已经是空指针了，在update中会直接返回，不会出现两个设备同时读取一个串口的情况。</p>
+
+
+  </div><!--
+	<a href="https://github.com/Ncerzzk/Myblog/issues/50" class="css_btn_class">添加留言</a>
+	-->
+	
+<div id="comment">
+<li class="comment">
+	
+	<img class="comment_user_img"  height="40" width="40" src="https://avatars2.githubusercontent.com/u/9284611?v=4"></img>
+	<div class="comment_box">
+	<a class="comment_username" href="#">Username</a>
+	<span class="comment_time">Comment at 2019.5.13</span>
+	<div class="comment_content">Here is the Content</div>
+	</div>
+</li>
+</div>
+		
+	
+  <a class="u-url" href="/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/%E9%A3%9E%E6%8E%A7/2019/03/13/ArduPilot-zhong-chuan-kou-de-fu-yong.html" hidden></a>
+</article>
+
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+</script>
+
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).hide();
+  });
+});
+var h=$("#comment").html();
+var user="Ncerzzk";
+var repo="Myblog";
+var issueid="50";
+$("#comment").html("");
+$.getJSON("https://api.github.com/repos/"+user+"/"+repo+"/issues/"+issueid+"/comments", function(json){
+  for(i in json){
+	  $("#comment").append(h);
+	  $(".comment_username:last").text(json[i].user.login);
+	  $(".comment_username:last").attr("href",json[i].user.html_url);
+	  $(".comment_content:last").text(json[i].body);
+	  $(".comment_time:last").text(json[i].created_at);
+	  $(".comment_user_img:last").attr("src",json[i].user.avatar_url);
+  }
+});
+</script>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Hello,world!</p>
+      </div>
+    </div>
+	<div>
+		<a href="http://beian.miit.gov.cn/">闽ICP备20002143号</a>
+	</div>
+  </div>
+
+</footer>
+</body>
+<script>
+  window.onload=function (){
+    var content = document.getElementsByTagName("html")[0].innerHTML;
+    content = content.replace(/博客|Blog|blog/g,"");
+    console.log(content);
+
+    document.getElementsByTagName("html")[0].innerHTML = content; 
+  }
+</script>
+</html>

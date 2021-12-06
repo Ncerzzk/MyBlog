@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>PX4的linux调度 | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="PX4的linux调度" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="作为顶顶大名的飞控，PX4实际上支持在linux下直接运行的，因此可以不必再外接pixhawk。" />
+<meta property="og:description" content="作为顶顶大名的飞控，PX4实际上支持在linux下直接运行的，因此可以不必再外接pixhawk。" />
+<link rel="canonical" href="https://ncerzzk.github.io/%E9%A3%9E%E6%8E%A7/2021/11/20/PX4-de-linux-diao-du.html" />
+<meta property="og:url" content="https://ncerzzk.github.io/%E9%A3%9E%E6%8E%A7/2021/11/20/PX4-de-linux-diao-du.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-20T17:01:42+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ncerzzk.github.io/%E9%A3%9E%E6%8E%A7/2021/11/20/PX4-de-linux-diao-du.html"},"url":"https://ncerzzk.github.io/%E9%A3%9E%E6%8E%A7/2021/11/20/PX4-de-linux-diao-du.html","headline":"PX4的linux调度","dateModified":"2021-11-20T17:01:42+08:00","datePublished":"2021-11-20T17:01:42+08:00","description":"作为顶顶大名的飞控，PX4实际上支持在linux下直接运行的，因此可以不必再外接pixhawk。","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://ncerzzk.github.io/feed.xml" title="Huangzzk's Blog" /><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9a0d201458675d03a87e467407e4889b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/aboutme/">关于</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <style type="text/css">
+.css_btn_class {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #dcdcdc;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffffff), color-stop(100%, #f6f6f6) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
+	background:-ms-linear-gradient( top, #ffffff 5%, #f6f6f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
+	background-color:#ffffff;
+	color:#666666;
+	display:inline-block;
+	text-shadow:1px 1px 0px #ffffff;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	box-shadow:inset 1px 1px 0px 0px #ffffff;
+}.css_btn_class:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background-color:#f6f6f6;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+.comment_username{
+font-size:14px;
+margin-left:5px;
+}
+.comment_time{
+font-size:14px;	
+	float:right;
+	margin-right:5px;
+}
+.comment{
+	list-style:none;
+}
+.comment_username{
+	color: #24292e;
+	text-decoration: none;
+	}
+	.comment_user_img{
+	float:left;
+}
+.comment_box{
+	margin-left:40px;
+    color: #24292e;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+}
+.comment_content{
+margin:10px 10px 10px 10px;
+}
+
+#comment{
+	margin-top:30px;
+}
+
+.comment{
+	margin-top:30px;
+}
+
+/* CSS按钮生成器 */
+</style>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">PX4的linux调度</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-11-20T17:01:42+08:00" itemprop="datePublished">Nov 20, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>作为顶顶大名的飞控，PX4实际上支持在linux下直接运行的，因此可以不必再外接pixhawk。</p>
+
+<p>那么linux作为一个非实时的操作系统，PX4具体是如何在上面运行的呢？这篇文章就是为了探究这个问题。</p>
+
+<p>首先在main.cpp中找到初始化函数：</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">init_once</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">_shell_task_id</span> <span class="o">=</span> <span class="n">pthread_self</span><span class="p">();</span>
+
+	<span class="n">work_queues_init</span><span class="p">();</span>
+	<span class="n">hrt_work_queue_init</span><span class="p">();</span>
+
+	<span class="n">px4_platform_init</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>除了第一句以外，其他的看起来都跟调度可能有关，挨个去看看。</p>
+
+<h2 id="work-queues-init">Work Queues Init</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">work_queues_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">px4_sem_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">_work_lock</span><span class="p">[</span><span class="n">HPWORK</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+	<span class="n">px4_sem_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">_work_lock</span><span class="p">[</span><span class="n">LPWORK</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="cp">#ifdef CONFIG_SCHED_USRWORK
+</span>	<span class="n">px4_sem_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">_work_lock</span><span class="p">[</span><span class="n">USRWORK</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="cp">#endif
+</span>
+	<span class="c1">// Create high priority worker thread</span>
+	<span class="n">g_work</span><span class="p">[</span><span class="n">HPWORK</span><span class="p">].</span><span class="n">pid</span> <span class="o">=</span> <span class="n">px4_task_spawn_cmd</span><span class="p">(</span><span class="s">"hpwork"</span><span class="p">,</span>
+						<span class="n">SCHED_DEFAULT</span><span class="p">,</span>
+						<span class="n">SCHED_PRIORITY_MAX</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+						<span class="mi">2000</span><span class="p">,</span>
+						<span class="n">work_hpthread</span><span class="p">,</span>
+						<span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="k">const</span> <span class="o">*</span><span class="p">)</span><span class="nb">NULL</span><span class="p">);</span>
+
+	<span class="c1">// Create low priority worker thread</span>
+	<span class="n">g_work</span><span class="p">[</span><span class="n">LPWORK</span><span class="p">].</span><span class="n">pid</span> <span class="o">=</span> <span class="n">px4_task_spawn_cmd</span><span class="p">(</span><span class="s">"lpwork"</span><span class="p">,</span>
+						<span class="n">SCHED_DEFAULT</span><span class="p">,</span>
+						<span class="n">SCHED_PRIORITY_MIN</span><span class="p">,</span>
+						<span class="mi">2000</span><span class="p">,</span>
+						<span class="n">work_lpthread</span><span class="p">,</span>
+						<span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="k">const</span> <span class="o">*</span><span class="p">)</span><span class="nb">NULL</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>其中，<code class="highlighter-rouge">px4_task_spawn_cmd</code>是用来新建一个可调度的task，SCHED_DEFAULT是一个宏定义，定义为：SCHED_FIFO，对linux比较熟悉的应该知道，这是一种实时调度策略，
+高优先级线程可以抢占低优先级线程，并且如果高优先级线程不主动释放CPU，低优先级线程是无法执行的。
+<code class="highlighter-rouge">px4_task_spawn_cmd</code>函数声明为:</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">px4_task_t</span> <span class="n">px4_task_spawn_cmd</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">scheduler</span><span class="p">,</span> <span class="kt">int</span> <span class="n">priority</span><span class="p">,</span> <span class="kt">int</span> <span class="n">stack_size</span><span class="p">,</span> <span class="n">px4_main_t</span> <span class="n">entry</span><span class="p">,</span>
+			      <span class="kt">char</span> <span class="o">*</span><span class="k">const</span> <span class="n">argv</span><span class="p">[])</span>
+</code></pre></div></div>
+<p>内部实现是调用操作系统的pthread。</p>
+
+<p>好了，通过这里可以发现，这里新建了两个work queue，分别是高优先级的队列和低优先级的队列。</p>
+
+<p>接下来进去看看这两个队列管理线程里干了些啥事</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">work_hpthread</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+	<span class="cm">/* Loop forever */</span>
+
+	<span class="k">for</span> <span class="p">(;;)</span> <span class="p">{</span>
+		<span class="cm">/* First, perform garbage collection.  This cleans-up memory de-allocations
+		 * that were queued because they could not be freed in that execution
+		 * context (for example, if the memory was freed from an interrupt handler).
+		 * NOTE: If the work thread is disabled, this clean-up is performed by
+		 * the IDLE thread (at a very, very low priority).
+		 */</span>
+
+<span class="cp">#ifndef CONFIG_SCHED_LPWORK
+</span>		<span class="n">sched_garbagecollection</span><span class="p">();</span>
+<span class="cp">#endif
+</span>
+		<span class="cm">/* Then process queued work.  We need to keep interrupts disabled while
+		 * we process items in the work list.
+		 */</span>
+
+		<span class="n">work_process</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_work</span><span class="p">[</span><span class="n">HPWORK</span><span class="p">],</span> <span class="n">HPWORK</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="n">PX4_OK</span><span class="p">;</span> <span class="cm">/* To keep some compilers happy */</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>注释里写得很清楚，首先是垃圾回收（一些上下文下无法及时释放的内存会在这里释放，但是sched_garbagecollection似乎没实际使用，因为CONFIG_SCHED_LPWORK这个宏是有定义的，而且在work_lpthread中，将sched_garbagecollection注释了，且我也没找到这个函数的定义或者声明，这里先不管他），然后开始实际的work_progress,再进去看看：（出于方便，我会直接将标注用中文注释的方式写在下方代码中）</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static</span> <span class="kt">void</span> <span class="nf">work_process</span><span class="p">(</span><span class="k">struct</span> <span class="n">wqueue_s</span> <span class="o">*</span><span class="n">wqueue</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lock_id</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">volatile</span> <span class="k">struct</span> <span class="n">work_s</span> <span class="o">*</span><span class="n">work</span><span class="p">;</span>
+	<span class="n">worker_t</span>  <span class="n">worker</span><span class="p">;</span>
+	<span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">;</span>
+	<span class="kt">uint64_t</span> <span class="n">elapsed</span><span class="p">;</span>
+	<span class="kt">uint32_t</span> <span class="n">remaining</span><span class="p">;</span>
+	<span class="kt">uint32_t</span> <span class="n">next</span><span class="p">;</span>
+
+	<span class="cm">/* Then process queued work.  We need to keep interrupts disabled while
+	 * we process items in the work list.
+	 */</span>
+
+	<span class="n">next</span>  <span class="o">=</span> <span class="n">CONFIG_SCHED_WORKPERIOD</span><span class="p">;</span>
+
+	<span class="n">work_lock</span><span class="p">(</span><span class="n">lock_id</span><span class="p">);</span>
+
+	<span class="n">work</span>  <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">work_s</span> <span class="o">*</span><span class="p">)</span><span class="n">wqueue</span><span class="o">-&gt;</span><span class="n">q</span><span class="p">.</span><span class="n">head</span><span class="p">;</span>
+
+	<span class="k">while</span> <span class="p">(</span><span class="n">work</span><span class="p">)</span> <span class="p">{</span>
+		<span class="cm">/* Is this work ready?  It is ready if there is no delay or if
+		 * the delay has elapsed. qtime is the time that the work was added
+		 * to the work queue.  It will always be greater than or equal to
+		 * zero.  Therefore a delay of zero will always execute immediately.
+		 */</span>
+
+		<span class="n">elapsed</span> <span class="o">=</span> <span class="n">USEC2TICK</span><span class="p">(</span><span class="n">clock_systimer</span><span class="p">()</span> <span class="o">-</span> <span class="n">work</span><span class="o">-&gt;</span><span class="n">qtime</span><span class="p">);</span>
+        <span class="c1">// 检测该work上次执行到现在所过的时间</span>
+
+		<span class="c1">//printf("work_process: in ticks elapsed=%lu delay=%u\n", elapsed, work-&gt;delay);</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">elapsed</span> <span class="o">&gt;=</span> <span class="n">work</span><span class="o">-&gt;</span><span class="n">delay</span><span class="p">)</span> <span class="p">{</span>
+			<span class="cm">/* Remove the ready-to-execute work from the list */</span>
+
+			<span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dq_rem</span><span class="p">((</span><span class="k">struct</span> <span class="n">dq_entry_s</span> <span class="o">*</span><span class="p">)</span><span class="n">work</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">wqueue</span><span class="o">-&gt;</span><span class="n">q</span><span class="p">);</span>
+
+			<span class="cm">/* Extract the work description from the entry (in case the work
+			 * instance by the re-used after it has been de-queued).
+			 */</span>
+
+			<span class="n">worker</span> <span class="o">=</span> <span class="n">work</span><span class="o">-&gt;</span><span class="n">worker</span><span class="p">;</span>
+			<span class="n">arg</span>    <span class="o">=</span> <span class="n">work</span><span class="o">-&gt;</span><span class="n">arg</span><span class="p">;</span>
+
+			<span class="cm">/* Mark the work as no longer being queued */</span>
+            <span class="c1">// 取出worker 和 参数，并将标记为NULL(表示已经执行过）</span>
+			<span class="n">work</span><span class="o">-&gt;</span><span class="n">worker</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+			<span class="cm">/* Do the work.  Re-enable interrupts while the work is being
+			 * performed... we don't have any idea how long that will take!
+			 */</span>
+
+             <span class="c1">// 这里他说重新使能中断了，但实际上之类只是设置了一下信号量，因此可以推测中断也用了这个信号量来进行同步</span>
+			<span class="n">work_unlock</span><span class="p">(</span><span class="n">lock_id</span><span class="p">);</span>
+
+			<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">worker</span><span class="p">)</span> <span class="p">{</span>
+				<span class="n">PX4_WARN</span><span class="p">(</span><span class="s">"MESSED UP: worker = 0</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+				<span class="n">worker</span><span class="p">(</span><span class="n">arg</span><span class="p">);</span>
+                <span class="c1">// 实际运行这个work</span>
+			<span class="p">}</span>
+
+			<span class="cm">/* Now, unfortunately, since we re-enabled interrupts we don't
+			 * know the state of the work list and we will have to start
+			 * back at the head of the list.
+			 */</span>
+            <span class="c1">// 如上所言，由于实际执行了一项work，此时应该从头开始遍历一下这个工作队列，（可能在队列头部有一些work已经就绪了，这时候应该去执行队列头部的work）</span>
+
+			<span class="n">work_lock</span><span class="p">(</span><span class="n">lock_id</span><span class="p">);</span>
+			<span class="n">work</span>  <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">work_s</span> <span class="o">*</span><span class="p">)</span><span class="n">wqueue</span><span class="o">-&gt;</span><span class="n">q</span><span class="p">.</span><span class="n">head</span><span class="p">;</span>
+
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+
+            <span class="c1">// 整个else逻辑就是：</span>
+            <span class="c1">// 这个work还未就绪，那么计算一下它离就绪还有多久，如果比next还少，那么就将next赋值为这个下次就绪时间</span>
+            <span class="c1">// 遍历一遍后，next就是最快将要就绪的work的等待时间，然后再usleep 这个时间即可。</span>
+
+			<span class="cm">/* This one is not ready.. will it be ready before the next
+			 * scheduled wakeup interval?
+			 */</span>
+
+			<span class="cm">/* Here: elapsed &lt; work-&gt;delay */</span>
+			<span class="n">remaining</span> <span class="o">=</span> <span class="n">USEC_PER_TICK</span> <span class="o">*</span> <span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">delay</span> <span class="o">-</span> <span class="n">elapsed</span><span class="p">);</span>
+
+			<span class="k">if</span> <span class="p">(</span><span class="n">remaining</span> <span class="o">&lt;</span> <span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+				<span class="cm">/* Yes.. Then schedule to wake up when the work is ready */</span>
+
+				<span class="n">next</span> <span class="o">=</span> <span class="n">remaining</span><span class="p">;</span>
+			<span class="p">}</span>
+
+			<span class="cm">/* Then try the next in the list. */</span>
+
+			<span class="n">work</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">work_s</span> <span class="o">*</span><span class="p">)</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dq</span><span class="p">.</span><span class="n">flink</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="cm">/* Wait awhile to check the work list.  We will wait here until either
+	 * the time elapses or until we are awakened by a signal.
+	 */</span>
+	<span class="n">work_unlock</span><span class="p">(</span><span class="n">lock_id</span><span class="p">);</span>
+
+	<span class="n">px4_usleep</span><span class="p">(</span><span class="n">next</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>到这里，调度的逻辑已经比较清晰了，即通过两个work_queue，这两个work_queue自身通过linux得SCHED_FIFO来调度，在它们内部，会自己进行调度。
+刚刚分析的主要是<code class="highlighter-rouge">work_hpthread</code>,但实际上<code class="highlighter-rouge">work_lpthread</code>、<code class="highlighter-rouge">work_hrtthread</code>的流程也几乎是一样的，这里就不再分析了。</p>
+
+<p>总结一下这一部分，基本就是三种work queue的初始化，分别是hpthread（高优先级） lphread（低优先级）和hrtthread(依赖高分辨率定时器的workqueue)</p>
+
+<h2 id="platform-init">Platform Init</h2>
+<p>接下来是平台级的一些初始化，</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">px4_platform_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">hrt_init</span><span class="p">();</span>
+
+	<span class="n">param_init</span><span class="p">();</span>
+
+	<span class="n">px4</span><span class="o">::</span><span class="n">WorkQueueManagerStart</span><span class="p">();</span>
+
+	<span class="n">uorb_start</span><span class="p">();</span>
+
+	<span class="n">px4_log_initialize</span><span class="p">();</span>
+
+	<span class="k">return</span> <span class="n">PX4_OK</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>我们主要关注一下WorkQueueManagerStart，该函数</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static</span> <span class="kt">int</span>
+<span class="nf">WorkQueueManagerRun</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">_wq_manager_wqs_list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BlockingList</span><span class="o">&lt;</span><span class="n">WorkQueue</span> <span class="o">*&gt;</span><span class="p">();</span>
+	<span class="n">_wq_manager_create_queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BlockingQueue</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">wq_config_t</span> <span class="o">*</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">();</span>
+
+	<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">_wq_manager_should_exit</span><span class="p">.</span><span class="n">load</span><span class="p">())</span> <span class="p">{</span>
+		<span class="c1">// create new work queues as needed</span>
+		<span class="k">const</span> <span class="n">wq_config_t</span> <span class="o">*</span><span class="n">wq</span> <span class="o">=</span> <span class="n">_wq_manager_create_queue</span><span class="o">-&gt;</span><span class="n">pop</span><span class="p">();</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">wq</span> <span class="o">!=</span> <span class="nb">nullptr</span><span class="p">)</span> <span class="p">{</span>
+			<span class="c1">// create new work queue</span>
+            <span class="c1">// 如果有work queue 待创建，那么下面据开始创建流程。</span>
+            <span class="c1">// 一开始_wq_manager_create_queue是空的，只有当运行到其他模块时，才会往这里添加元素</span>
+
+			<span class="n">pthread_attr_t</span> <span class="n">attr</span><span class="p">;</span>
+			<span class="kt">int</span> <span class="n">ret_attr_init</span> <span class="o">=</span> <span class="n">pthread_attr_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">attr</span><span class="p">);</span>
+
+            <span class="c1">// .. 省略 attr 和 优先级的设置</span>
+
+			<span class="c1">// create thread</span>
+			<span class="n">pthread_t</span> <span class="kr">thread</span><span class="p">;</span>
+			<span class="kt">int</span> <span class="n">ret_create</span> <span class="o">=</span> <span class="n">pthread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="kr">thread</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr</span><span class="p">,</span> <span class="n">WorkQueueRunner</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="n">wq</span><span class="p">);</span>
+
+            <span class="c1">// ...</span>
+			<span class="c1">// destroy thread attributes</span>
+			<span class="kt">int</span> <span class="n">ret_destroy</span> <span class="o">=</span> <span class="n">pthread_attr_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">attr</span><span class="p">);</span>
+
+			<span class="k">if</span> <span class="p">(</span><span class="n">ret_destroy</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+				<span class="n">PX4_ERR</span><span class="p">(</span><span class="s">"failed to destroy thread attributes for %s (%i)"</span><span class="p">,</span> <span class="n">wq</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="n">ret_create</span><span class="p">);</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>那么什么时候会往<code class="highlighter-rouge">_wq_manager_create_queue</code>添加元素呢？首先是<code class="highlighter-rouge">WorkQueueFindOrCreate</code>，该函数会往<code class="highlighter-rouge">_wq_manager_create_queue</code> push 一个新元素。</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">WorkQueue</span> <span class="o">*</span>
+<span class="nf">WorkQueueFindOrCreate</span><span class="p">(</span><span class="k">const</span> <span class="n">wq_config_t</span> <span class="o">&amp;</span><span class="n">new_wq</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">_wq_manager_create_queue</span> <span class="o">==</span> <span class="nb">nullptr</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">PX4_ERR</span><span class="p">(</span><span class="s">"not running"</span><span class="p">);</span>
+		<span class="k">return</span> <span class="nb">nullptr</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// search list for existing work queue</span>
+	<span class="n">WorkQueue</span> <span class="o">*</span><span class="n">wq</span> <span class="o">=</span> <span class="n">FindWorkQueueByName</span><span class="p">(</span><span class="n">new_wq</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+
+	<span class="c1">// create work queue if it doesn't already exist</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">wq</span> <span class="o">==</span> <span class="nb">nullptr</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// add WQ config to list</span>
+		<span class="c1">//  main thread wakes up, creates the thread</span>
+		<span class="n">_wq_manager_create_queue</span><span class="o">-&gt;</span><span class="n">push</span><span class="p">(</span><span class="o">&amp;</span><span class="n">new_wq</span><span class="p">);</span>
+
+		<span class="c1">// we wait until new wq is created, then return</span>
+		<span class="kt">uint64_t</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+		<span class="k">while</span> <span class="p">(</span><span class="n">wq</span> <span class="o">==</span> <span class="nb">nullptr</span> <span class="o">&amp;&amp;</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="n">_s</span><span class="p">)</span> <span class="p">{</span>
+			<span class="c1">// Wait up to 10 seconds, checking every 1 ms</span>
+			<span class="n">t</span> <span class="o">+=</span> <span class="mi">1</span><span class="n">_ms</span><span class="p">;</span>
+			<span class="n">px4_usleep</span><span class="p">(</span><span class="mi">1</span><span class="n">_ms</span><span class="p">);</span>
+
+			<span class="n">wq</span> <span class="o">=</span> <span class="n">FindWorkQueueByName</span><span class="p">(</span><span class="n">new_wq</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+		<span class="p">}</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">wq</span> <span class="o">==</span> <span class="nb">nullptr</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">PX4_ERR</span><span class="p">(</span><span class="s">"failed to create %s"</span><span class="p">,</span> <span class="n">new_wq</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="n">wq</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>而<code class="highlighter-rouge">WorkQueueFindOrCreate</code> 又在<code class="highlighter-rouge">WorkItem::Init</code>中被调用</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">WorkItem</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="k">const</span> <span class="n">wq_config_t</span> <span class="o">&amp;</span><span class="n">config</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="c1">// clear any existing first</span>
+	<span class="n">Deinit</span><span class="p">();</span>
+
+	<span class="n">px4</span><span class="o">::</span><span class="n">WorkQueue</span> <span class="o">*</span><span class="n">wq</span> <span class="o">=</span> <span class="n">WorkQueueFindOrCreate</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">((</span><span class="n">wq</span> <span class="o">!=</span> <span class="nb">nullptr</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">wq</span><span class="o">-&gt;</span><span class="n">Attach</span><span class="p">(</span><span class="k">this</span><span class="p">))</span> <span class="p">{</span>
+		<span class="n">_wq</span> <span class="o">=</span> <span class="n">wq</span><span class="p">;</span>
+		<span class="n">_time_first_run</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="n">PX4_ERR</span><span class="p">(</span><span class="s">"%s not available"</span><span class="p">,</span> <span class="n">config</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+	<span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>什么是<code class="highlighter-rouge">WorkItem</code>？随手举个例子，如固定翼的控制模块：</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">FixedwingPositionControl</span><span class="o">::</span><span class="n">FixedwingPositionControl</span><span class="p">(</span><span class="kt">bool</span> <span class="n">vtol</span><span class="p">)</span> <span class="o">:</span>
+	<span class="n">ModuleParams</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">),</span>
+	<span class="n">WorkItem</span><span class="p">(</span><span class="n">MODULE_NAME</span><span class="p">,</span> <span class="n">px4</span><span class="o">::</span><span class="n">wq_configurations</span><span class="o">::</span><span class="n">nav_and_controllers</span><span class="p">),</span>
+	<span class="n">_attitude_sp_pub</span><span class="p">(</span><span class="n">vtol</span> <span class="o">?</span> <span class="n">ORB_ID</span><span class="p">(</span><span class="n">fw_virtual_attitude_setpoint</span><span class="p">)</span> <span class="o">:</span> <span class="n">ORB_ID</span><span class="p">(</span><span class="n">vehicle_attitude_setpoint</span><span class="p">)),</span>
+	<span class="n">_loop_perf</span><span class="p">(</span><span class="n">perf_alloc</span><span class="p">(</span><span class="n">PC_ELAPSED</span><span class="p">,</span> <span class="n">MODULE_NAME</span><span class="s">": cycle"</span><span class="p">)),</span>
+	<span class="n">_launchDetector</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+	<span class="n">_runway_takeoff</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>也就是说，在PX4的一些组件模块初始化的时候，会创建一个WorkItem，然后将与该WorkItem关联的workqueue加到待初始化的work queue列表中，由WorkQueueManager来实际地创建线程。</p>
+
+<p>不过，需要注意的是，这里创建的都是<em>线程</em>，也就是和一开始讨论的hpthread lpthread等线程都是同级的关系。有哪些操作是通过线程直接调度的，可以查看<code class="highlighter-rouge">wq_configurations</code>。可以看到，里面大部分都是一些接口，如I2C、SPI（另外高度、速度控制也作为一个work queue）。可以推测，每种接口都是一个work queue，如一个I2C总线下挂多个设备，那么每个设备的操作就是该work queue的一项work。每项work的调度就是最开始hpthread那样地调度了。</p>
+
+<h2 id="总结">总结</h2>
+
+<p>总结一下，PX4在linux上（或者说在posix上），主要是通过线程调度+work queue内部调度来完成的。</p>
+
+<p>依据所要完成的操作种类，会有多个work queue，每个workqueue都由一个线程管理，也即每个workque 自身是由linux通过线程来调度的。不同的workqueue有不同的优先级，该优先级也是与linux FIFO调度的优先级对应的。</p>
+
+<p>一个workqueue下会有多个work，workqueue也是通过FIFO的方式来调度，但是与linux的SCHED_FIFO不同，这里的FIFO不会发生抢占（因为这里面的每项work已经没有优先级的区分了）。</p>
+
+<p>那么，这种方式有缺点吗？我想应该是有的，每个线程（或者说workqueue）都要仔细考虑其优先级，如果高优先级的workqueue中有太多的work，那么显然它是不会将CPU释放给低优先级的workqueue的，因此如果处理器性能不够，高优先级的线程实时性能够得到保证，但是低优先级的线程实时性可能就无法保证了。（但是，低优先级线程的实时性重要吗？如果重要，怎么不设置为高优先级呢？）另外，其他rtos的实现不也是如此吗，如果有一个高优先级的线程在执行，其他低优先级的线程同样无法抢占（在抢占式调度下），因此这样说来，实际上这种方式并不比rtos在调度上逊色太多。当然，由于linux的内核比较重，因此与RTOS相比，还有内核调度上的一些开销。</p>
+
+<p>此外，linux上要运行PX4，要打开内核抢占（实现软实时），打实时性补丁（实现硬实时）的，虽然PX4官方没提到，但是其提供的在树莓派上运行的一个OS，实际上是已经打过补丁的了。</p>
+
+<h2 id="函数声明变量类型备查">函数声明、变量类型备查</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static</span> <span class="n">BlockingQueue</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">wq_config_t</span> <span class="o">*</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">_wq_manager_create_queue</span><span class="p">{</span><span class="nb">nullptr</span><span class="p">};</span>
+<span class="k">static</span> <span class="n">BlockingList</span><span class="o">&lt;</span><span class="n">WorkQueue</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_wq_manager_wqs_list</span><span class="p">{</span><span class="nb">nullptr</span><span class="p">};</span>    <span class="c1">//当前正在的执行的work queues，如果某个workqueue不再需要执行，会被移出这个队列</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">work_process</span><span class="p">(</span><span class="k">struct</span> <span class="n">wqueue_s</span> <span class="o">*</span><span class="n">wqueue</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lock_id</span><span class="p">);</span>  <span class="c1">// 实际的workqueue 处理函数</span>
+<span class="k">struct</span> <span class="n">wqueue_s</span> <span class="n">g_work</span><span class="p">[</span><span class="n">NWORKERS</span><span class="p">];</span>
+<span class="n">px4_sem_t</span> <span class="n">_work_lock</span><span class="p">[</span><span class="n">NWORKERS</span><span class="p">];</span>
+<span class="k">struct</span> <span class="n">wqueue_s</span> <span class="n">g_hrt_work</span><span class="p">;</span>
+<span class="k">struct</span> <span class="n">wq_config_t</span> <span class="p">{</span>
+	<span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
+	<span class="kt">uint16_t</span> <span class="n">stacksize</span><span class="p">;</span>
+	<span class="kt">int8_t</span> <span class="n">relative_priority</span><span class="p">;</span> <span class="c1">// relative to max</span>
+<span class="p">};</span>
+<span class="k">namespace</span> <span class="n">wq_configurations</span>
+<span class="p">{</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">rate_ctrl</span><span class="p">{</span><span class="s">"wq:rate_ctrl"</span><span class="p">,</span> <span class="mi">1952</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span> <span class="c1">// PX4 inner loop highest priority</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">ctrl_alloc</span><span class="p">{</span><span class="s">"wq:ctrl_alloc"</span><span class="p">,</span> <span class="mi">9500</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span> <span class="c1">// PX4 control allocation, same priority as rate_ctrl</span>
+
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">SPI0</span><span class="p">{</span><span class="s">"wq:SPI0"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">SPI1</span><span class="p">{</span><span class="s">"wq:SPI1"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">SPI2</span><span class="p">{</span><span class="s">"wq:SPI2"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">SPI3</span><span class="p">{</span><span class="s">"wq:SPI3"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">SPI4</span><span class="p">{</span><span class="s">"wq:SPI4"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">SPI5</span><span class="p">{</span><span class="s">"wq:SPI5"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">SPI6</span><span class="p">{</span><span class="s">"wq:SPI6"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">};</span>
+
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">I2C0</span><span class="p">{</span><span class="s">"wq:I2C0"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">I2C1</span><span class="p">{</span><span class="s">"wq:I2C1"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">I2C2</span><span class="p">{</span><span class="s">"wq:I2C2"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">I2C3</span><span class="p">{</span><span class="s">"wq:I2C3"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">11</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">I2C4</span><span class="p">{</span><span class="s">"wq:I2C4"</span><span class="p">,</span> <span class="mi">2336</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">};</span>
+
+<span class="c1">// PX4 att/pos controllers, highest priority after sensors.</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">nav_and_controllers</span><span class="p">{</span><span class="s">"wq:nav_and_controllers"</span><span class="p">,</span> <span class="mi">2240</span><span class="p">,</span> <span class="o">-</span><span class="mi">13</span><span class="p">};</span>
+
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">INS0</span><span class="p">{</span><span class="s">"wq:INS0"</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="o">-</span><span class="mi">14</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">INS1</span><span class="p">{</span><span class="s">"wq:INS1"</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="o">-</span><span class="mi">15</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">INS2</span><span class="p">{</span><span class="s">"wq:INS2"</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="o">-</span><span class="mi">16</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">INS3</span><span class="p">{</span><span class="s">"wq:INS3"</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="o">-</span><span class="mi">17</span><span class="p">};</span>
+
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">hp_default</span><span class="p">{</span><span class="s">"wq:hp_default"</span><span class="p">,</span> <span class="mi">1900</span><span class="p">,</span> <span class="o">-</span><span class="mi">18</span><span class="p">};</span>
+
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">uavcan</span><span class="p">{</span><span class="s">"wq:uavcan"</span><span class="p">,</span> <span class="mi">3624</span><span class="p">,</span> <span class="o">-</span><span class="mi">19</span><span class="p">};</span>
+
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">UART0</span><span class="p">{</span><span class="s">"wq:UART0"</span><span class="p">,</span> <span class="mi">1632</span><span class="p">,</span> <span class="o">-</span><span class="mi">21</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">UART1</span><span class="p">{</span><span class="s">"wq:UART1"</span><span class="p">,</span> <span class="mi">1632</span><span class="p">,</span> <span class="o">-</span><span class="mi">22</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">UART2</span><span class="p">{</span><span class="s">"wq:UART2"</span><span class="p">,</span> <span class="mi">1632</span><span class="p">,</span> <span class="o">-</span><span class="mi">23</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">UART3</span><span class="p">{</span><span class="s">"wq:UART3"</span><span class="p">,</span> <span class="mi">1632</span><span class="p">,</span> <span class="o">-</span><span class="mi">24</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">UART4</span><span class="p">{</span><span class="s">"wq:UART4"</span><span class="p">,</span> <span class="mi">1632</span><span class="p">,</span> <span class="o">-</span><span class="mi">25</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">UART5</span><span class="p">{</span><span class="s">"wq:UART5"</span><span class="p">,</span> <span class="mi">1632</span><span class="p">,</span> <span class="o">-</span><span class="mi">26</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">UART6</span><span class="p">{</span><span class="s">"wq:UART6"</span><span class="p">,</span> <span class="mi">1632</span><span class="p">,</span> <span class="o">-</span><span class="mi">27</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">UART7</span><span class="p">{</span><span class="s">"wq:UART7"</span><span class="p">,</span> <span class="mi">1632</span><span class="p">,</span> <span class="o">-</span><span class="mi">28</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">UART8</span><span class="p">{</span><span class="s">"wq:UART8"</span><span class="p">,</span> <span class="mi">1632</span><span class="p">,</span> <span class="o">-</span><span class="mi">29</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">UART_UNKNOWN</span><span class="p">{</span><span class="s">"wq:UART_UNKNOWN"</span><span class="p">,</span> <span class="mi">1632</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">};</span>
+
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">lp_default</span><span class="p">{</span><span class="s">"wq:lp_default"</span><span class="p">,</span> <span class="mi">1920</span><span class="p">,</span> <span class="o">-</span><span class="mi">50</span><span class="p">};</span>
+
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">test1</span><span class="p">{</span><span class="s">"wq:test1"</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">constexpr</span> <span class="n">wq_config_t</span> <span class="n">test2</span><span class="p">{</span><span class="s">"wq:test2"</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
+
+<span class="p">}</span> <span class="c1">// namespace wq_configurations</span>
+
+<span class="kt">int</span> <span class="nf">pthread_create</span><span class="p">(</span>
+                 <span class="n">pthread_t</span> <span class="o">*</span><span class="k">restrict</span> <span class="n">tidp</span><span class="p">,</span>   <span class="c1">//新创建的线程ID指向的内存单元。</span>
+                 <span class="k">const</span> <span class="n">pthread_attr_t</span> <span class="o">*</span><span class="k">restrict</span> <span class="n">attr</span><span class="p">,</span>  <span class="c1">//线程属性，默认为NULL</span>
+                 <span class="kt">void</span> <span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="n">start_rtn</span><span class="p">)(</span><span class="kt">void</span> <span class="o">*</span><span class="p">),</span> <span class="c1">//新创建的线程从start_rtn函数的地址开始运行</span>
+                 <span class="kt">void</span> <span class="o">*</span><span class="k">restrict</span> <span class="n">arg</span> <span class="c1">//默认为NULL。若上述函数需要参数，将参数放入结构中并将地址作为arg传入。</span>
+                  <span class="p">);</span>
+</code></pre></div></div>
+
+  </div><!--
+	<a href="https://github.com/Ncerzzk/Myblog/issues/151" class="css_btn_class">添加留言</a>
+	-->
+	
+<div id="comment">
+<li class="comment">
+	
+	<img class="comment_user_img"  height="40" width="40" src="https://avatars2.githubusercontent.com/u/9284611?v=4"></img>
+	<div class="comment_box">
+	<a class="comment_username" href="#">Username</a>
+	<span class="comment_time">Comment at 2019.5.13</span>
+	<div class="comment_content">Here is the Content</div>
+	</div>
+</li>
+</div>
+		
+	
+  <a class="u-url" href="/%E9%A3%9E%E6%8E%A7/2021/11/20/PX4-de-linux-diao-du.html" hidden></a>
+</article>
+
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+</script>
+
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).hide();
+  });
+});
+var h=$("#comment").html();
+var user="Ncerzzk";
+var repo="Myblog";
+var issueid="151";
+$("#comment").html("");
+$.getJSON("https://api.github.com/repos/"+user+"/"+repo+"/issues/"+issueid+"/comments", function(json){
+  for(i in json){
+	  $("#comment").append(h);
+	  $(".comment_username:last").text(json[i].user.login);
+	  $(".comment_username:last").attr("href",json[i].user.html_url);
+	  $(".comment_content:last").text(json[i].body);
+	  $(".comment_time:last").text(json[i].created_at);
+	  $(".comment_user_img:last").attr("src",json[i].user.avatar_url);
+  }
+});
+</script>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Hello,world!</p>
+      </div>
+    </div>
+	<div>
+		<a href="http://beian.miit.gov.cn/">闽ICP备20002143号</a>
+	</div>
+  </div>
+
+</footer>
+</body>
+<script>
+  window.onload=function (){
+    var content = document.getElementsByTagName("html")[0].innerHTML;
+    content = content.replace(/博客|Blog|blog/g,"");
+    console.log(content);
+
+    document.getElementsByTagName("html")[0].innerHTML = content; 
+  }
+</script>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>直升机倾斜器研究总结 | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="直升机倾斜器研究总结" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="目前已知有两种倾斜器。" />
+<meta property="og:description" content="目前已知有两种倾斜器。" />
+<link rel="canonical" href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/2020/03/09/zhi-sheng-ji-qing-xie-qi-yan-jiu-zong-jie.html" />
+<meta property="og:url" content="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/2020/03/09/zhi-sheng-ji-qing-xie-qi-yan-jiu-zong-jie.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-09T12:50:26+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/2020/03/09/zhi-sheng-ji-qing-xie-qi-yan-jiu-zong-jie.html"},"url":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/2020/03/09/zhi-sheng-ji-qing-xie-qi-yan-jiu-zong-jie.html","headline":"直升机倾斜器研究总结","dateModified":"2020-03-09T12:50:26+08:00","datePublished":"2020-03-09T12:50:26+08:00","description":"目前已知有两种倾斜器。","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://ncerzzk.github.io/feed.xml" title="Huangzzk's Blog" /><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9a0d201458675d03a87e467407e4889b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/aboutme/">关于</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <style type="text/css">
+.css_btn_class {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #dcdcdc;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffffff), color-stop(100%, #f6f6f6) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
+	background:-ms-linear-gradient( top, #ffffff 5%, #f6f6f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
+	background-color:#ffffff;
+	color:#666666;
+	display:inline-block;
+	text-shadow:1px 1px 0px #ffffff;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	box-shadow:inset 1px 1px 0px 0px #ffffff;
+}.css_btn_class:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background-color:#f6f6f6;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+.comment_username{
+font-size:14px;
+margin-left:5px;
+}
+.comment_time{
+font-size:14px;	
+	float:right;
+	margin-right:5px;
+}
+.comment{
+	list-style:none;
+}
+.comment_username{
+	color: #24292e;
+	text-decoration: none;
+	}
+	.comment_user_img{
+	float:left;
+}
+.comment_box{
+	margin-left:40px;
+    color: #24292e;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+}
+.comment_content{
+margin:10px 10px 10px 10px;
+}
+
+#comment{
+	margin-top:30px;
+}
+
+.comment{
+	margin-top:30px;
+}
+
+/* CSS按钮生成器 */
+</style>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">直升机倾斜器研究总结</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-03-09T12:50:26+08:00" itemprop="datePublished">Mar 9, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>目前已知有两种倾斜器。</p>
+
+<p>大型直升机上的倾斜器（倾斜盘）,倾斜盘上连接连杆到桨叶上，用来控制桨距。如果倾斜器上下移动（collective input)，则所有桨叶的桨距一起增大减小。如果倾斜器发生倾斜(cyclic input)，则桨距的变化就不是一起的了。同时，倾斜盘是一起旋转的，所以能实现“周期变距”。</p>
+
+<p>参考视频：
+https://www.youtube.com/watch?v=-kWhNi-MZAM&amp;t=103s</p>
+
+<p>另一种倾斜器是比较简单的倾斜器，直接带动整个电机的，一般来说需要两个舵机。
+有两个变种，一种是一个舵机附着在某个自由度的旋转机构上，另一个舵机直接推这整个机构，来实现两个自由度方向的变化。缺点是后一个舵机需要出更大的力。</p>
+
+<p><img src="https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/swash.jpg" alt="此处输入图片的描述" /></p>
+
+<p>另一种是直接用两个舵机分别拉两个方向，两个舵机的受力是差不多的。缺点是，内层不动的那个舵机的推力点应该在旋转机构的中心处，这样虽然会有误差，但是再加上使用带球头的连杆，可以稍微补偿掉这点误差。否则的话，因为连杆的长度是固定的，两个舵机分别推的话，很有可能是会别住的。 李梦澳跟我说可以两个舵机联动，这倒是一个解决办法，但是我看Youtube上的一个视频，人家似乎并没有联动，所以估计是球头起的作用。</p>
+
+<p>参考视频：
+https://www.youtube.com/watch?v=lqcUUsICeww&amp;t=24s</p>
+
+<h3 id="为什么直升机不直接改变转速">为什么直升机不直接改变转速？</h3>
+<ul>
+  <li>改变转速在会引发共振  （某个速度下？）</li>
+</ul>
+
+<h3 id="陀螺效应">陀螺效应</h3>
+
+<ul>
+  <li>进动性
+    <ul>
+      <li>理论：设t时刻陀螺对称轴与z轴的夹角为 θ （见右上图），角动量在 z 轴上的投影为Lcosθ；t+dt时刻，由于重力矩M的作用，陀螺将会下倾，使s轴与z轴的夹角变为θ+dθ，角动量在z轴的投影变为Lcos(θ+dθ)，则角动量在z轴方向上的增量为：
+      但是，M在z轴方向上无分量，因此，陀螺的角动量在Z轴方向必守恒，这意味着，陀螺必定会获得一个沿z轴正方向的角动量 ，使得陀螺的对称轴反时针方向沿z轴转动，产生进动。</li>
+      <li>参考地址：https://baike.baidu.com/item/陀螺进动/20359222?fr=aladdin</li>
+      <li>
+        <p>有关滞后性（滞后90度)的解释：
+  	- 以角动量守恒解释，重力矩在Z轴无分量，因此陀螺在Z轴角动量守恒
+  	- 定性解释：简单的讲，就是旋翼有惯性，以逆时针转动为例，在右侧减小浆距，使该片旋翼升力减小，旋翼会向下挥舞，但是它有个过程，不会立即掉下来，所以是在转过90度后，也就是前方旋翼达到最低点。这个过程就是相位滞后。</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  以陀螺的原理来讲，就是陀螺的进动性，旋转的物体在某方向施加力，它会想90度之后的方向运动。
+
+  或者你以理论公式来讲，单片桨叶的升力可以最终写成一个三角函数的方程（sin或者cos），然后其运动的路程公式和升力的公式之间是求导的关系，三角函数求导还是三角函数，但是相位会有90度偏差，理论上讲就造成了相位滞后
+
+  参考地址：https://bbs.airacm.com/forum.php?mod=viewthread&amp;tid=329948
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>定轴性
+    <ul>
+      <li>陀螺转子以高速旋转时，在没有任何外力矩作用在陀螺仪上时，陀螺仪的自转轴在惯性空间中的指向保持稳定不变的特性。</li>
+    </ul>
+  </li>
+</ul>
+
+
+  </div><!--
+	<a href="https://github.com/Ncerzzk/Myblog/issues/88" class="css_btn_class">添加留言</a>
+	-->
+	
+<div id="comment">
+<li class="comment">
+	
+	<img class="comment_user_img"  height="40" width="40" src="https://avatars2.githubusercontent.com/u/9284611?v=4"></img>
+	<div class="comment_box">
+	<a class="comment_username" href="#">Username</a>
+	<span class="comment_time">Comment at 2019.5.13</span>
+	<div class="comment_content">Here is the Content</div>
+	</div>
+</li>
+</div>
+		
+	
+  <a class="u-url" href="/%E6%8A%80%E6%9C%AF/2020/03/09/zhi-sheng-ji-qing-xie-qi-yan-jiu-zong-jie.html" hidden></a>
+</article>
+
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+</script>
+
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).hide();
+  });
+});
+var h=$("#comment").html();
+var user="Ncerzzk";
+var repo="Myblog";
+var issueid="88";
+$("#comment").html("");
+$.getJSON("https://api.github.com/repos/"+user+"/"+repo+"/issues/"+issueid+"/comments", function(json){
+  for(i in json){
+	  $("#comment").append(h);
+	  $(".comment_username:last").text(json[i].user.login);
+	  $(".comment_username:last").attr("href",json[i].user.html_url);
+	  $(".comment_content:last").text(json[i].body);
+	  $(".comment_time:last").text(json[i].created_at);
+	  $(".comment_user_img:last").attr("src",json[i].user.avatar_url);
+  }
+});
+</script>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Hello,world!</p>
+      </div>
+    </div>
+	<div>
+		<a href="http://beian.miit.gov.cn/">闽ICP备20002143号</a>
+	</div>
+  </div>
+
+</footer>
+</body>
+<script>
+  window.onload=function (){
+    var content = document.getElementsByTagName("html")[0].innerHTML;
+    content = content.replace(/博客|Blog|blog/g,"");
+    console.log(content);
+
+    document.getElementsByTagName("html")[0].innerHTML = content; 
+  }
+</script>
+</html>

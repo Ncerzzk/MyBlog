@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VESC测量电感的方式分析 | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="VESC测量电感的方式分析" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="测量程序入口：" />
+<meta property="og:description" content="测量程序入口：" />
+<link rel="canonical" href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/04/VESC-ce-liang-dian-gan-de-fang-shi-fen-xi.html" />
+<meta property="og:url" content="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/04/VESC-ce-liang-dian-gan-de-fang-shi-fen-xi.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-04T14:40:21+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/04/VESC-ce-liang-dian-gan-de-fang-shi-fen-xi.html"},"url":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/04/VESC-ce-liang-dian-gan-de-fang-shi-fen-xi.html","headline":"VESC测量电感的方式分析","dateModified":"2021-01-04T14:40:21+08:00","datePublished":"2021-01-04T14:40:21+08:00","description":"测量程序入口：","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://ncerzzk.github.io/feed.xml" title="Huangzzk's Blog" /><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9a0d201458675d03a87e467407e4889b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/aboutme/">关于</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <style type="text/css">
+.css_btn_class {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #dcdcdc;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffffff), color-stop(100%, #f6f6f6) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
+	background:-ms-linear-gradient( top, #ffffff 5%, #f6f6f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
+	background-color:#ffffff;
+	color:#666666;
+	display:inline-block;
+	text-shadow:1px 1px 0px #ffffff;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	box-shadow:inset 1px 1px 0px 0px #ffffff;
+}.css_btn_class:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background-color:#f6f6f6;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+.comment_username{
+font-size:14px;
+margin-left:5px;
+}
+.comment_time{
+font-size:14px;	
+	float:right;
+	margin-right:5px;
+}
+.comment{
+	list-style:none;
+}
+.comment_username{
+	color: #24292e;
+	text-decoration: none;
+	}
+	.comment_user_img{
+	float:left;
+}
+.comment_box{
+	margin-left:40px;
+    color: #24292e;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+}
+.comment_content{
+margin:10px 10px 10px 10px;
+}
+
+#comment{
+	margin-top:30px;
+}
+
+.comment{
+	margin-top:30px;
+}
+
+/* CSS按钮生成器 */
+</style>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">VESC测量电感的方式分析</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-01-04T14:40:21+08:00" itemprop="datePublished">Jan 4, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>测量程序入口：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bool</span> <span class="nf">mcpwm_foc_measure_res_ind</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">res</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">ind</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">const</span> <span class="kt">float</span> <span class="n">f_sw_old</span> <span class="o">=</span> <span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_f_sw</span><span class="p">;</span>
+	<span class="k">const</span> <span class="kt">float</span> <span class="n">kp_old</span> <span class="o">=</span> <span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_current_kp</span><span class="p">;</span>
+	<span class="k">const</span> <span class="kt">float</span> <span class="n">ki_old</span> <span class="o">=</span> <span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_current_ki</span><span class="p">;</span>
+
+	<span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_f_sw</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+	<span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_current_kp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mo">001</span><span class="p">;</span>
+	<span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_current_ki</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+
+	<span class="kt">uint32_t</span> <span class="n">top</span> <span class="o">=</span> <span class="n">SYSTEM_CORE_CLOCKA</span> <span class="o">/</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_f_sw</span><span class="p">;</span>
+	<span class="n">TIMER_UPDATE_SAMP_TOP</span><span class="p">(</span><span class="n">MCPWM_FOC_CURRENT_SAMP_OFFSET</span><span class="p">,</span> <span class="n">top</span><span class="p">);</span>
+
+	<span class="kt">float</span> <span class="n">i_last</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+    <span class="c1">// 测量出一个大致的期望电流</span>
+    <span class="c1">// 这个期望电流大概是在1V的电压下，电机的电流（无反电动势）</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">float</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">l_current_max</span> <span class="o">/</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span><span class="n">i</span> <span class="o">*=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="o">/</span> <span class="n">mcpwm_foc_measure_resistance</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">20</span><span class="p">)))</span> <span class="p">{</span>
+			<span class="n">i_last</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">i_last</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">.</span><span class="mo">01</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">i_last</span> <span class="o">=</span> <span class="p">(</span><span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">l_current_max</span> <span class="o">/</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span>
+	<span class="p">}</span>
+
+<span class="cp">#ifdef HW_AXIOM_FORCE_HIGH_CURRENT_MEASUREMENTS
+</span>	<span class="n">i_last</span> <span class="o">=</span> <span class="p">(</span><span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">l_current_max</span> <span class="o">/</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span>
+<span class="cp">#endif
+</span>
+    <span class="c1">// 用刚刚测量出的期望电流去测量电阻和电感，第二个参数是采样次数</span>
+	<span class="o">*</span><span class="n">res</span> <span class="o">=</span> <span class="n">mcpwm_foc_measure_resistance</span><span class="p">(</span><span class="n">i_last</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+	<span class="o">*</span><span class="n">ind</span> <span class="o">=</span> <span class="n">mcpwm_foc_measure_inductance_current</span><span class="p">(</span><span class="n">i_last</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+	<span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_f_sw</span> <span class="o">=</span> <span class="n">f_sw_old</span><span class="p">;</span>
+	<span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_current_kp</span> <span class="o">=</span> <span class="n">kp_old</span><span class="p">;</span>
+	<span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_current_ki</span> <span class="o">=</span> <span class="n">ki_old</span><span class="p">;</span>
+
+	<span class="n">top</span> <span class="o">=</span> <span class="n">SYSTEM_CORE_CLOCK</span> <span class="o">/</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_f_sw</span><span class="p">;</span>
+	<span class="n">TIMER_UPDATE_SAMP_TOP</span><span class="p">(</span><span class="n">MCPWM_FOC_CURRENT_SAMP_OFFSET</span><span class="p">,</span> <span class="n">top</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>接下来,跳进主要函数mcpwm_foc_measure_inductance_current里看看：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">float</span> <span class="nf">mcpwm_foc_measure_inductance_current</span><span class="p">(</span><span class="kt">float</span> <span class="n">curr_goal</span><span class="p">,</span> <span class="kt">int</span> <span class="n">samples</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">curr</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">const</span> <span class="kt">float</span> <span class="n">f_sw_old</span> <span class="o">=</span> <span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_f_sw</span><span class="p">;</span>
+	<span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_f_sw</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>  <span class="c1">// 注意这里FOC的频率变成了3k</span>
+
+	<span class="kt">uint32_t</span> <span class="n">top</span> <span class="o">=</span> <span class="n">SYSTEM_CORE_CLOCK</span> <span class="o">/</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_f_sw</span><span class="p">;</span>
+	<span class="n">TIMER_UPDATE_SAMP_TOP</span><span class="p">(</span><span class="n">MCPWM_FOC_CURRENT_SAMP_OFFSET</span><span class="p">,</span> <span class="n">top</span><span class="p">);</span>
+
+	<span class="kt">float</span> <span class="n">duty_last</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+    <span class="c1">// 注意这里的i 并不是指代电流，而是指占空比</span>
+    <span class="c1">// 这里占空比从2%开始递增，到50%结束，每次增大1.5倍</span>
+    <span class="c1">// 如果电机电流大于上面给的期望电流，那么就跳出，保存此时的占空比作为期望占空比</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">float</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mo">02</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">;</span><span class="n">i</span> <span class="o">*=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">5</span><span class="p">)</span> <span class="p">{</span> 
+		<span class="kt">float</span> <span class="n">i_tmp</span><span class="p">;</span>
+		<span class="n">mcpwm_foc_measure_inductance</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i_tmp</span><span class="p">);</span>
+
+		<span class="n">duty_last</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">i_tmp</span> <span class="o">&gt;=</span> <span class="n">curr_goal</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+    <span class="c1">// 使用刚刚测量好的期望占空比来实际测量电感</span>
+    <span class="c1">// 再重复一下，在电机加上该占空比的电压，可以使电机电流大致等于期望电流</span>
+	<span class="kt">float</span> <span class="n">ind</span> <span class="o">=</span> <span class="n">mcpwm_foc_measure_inductance</span><span class="p">(</span><span class="n">duty_last</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">curr</span><span class="p">);</span>
+
+	<span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_f_sw</span> <span class="o">=</span> <span class="n">f_sw_old</span><span class="p">;</span>
+	<span class="n">top</span> <span class="o">=</span> <span class="n">SYSTEM_CORE_CLOCK</span> <span class="o">/</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_f_sw</span><span class="p">;</span>
+	<span class="n">TIMER_UPDATE_SAMP_TOP</span><span class="p">(</span><span class="n">MCPWM_FOC_CURRENT_SAMP_OFFSET</span><span class="p">,</span> <span class="n">top</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="n">ind</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>可以看到，电感值是在mcpwm_foc_measure_inductance中计算的，继续跳入</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">float</span> <span class="nf">mcpwm_foc_measure_inductance</span><span class="p">(</span><span class="kt">float</span> <span class="n">duty</span><span class="p">,</span> <span class="kt">int</span> <span class="n">samples</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">curr</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">m_samples</span><span class="p">.</span><span class="n">avg_current_tot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+	<span class="n">m_samples</span><span class="p">.</span><span class="n">avg_voltage_tot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+	<span class="n">m_samples</span><span class="p">.</span><span class="n">sample_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">m_samples</span><span class="p">.</span><span class="n">measure_inductance_duty</span> <span class="o">=</span> <span class="n">duty</span><span class="p">;</span>
+
+	<span class="c1">// Disable timeout</span>
+	<span class="n">systime_t</span> <span class="n">tout</span> <span class="o">=</span> <span class="n">timeout_get_timeout_msec</span><span class="p">();</span>
+	<span class="kt">float</span> <span class="n">tout_c</span> <span class="o">=</span> <span class="n">timeout_get_brake_current</span><span class="p">();</span>
+	<span class="n">timeout_reset</span><span class="p">();</span>
+	<span class="n">timeout_configure</span><span class="p">(</span><span class="mi">60000</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span>
+
+	<span class="n">mc_interface_lock</span><span class="p">();</span>
+
+	<span class="n">CURRENT_FILTER_OFF</span><span class="p">();</span>
+
+	<span class="kt">int</span> <span class="n">to_cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">samples</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">m_samples</span><span class="p">.</span><span class="n">measure_inductance_now</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>   <span class="c1">// 这里只是设置了一下标志位，采样的地方不在这里</span>
+
+		<span class="k">do</span> <span class="p">{</span>
+			<span class="n">chThdSleepMicroseconds</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>  <span class="c1">// 100us</span>
+			<span class="n">to_cnt</span><span class="o">++</span><span class="p">;</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">to_cnt</span> <span class="o">&gt;</span> <span class="mi">50000</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 100us * 50000 = 5s</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">m_samples</span><span class="p">.</span><span class="n">measure_inductance_now</span><span class="p">);</span>  <span class="c1">// 总采样时间如果超过5s，跳出</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">to_cnt</span> <span class="o">&gt;</span> <span class="mi">50000</span><span class="p">)</span> <span class="p">{</span>  
+			<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="n">CURRENT_FILTER_ON</span><span class="p">();</span>
+
+	<span class="c1">// Enable timeout</span>
+	<span class="n">timeout_configure</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">tout_c</span><span class="p">);</span>
+
+	<span class="n">mc_interface_unlock</span><span class="p">();</span>
+
+	<span class="kt">float</span> <span class="n">avg_current</span> <span class="o">=</span> <span class="n">m_samples</span><span class="p">.</span><span class="n">avg_current_tot</span> <span class="o">/</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">m_samples</span><span class="p">.</span><span class="n">sample_num</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">avg_voltage</span> <span class="o">=</span> <span class="n">m_samples</span><span class="p">.</span><span class="n">avg_voltage_tot</span> <span class="o">/</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">m_samples</span><span class="p">.</span><span class="n">sample_num</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">TIM1</span><span class="o">-&gt;</span><span class="n">ARR</span> <span class="o">*</span> <span class="n">m_samples</span><span class="p">.</span><span class="n">measure_inductance_duty</span> <span class="o">/</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">SYSTEM_CORE_CLOCK</span> <span class="o">-</span>
+			<span class="p">(</span><span class="kt">float</span><span class="p">)(</span><span class="n">MCPWM_FOC_INDUCTANCE_SAMPLE_CNT_OFFSET</span> <span class="o">+</span> <span class="n">MCPWM_FOC_INDUCTANCE_SAMPLE_RISE_COMP</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">SYSTEM_CORE_CLOCK</span><span class="p">;</span>
+	<span class="c1">// ARR / CLOCK = T(周期，频率的倒数)</span>
+    <span class="c1">// 这里他减去了两个补偿时间，分别是MCPWM_FOC_INDUCTANCE_SAMPLE_CNT_OFFSET = 10</span>
+    <span class="c1">// MCPWM_FOC_INDUCTANCE_SAMPLE_RISE_COMP = 50</span>
+    <span class="c1">// 具体这两个时间是指什么下面再仔细讲</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">curr</span><span class="p">)</span> <span class="p">{</span>
+		<span class="o">*</span><span class="n">curr</span> <span class="o">=</span> <span class="n">avg_current</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="p">((</span><span class="n">avg_voltage</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> <span class="o">/</span> <span class="n">avg_current</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1e6</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="o">/</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>找到真实采样的地方，就是ADC的采样中断那里(mcpwm_foc_adc_int_handler)：</p>
+
+<p>整个函数太长了，截取重要的部分：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">m_samples</span><span class="p">.</span><span class="n">measure_inductance_now</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// 在非电感采样模式下</span>
+<span class="cp">#ifdef HW_HAS_PHASE_SHUNTS
+</span>		<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">m_conf</span><span class="o">-&gt;</span><span class="n">foc_sample_v0_v7</span> <span class="o">&amp;&amp;</span> <span class="n">is_v7</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span><span class="p">;</span>
+		<span class="p">}</span>
+<span class="cp">#else
+</span>		<span class="k">if</span> <span class="p">(</span><span class="n">is_v7</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// 判断当前是上溢中断还是下溢中断，正常情况应该在上管关闭（下管导通）的时候采样</span>
+			<span class="k">return</span><span class="p">;</span>   <span class="c1">// 因此这里is_v7代表的情况是，上管导通,这里的v7的意思是指七步SVPWM中的第七状态</span>
+		<span class="p">}</span>
+<span class="cp">#endif
+</span>	<span class="p">}</span>
+</code></pre></div></div>
+
+<p>这一部分就在整个函数的入口处，主要就是判断一下当前是不是V7时间段，众所周知，一般情况下电流采样应该在V0时间段采样。而由于本杰明中配置定时器的中央对齐模式时，并没有配置重复计数器，因此每一个周期会有两次中断，分别是上溢中断和下溢中断。这个代码就是判断当前到底是处于哪个中断的，如果在非电感采样模式下，且处于V7（上溢中断），则直接返回。</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">if</span> <span class="p">(</span><span class="n">m_samples</span><span class="p">.</span><span class="n">measure_inductance_now</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">is_v7</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// is_v7 代表上管导通</span>
+			<span class="k">return</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="k">static</span> <span class="kt">int</span> <span class="n">inductance_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="k">const</span> <span class="kt">uint32_t</span> <span class="n">duty_cnt</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint32_t</span><span class="p">)((</span><span class="kt">float</span><span class="p">)</span><span class="n">TIM1</span><span class="o">-&gt;</span><span class="n">ARR</span> <span class="o">*</span> <span class="n">m_samples</span><span class="p">.</span><span class="n">measure_inductance_duty</span><span class="p">);</span> 
+		<span class="k">const</span> <span class="kt">uint32_t</span> <span class="n">samp_time</span> <span class="o">=</span> <span class="n">duty_cnt</span> <span class="o">-</span> <span class="n">MCPWM_FOC_INDUCTANCE_SAMPLE_CNT_OFFSET</span><span class="p">;</span> 
+        <span class="c1">// 注意这里更新了电流的采样点，将其往前挪了MCPWM_FOC_INDUCTANCE_SAMPLE_CNT_OFFSET个定时器的CLK</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">inductance_state</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">TIMER_UPDATE_DUTY_SAMP</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">samp_time</span><span class="p">);</span>
+			<span class="n">start_pwm_hw</span><span class="p">();</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">inductance_state</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">TIMER_UPDATE_DUTY</span><span class="p">(</span><span class="n">duty_cnt</span><span class="p">,</span>	<span class="mi">0</span><span class="p">,</span> <span class="n">duty_cnt</span><span class="p">);</span> <span class="c1">// 打开AC上桥，B下桥，导通时间duty_cnt</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">inductance_state</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">m_samples</span><span class="p">.</span><span class="n">avg_current_tot</span> <span class="o">+=</span> <span class="o">-</span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">curr1</span> <span class="o">*</span> <span class="n">FAC_CURRENT</span><span class="p">);</span> <span class="c1">// 测量A的电流</span>
+			<span class="n">m_samples</span><span class="p">.</span><span class="n">avg_voltage_tot</span> <span class="o">+=</span> <span class="n">GET_INPUT_VOLTAGE</span><span class="p">();</span> <span class="c1">// 测量电源电压</span>
+			<span class="n">m_samples</span><span class="p">.</span><span class="n">sample_num</span><span class="o">++</span><span class="p">;</span>
+			<span class="n">TIMER_UPDATE_DUTY</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">inductance_state</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">TIMER_UPDATE_DUTY</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">duty_cnt</span><span class="p">,</span> <span class="n">duty_cnt</span><span class="p">);</span> <span class="c1">// 打开BC上桥，A下桥,导通时间duty_cnt</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">inductance_state</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">m_samples</span><span class="p">.</span><span class="n">avg_current_tot</span> <span class="o">+=</span> <span class="o">-</span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">curr0</span> <span class="o">*</span> <span class="n">FAC_CURRENT</span><span class="p">);</span> <span class="c1">// 测量C电流</span>
+			<span class="n">m_samples</span><span class="p">.</span><span class="n">avg_voltage_tot</span> <span class="o">+=</span> <span class="n">GET_INPUT_VOLTAGE</span><span class="p">();</span>
+			<span class="n">m_samples</span><span class="p">.</span><span class="n">sample_num</span><span class="o">++</span><span class="p">;</span>
+			<span class="n">TIMER_UPDATE_DUTY</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">inductance_state</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+<span class="cp">#ifdef HW_HAS_3_SHUNTS
+</span>			<span class="n">TIMER_UPDATE_DUTY</span><span class="p">(</span><span class="n">duty_cnt</span><span class="p">,</span> <span class="n">duty_cnt</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="cp">#else
+</span>			<span class="n">TIMER_UPDATE_DUTY</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">duty_cnt</span><span class="p">);</span>  <span class="c1">// 打开C上桥，AB下桥</span>
+<span class="cp">#endif
+</span>		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">inductance_state</span> <span class="o">==</span> <span class="mi">9</span><span class="p">)</span> <span class="p">{</span>
+<span class="cp">#ifdef HW_HAS_3_SHUNTS
+</span>			<span class="n">m_samples</span><span class="p">.</span><span class="n">avg_current_tot</span> <span class="o">+=</span> <span class="o">-</span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">curr2</span> <span class="o">*</span> <span class="n">FAC_CURRENT</span><span class="p">);</span>
+<span class="cp">#else
+</span>			<span class="n">m_samples</span><span class="p">.</span><span class="n">avg_current_tot</span> <span class="o">+=</span> <span class="o">-</span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">curr0</span> <span class="o">*</span> <span class="n">FAC_CURRENT</span> <span class="o">+</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">curr1</span> <span class="o">*</span> <span class="n">FAC_CURRENT</span><span class="p">);</span>  <span class="c1">// 测量B电流</span>
+<span class="cp">#endif
+</span>			<span class="n">m_samples</span><span class="p">.</span><span class="n">avg_voltage_tot</span> <span class="o">+=</span> <span class="n">GET_INPUT_VOLTAGE</span><span class="p">();</span>
+			<span class="n">m_samples</span><span class="p">.</span><span class="n">sample_num</span><span class="o">++</span><span class="p">;</span>
+			<span class="n">stop_pwm_hw</span><span class="p">();</span>
+			<span class="n">TIMER_UPDATE_SAMP</span><span class="p">(</span><span class="n">MCPWM_FOC_CURRENT_SAMP_OFFSET</span><span class="p">);</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">inductance_state</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">inductance_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+			<span class="n">m_samples</span><span class="p">.</span><span class="n">measure_inductance_now</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>  <span class="c1">// 一次循环结束，采样了三次</span>
+			<span class="k">return</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="n">inductance_state</span><span class="o">++</span><span class="p">;</span>
+		<span class="k">return</span><span class="p">;</span>
+	<span class="p">}</span>
+</code></pre></div></div>
+
+<p>现在可以知道，VESC中测量电感的方式了：</p>
+
+<p>利用公式：U=L*(di/dt) ，利用短脉冲电压，测量该电压下，电感的电流。需要注意的是，实际上电机线圈还有电阻，因此完整的公式应该是：</p>
+
+<p>U=L<em>(di/dt) + I</em>R，电阻一般是mR级，再加上电流较小，因此本杰明直接忽略掉电阻的影响可能误差也不是很大。</p>
+
+<p>再来讨论一下上面说的减去的补偿时间：
+MCPWM_FOC_INDUCTANCE_SAMPLE_CNT_OFFSET(10) 和  MCPWM_FOC_INDUCTANCE_SAMPLE_RISE_COMP(50)</p>
+
+<p>前者在设置电流采样点的时候和计算最终dt的时候都用到了，设置采样点的时候将其往前挪，我自己的推测是：</p>
+
+<p>本杰明的电流采样通道优先级低于反电动势的采样通道，因此在采样电流前，需要先采样反电动势，这样会导致等电流开始采样的时候，已经过了一段时间，导致电流已经开始变小，从而影响电流的精度。
+但这个推测的问题在于，如果要补偿的话，也应该补偿：(15+12)个ADCCLK，15是设置的ADC采样周期个数，12是ADC转换的周期个数，再加上本杰明设置的ADCCLK为42MHZ，而定时器频率为168MHZ,因此显然应该补偿(15+12)*4左右才对。</p>
+
+<p>另一个补偿时间是MCPWM_FOC_INDUCTANCE_SAMPLE_RISE_COMP,因为其中带了个Rise，我猜测这是为了补偿MOS的打开延迟，包括STM32引脚拉高到DRV8302输出高，到MOS实际导通之间的延迟。这个时间可能是本杰明测出来的。</p>
+
+  </div><!--
+	<a href="https://github.com/Ncerzzk/Myblog/issues/144" class="css_btn_class">添加留言</a>
+	-->
+	
+<div id="comment">
+<li class="comment">
+	
+	<img class="comment_user_img"  height="40" width="40" src="https://avatars2.githubusercontent.com/u/9284611?v=4"></img>
+	<div class="comment_box">
+	<a class="comment_username" href="#">Username</a>
+	<span class="comment_time">Comment at 2019.5.13</span>
+	<div class="comment_content">Here is the Content</div>
+	</div>
+</li>
+</div>
+		
+	
+  <a class="u-url" href="/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/04/VESC-ce-liang-dian-gan-de-fang-shi-fen-xi.html" hidden></a>
+</article>
+
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+</script>
+
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).hide();
+  });
+});
+var h=$("#comment").html();
+var user="Ncerzzk";
+var repo="Myblog";
+var issueid="144";
+$("#comment").html("");
+$.getJSON("https://api.github.com/repos/"+user+"/"+repo+"/issues/"+issueid+"/comments", function(json){
+  for(i in json){
+	  $("#comment").append(h);
+	  $(".comment_username:last").text(json[i].user.login);
+	  $(".comment_username:last").attr("href",json[i].user.html_url);
+	  $(".comment_content:last").text(json[i].body);
+	  $(".comment_time:last").text(json[i].created_at);
+	  $(".comment_user_img:last").attr("src",json[i].user.avatar_url);
+  }
+});
+</script>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Hello,world!</p>
+      </div>
+    </div>
+	<div>
+		<a href="http://beian.miit.gov.cn/">闽ICP备20002143号</a>
+	</div>
+  </div>
+
+</footer>
+</body>
+<script>
+  window.onload=function (){
+    var content = document.getElementsByTagName("html")[0].innerHTML;
+    content = content.replace(/博客|Blog|blog/g,"");
+    console.log(content);
+
+    document.getElementsByTagName("html")[0].innerHTML = content; 
+  }
+</script>
+</html>

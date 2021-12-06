@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://ncerzzk.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ncerzzk.github.io/" rel="alternate" type="text/html" /><updated>2021-12-07T00:30:57+08:00</updated><id>https://ncerzzk.github.io/feed.xml</id><title type="html">Huangzzk’s Blog</title><subtitle>Hello,world!</subtitle><entry><title type="html">百阿</title><link href="https://ncerzzk.github.io/2021/12/04/bai-a.html" rel="alternate" type="text/html" title="百阿" /><published>2021-12-04T11:47:58+08:00</published><updated>2021-12-04T11:47:58+08:00</updated><id>https://ncerzzk.github.io/2021/12/04/bai-a</id><content type="html" xml:base="https://ncerzzk.github.io/2021/12/04/bai-a.html">&lt;p&gt;我有好久好久没有写日记（日常记录）了，今天看了看之前写的日记，在日本的也好，毕业前的也好（实际上毕业前没写几篇），
+还是满满的感慨，好多已经逐渐尘封的记忆又随着文字慢慢揭开。所以说呀，流水账还是有必要记录的，以后翻看的时候，流水账也都是回忆。&lt;/p&gt;
+
+&lt;p&gt;上周去参加百阿（百年阿里）了，带薪脱产培训。实际上这种场合我一直是比较害怕的，因为一想到要和人家social，压力山大。培训之前，我对百阿也早有耳闻，估摸着是价值观的培训，想要将你培养成阿里同路人。实际培训的时候，也有一点这种感觉，但是没有那么露骨，展示了大量的案例等等，可能这也是潜移默化的一种方式。我自己对价值观这一套是挺抗拒的，因此我对其中很多内容，包括使命、愿景等等，也保持着将信将疑的态度，但是对于带我们的班主任言果，我可以感觉到她的真诚，不像是照本宣科地想要将价值观灌输到我们脑中。我可以清楚地感受到她确实是希望我们在阿里的职场之路上能走得更远。&lt;/p&gt;
+
+&lt;p&gt;这次百阿一共有50+人，本来还有几个上海的同事，不过由于上海突发疫情，因此上海的都延期了，只有杭州本地的参加了培训。培训中还是有一点竞争的成分在里面的，还有积分奖励，比如分组时候最先建群都会有积分奖励。我被分到了B组，发现大家十分佛系，最后愣是没人想建群，最后在其他组已经建完群很久之后，我拉了个群。大家纷纷表示进了躺平组可太开心了，哈哈哈。&lt;/p&gt;
+
+&lt;p&gt;班上有两位北邮校友，一个学姐和一个同届的计算机院的同学，听说我们在学校的时候，校园网登陆什么的都是他写的。还有一个哥们说自己来自福建漳州，理论上除了高中有几个漳州的同学，我应该认识不了漳州的人的。但是我总感觉他好像在哪里见过，又实在想不起来在哪儿，想着也可能是我又认错了，又把以前哪个熟人的特征套在了新认识的人上。结果后面一问，发现这哥们初中在子江读的，高中和晴莞一起去双十了，初中的时候我们一起参加过物理竞赛和化学竞赛的培训，怪不得脸熟呢。说起这事的时候我们还都很感慨，初中到现在一晃居然十年过去了。&lt;/p&gt;
+
+&lt;p&gt;周三的时候班级重新打散来做业务探寻，我分到了阿里云项目组，和小组成员们一起从下午4点开始奋斗到了晚上十点。要干的活包括资料整理、采访、PPT输出等等，我是采访组之一。因为感觉找纯粹的陌生人采访可能稍微有点尴尬，对于我来说。于是我在北邮阿里微信群里问了下有没有阿里云飞天架构的哥们，结果真有个哥们回我了，还说他在西溪园区，可以直接现场采访。我简直喜出望外，于是带着组里另一个哥们从西溪B区跑到西溪A区会议室。谁能想到啊，进去一看发现这个哥们是上文提到班里的北邮哥们，因为我在群里没有备注名字，只写了平头哥-杭州，他也没写名字，写了阿里云-ZCQ啥的，于是我们俩谁也没认出谁，到了现场直接无语凝噎。不过秉着来都来了的想法，我还是让他给我采访了。&lt;/p&gt;
+
+&lt;p&gt;不过最后因为时间安排的问题，等采访组采访完毕，资料组已经把PPT做得差不多了，很难再塞下内容，而且十点之后我们也没有时间再串讲一遍了，导致第二天得分比较低。组里安排上去讲阿里云故事的哥们很不好意思，因为他花了比较多的时间，导致后面讲技术和展望的部分没有太多时间讲到，被其他组评价头重脚轻。不过我感觉其实没啥关系，大家都花了时间，结果有好有坏而已，而且阿里云作为一个比较硬核的项目，讲起来相对于其他项目本身趣味性就不够，所以这个也挺正常。&lt;/p&gt;
+
+&lt;p&gt;倒数第二天是关于绩效的课程，上课的老师还安排了角色扮演，让两位同学分别扮演3.25的员工和主管，然后反过来再演一次，但却没有提供更多的信息，导致有个哥们疯狂给自己加戏，给自己加了很多对自己有利的场景，而且说话也很冲，给人感觉就是为了吵架而上去的，观感很不好，其中有一段时间都快打起来了。老师都懵了一段时间，估计是没见过这么能“演”的，后面才出来叫停。&lt;/p&gt;
+
+&lt;p&gt;最后一天早上是合伙人来分享，分享的内容我已经忘得差不多了，同学提问的问题我也不记得，但只是感觉问题提的都特别大，什么中美竞争、地缘政治，很不接地气的感觉。&lt;/p&gt;
+
+&lt;p&gt;下午是毕业典礼了，说实话，伴随着音乐，看着循环播放的大家的自我介绍，感觉还是挺伤感的。一周的培训居然就这么过去了，班主任第一天上课的时候说，大家刚来的时候回想着五天太长，毕业的时候回想着五天太短。确实啊，简直完美符合。最后的大家每个小组都排练了各自的节目，在欢声笑语和肯德基、蛋糕中，结束了为期五天的培训。后面C组和D组去聚餐，我们组里没事的8、9个人上楼上找了个会议室开始玩桌游，玩到了晚上十点多。还是挺开心的，回家的车上大家一顿加微信好友，可惜之后应该没什么机会再聚起来了。&lt;/p&gt;
+
+&lt;p&gt;这次百阿有一些感想吧，一个是实际上前几个月上班我经常想跑路了，感觉工作内容不是特别喜欢，主要就是维护一下芯片的自动测试框架，对于指令集、OS层面并没有学习到太多的东西。参加百阿之后，有一句话让我感觉有点道理，就是三年不换岗，五年不离职。虽然从公司角度，毕竟重新招个人也是要一定的成本的，因此他肯定尽量希望员工的流动性不要那么大。但是对员工来说，在一家公司工作几个月就跑路了，真的能学到什么东西吗？后面我借着百阿对师兄的访谈，也跟鸿亮说了我的职业规划上的困惑和看法，鸿亮以前也不是做arm的，刚毕业的时候做手机驱动，后面做kernel相关，来PTG之后才做的arm相关，也是从头学起。总之，目前来说，暂时不会想着离职了，具体还是再观望观望。所以有人说百阿是来打鸡血的，我觉得也有一定的道理。&lt;/p&gt;
+
+&lt;p&gt;第二个是自己的语言表达能力确实比较堪忧，常常辞不达意，说了半天好像什么重点的信息也没说，这点我在几个技术同学上也发现了。但是这个可能也跟性格有关，因为我也看到有技术同学嘴皮子挺6的。组里一个原来在体制内的哥们就让我很佩服，随便一个什么组内交流都能马上说出1、2、3，而且很流畅，完全不会有什么停顿。以及运营、产品方面的同学，大家的语言表达能力都挺好的，这点以后需要自己有意识的改进吧。&lt;/p&gt;</content><author><name></name></author><summary type="html">我有好久好久没有写日记（日常记录）了，今天看了看之前写的日记，在日本的也好，毕业前的也好（实际上毕业前没写几篇）， 还是满满的感慨，好多已经逐渐尘封的记忆又随着文字慢慢揭开。所以说呀，流水账还是有必要记录的，以后翻看的时候，流水账也都是回忆。</summary></entry><entry><title type="html">PX4的linux调度</title><link href="https://ncerzzk.github.io/%E9%A3%9E%E6%8E%A7/2021/11/20/PX4-de-linux-diao-du.html" rel="alternate" type="text/html" title="PX4的linux调度" /><published>2021-11-20T17:01:42+08:00</published><updated>2021-11-20T17:01:42+08:00</updated><id>https://ncerzzk.github.io/%E9%A3%9E%E6%8E%A7/2021/11/20/PX4-de-linux-diao-du</id><content type="html" xml:base="https://ncerzzk.github.io/%E9%A3%9E%E6%8E%A7/2021/11/20/PX4-de-linux-diao-du.html">&lt;p&gt;作为顶顶大名的飞控，PX4实际上支持在linux下直接运行的，因此可以不必再外接pixhawk。&lt;/p&gt;
+
+&lt;p&gt;那么linux作为一个非实时的操作系统，PX4具体是如何在上面运行的呢？这篇文章就是为了探究这个问题。&lt;/p&gt;
+
+&lt;p&gt;首先在main.cpp中找到初始化函数：&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init_once&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;_shell_task_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pthread_self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;work_queues_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;hrt_work_queue_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;px4_platform_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;除了第一句以外，其他的看起来都跟调度可能有关，挨个去看看。&lt;/p&gt;
+
+&lt;h2 id=&quot;work-queues-init&quot;&gt;Work Queues Init&lt;/h2&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;work_queues_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;px4_sem_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_work_lock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HPWORK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;px4_sem_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_work_lock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LPWORK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#ifdef CONFIG_SCHED_USRWORK
+&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;px4_sem_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_work_lock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;USRWORK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// Create high priority worker thread&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;g_work&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HPWORK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;px4_task_spawn_cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hpwork&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;n&quot;&gt;SCHED_DEFAULT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;n&quot;&gt;SCHED_PRIORITY_MAX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;n&quot;&gt;work_hpthread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;c1&quot;&gt;// Create low priority worker thread&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;g_work&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LPWORK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;px4_task_spawn_cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;lpwork&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;n&quot;&gt;SCHED_DEFAULT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;n&quot;&gt;SCHED_PRIORITY_MIN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;n&quot;&gt;work_lpthread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;其中，&lt;code class=&quot;highlighter-rouge&quot;&gt;px4_task_spawn_cmd&lt;/code&gt;是用来新建一个可调度的task，SCHED_DEFAULT是一个宏定义，定义为：SCHED_FIFO，对linux比较熟悉的应该知道，这是一种实时调度策略，
+高优先级线程可以抢占低优先级线程，并且如果高优先级线程不主动释放CPU，低优先级线程是无法执行的。
+&lt;code class=&quot;highlighter-rouge&quot;&gt;px4_task_spawn_cmd&lt;/code&gt;函数声明为:&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;px4_task_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;px4_task_spawn_cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scheduler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;priority&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;px4_main_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+			      &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;内部实现是调用操作系统的pthread。&lt;/p&gt;
+
+&lt;p&gt;好了，通过这里可以发现，这里新建了两个work queue，分别是高优先级的队列和低优先级的队列。&lt;/p&gt;
+
+&lt;p&gt;接下来进去看看这两个队列管理线程里干了些啥事&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;work_hpthread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;cm&quot;&gt;/* Loop forever */&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(;;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;cm&quot;&gt;/* First, perform garbage collection.  This cleans-up memory de-allocations
+		 * that were queued because they could not be freed in that execution
+		 * context (for example, if the memory was freed from an interrupt handler).
+		 * NOTE: If the work thread is disabled, this clean-up is performed by
+		 * the IDLE thread (at a very, very low priority).
+		 */&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#ifndef CONFIG_SCHED_LPWORK
+&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;sched_garbagecollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;
+		&lt;span class=&quot;cm&quot;&gt;/* Then process queued work.  We need to keep interrupts disabled while
+		 * we process items in the work list.
+		 */&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;work_process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g_work&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HPWORK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HPWORK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PX4_OK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* To keep some compilers happy */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;注释里写得很清楚，首先是垃圾回收（一些上下文下无法及时释放的内存会在这里释放，但是sched_garbagecollection似乎没实际使用，因为CONFIG_SCHED_LPWORK这个宏是有定义的，而且在work_lpthread中，将sched_garbagecollection注释了，且我也没找到这个函数的定义或者声明，这里先不管他），然后开始实际的work_progress,再进去看看：（出于方便，我会直接将标注用中文注释的方式写在下方代码中）&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;work_process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wqueue_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wqueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lock_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;volatile&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;work_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;worker_t&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;worker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;uint64_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elapsed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;uint32_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remaining&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;uint32_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;cm&quot;&gt;/* Then process queued work.  We need to keep interrupts disabled while
+	 * we process items in the work list.
+	 */&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CONFIG_SCHED_WORKPERIOD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;work_lock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lock_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;work_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wqueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;cm&quot;&gt;/* Is this work ready?  It is ready if there is no delay or if
+		 * the delay has elapsed. qtime is the time that the work was added
+		 * to the work queue.  It will always be greater than or equal to
+		 * zero.  Therefore a delay of zero will always execute immediately.
+		 */&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;elapsed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;USEC2TICK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clock_systimer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 检测该work上次执行到现在所过的时间&lt;/span&gt;
+
+		&lt;span class=&quot;c1&quot;&gt;//printf(&quot;work_process: in ticks elapsed=%lu delay=%u\n&quot;, elapsed, work-&amp;gt;delay);&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elapsed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;cm&quot;&gt;/* Remove the ready-to-execute work from the list */&lt;/span&gt;
+
+			&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dq_rem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dq_entry_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wqueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+			&lt;span class=&quot;cm&quot;&gt;/* Extract the work description from the entry (in case the work
+			 * instance by the re-used after it has been de-queued).
+			 */&lt;/span&gt;
+
+			&lt;span class=&quot;n&quot;&gt;worker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;worker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+			&lt;span class=&quot;cm&quot;&gt;/* Mark the work as no longer being queued */&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// 取出worker 和 参数，并将标记为NULL(表示已经执行过）&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;worker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+			&lt;span class=&quot;cm&quot;&gt;/* Do the work.  Re-enable interrupts while the work is being
+			 * performed... we don't have any idea how long that will take!
+			 */&lt;/span&gt;
+
+             &lt;span class=&quot;c1&quot;&gt;// 这里他说重新使能中断了，但实际上之类只是设置了一下信号量，因此可以推测中断也用了这个信号量来进行同步&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;work_unlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lock_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+			&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;worker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;PX4_WARN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MESSED UP: worker = 0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;worker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;c1&quot;&gt;// 实际运行这个work&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+			&lt;span class=&quot;cm&quot;&gt;/* Now, unfortunately, since we re-enabled interrupts we don't
+			 * know the state of the work list and we will have to start
+			 * back at the head of the list.
+			 */&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// 如上所言，由于实际执行了一项work，此时应该从头开始遍历一下这个工作队列，（可能在队列头部有一些work已经就绪了，这时候应该去执行队列头部的work）&lt;/span&gt;
+
+			&lt;span class=&quot;n&quot;&gt;work_lock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lock_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;work_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wqueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;// 整个else逻辑就是：&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// 这个work还未就绪，那么计算一下它离就绪还有多久，如果比next还少，那么就将next赋值为这个下次就绪时间&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// 遍历一遍后，next就是最快将要就绪的work的等待时间，然后再usleep 这个时间即可。&lt;/span&gt;
+
+			&lt;span class=&quot;cm&quot;&gt;/* This one is not ready.. will it be ready before the next
+			 * scheduled wakeup interval?
+			 */&lt;/span&gt;
+
+			&lt;span class=&quot;cm&quot;&gt;/* Here: elapsed &amp;lt; work-&amp;gt;delay */&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;remaining&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;USEC_PER_TICK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elapsed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+			&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remaining&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+				&lt;span class=&quot;cm&quot;&gt;/* Yes.. Then schedule to wake up when the work is ready */&lt;/span&gt;
+
+				&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remaining&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+			&lt;span class=&quot;cm&quot;&gt;/* Then try the next in the list. */&lt;/span&gt;
+
+			&lt;span class=&quot;n&quot;&gt;work&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;work_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;cm&quot;&gt;/* Wait awhile to check the work list.  We will wait here until either
+	 * the time elapses or until we are awakened by a signal.
+	 */&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;work_unlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lock_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;px4_usleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;到这里，调度的逻辑已经比较清晰了，即通过两个work_queue，这两个work_queue自身通过linux得SCHED_FIFO来调度，在它们内部，会自己进行调度。
+刚刚分析的主要是&lt;code class=&quot;highlighter-rouge&quot;&gt;work_hpthread&lt;/code&gt;,但实际上&lt;code class=&quot;highlighter-rouge&quot;&gt;work_lpthread&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;work_hrtthread&lt;/code&gt;的流程也几乎是一样的，这里就不再分析了。&lt;/p&gt;
+
+&lt;p&gt;总结一下这一部分，基本就是三种work queue的初始化，分别是hpthread（高优先级） lphread（低优先级）和hrtthread(依赖高分辨率定时器的workqueue)&lt;/p&gt;
+
+&lt;h2 id=&quot;platform-init&quot;&gt;Platform Init&lt;/h2&gt;
+&lt;p&gt;接下来是平台级的一些初始化，&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;px4_platform_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;hrt_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;param_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;px4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WorkQueueManagerStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;uorb_start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;px4_log_initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PX4_OK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;我们主要关注一下WorkQueueManagerStart，该函数&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;WorkQueueManagerRun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;_wq_manager_wqs_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BlockingList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WorkQueue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;_wq_manager_create_queue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BlockingQueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_wq_manager_should_exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// create new work queues as needed&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_wq_manager_create_queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nullptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;c1&quot;&gt;// create new work queue&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// 如果有work queue 待创建，那么下面据开始创建流程。&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// 一开始_wq_manager_create_queue是空的，只有当运行到其他模块时，才会往这里添加元素&lt;/span&gt;
+
+			&lt;span class=&quot;n&quot;&gt;pthread_attr_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret_attr_init&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pthread_attr_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;// .. 省略 attr 和 优先级的设置&lt;/span&gt;
+
+			&lt;span class=&quot;c1&quot;&gt;// create thread&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;pthread_t&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret_create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pthread_create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WorkQueueRunner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+			&lt;span class=&quot;c1&quot;&gt;// destroy thread attributes&lt;/span&gt;
+			&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret_destroy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pthread_attr_destroy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+			&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ret_destroy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;PX4_ERR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;failed to destroy thread attributes for %s (%i)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret_create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;那么什么时候会往&lt;code class=&quot;highlighter-rouge&quot;&gt;_wq_manager_create_queue&lt;/code&gt;添加元素呢？首先是&lt;code class=&quot;highlighter-rouge&quot;&gt;WorkQueueFindOrCreate&lt;/code&gt;，该函数会往&lt;code class=&quot;highlighter-rouge&quot;&gt;_wq_manager_create_queue&lt;/code&gt; push 一个新元素。&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;WorkQueue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;WorkQueueFindOrCreate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_wq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_wq_manager_create_queue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nullptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;PX4_ERR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;not running&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nullptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;c1&quot;&gt;// search list for existing work queue&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;WorkQueue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FindWorkQueueByName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_wq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;c1&quot;&gt;// create work queue if it doesn't already exist&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nullptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// add WQ config to list&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//  main thread wakes up, creates the thread&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;_wq_manager_create_queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_wq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+		&lt;span class=&quot;c1&quot;&gt;// we wait until new wq is created, then return&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;uint64_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+		&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nullptr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;c1&quot;&gt;// Wait up to 10 seconds, checking every 1 ms&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;px4_usleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+			&lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FindWorkQueueByName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_wq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nullptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;PX4_ERR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;failed to create %s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_wq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;而&lt;code class=&quot;highlighter-rouge&quot;&gt;WorkQueueFindOrCreate&lt;/code&gt; 又在&lt;code class=&quot;highlighter-rouge&quot;&gt;WorkItem::Init&lt;/code&gt;中被调用&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WorkItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// clear any existing first&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Deinit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;px4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WorkQueue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WorkQueueFindOrCreate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nullptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Attach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;_wq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;_time_first_run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;PX4_ERR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%s not available&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;什么是&lt;code class=&quot;highlighter-rouge&quot;&gt;WorkItem&lt;/code&gt;？随手举个例子，如固定翼的控制模块：&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;FixedwingPositionControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FixedwingPositionControl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vtol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;ModuleParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nullptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;WorkItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MODULE_NAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;px4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wq_configurations&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nav_and_controllers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;_attitude_sp_pub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vtol&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ORB_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fw_virtual_attitude_setpoint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ORB_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vehicle_attitude_setpoint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;_loop_perf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perf_alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PC_ELAPSED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MODULE_NAME&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;: cycle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;_launchDetector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;_runway_takeoff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;也就是说，在PX4的一些组件模块初始化的时候，会创建一个WorkItem，然后将与该WorkItem关联的workqueue加到待初始化的work queue列表中，由WorkQueueManager来实际地创建线程。&lt;/p&gt;
+
+&lt;p&gt;不过，需要注意的是，这里创建的都是&lt;em&gt;线程&lt;/em&gt;，也就是和一开始讨论的hpthread lpthread等线程都是同级的关系。有哪些操作是通过线程直接调度的，可以查看&lt;code class=&quot;highlighter-rouge&quot;&gt;wq_configurations&lt;/code&gt;。可以看到，里面大部分都是一些接口，如I2C、SPI（另外高度、速度控制也作为一个work queue）。可以推测，每种接口都是一个work queue，如一个I2C总线下挂多个设备，那么每个设备的操作就是该work queue的一项work。每项work的调度就是最开始hpthread那样地调度了。&lt;/p&gt;
+
+&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;
+
+&lt;p&gt;总结一下，PX4在linux上（或者说在posix上），主要是通过线程调度+work queue内部调度来完成的。&lt;/p&gt;
+
+&lt;p&gt;依据所要完成的操作种类，会有多个work queue，每个workqueue都由一个线程管理，也即每个workque 自身是由linux通过线程来调度的。不同的workqueue有不同的优先级，该优先级也是与linux FIFO调度的优先级对应的。&lt;/p&gt;
+
+&lt;p&gt;一个workqueue下会有多个work，workqueue也是通过FIFO的方式来调度，但是与linux的SCHED_FIFO不同，这里的FIFO不会发生抢占（因为这里面的每项work已经没有优先级的区分了）。&lt;/p&gt;
+
+&lt;p&gt;那么，这种方式有缺点吗？我想应该是有的，每个线程（或者说workqueue）都要仔细考虑其优先级，如果高优先级的workqueue中有太多的work，那么显然它是不会将CPU释放给低优先级的workqueue的，因此如果处理器性能不够，高优先级的线程实时性能够得到保证，但是低优先级的线程实时性可能就无法保证了。（但是，低优先级线程的实时性重要吗？如果重要，怎么不设置为高优先级呢？）另外，其他rtos的实现不也是如此吗，如果有一个高优先级的线程在执行，其他低优先级的线程同样无法抢占（在抢占式调度下），因此这样说来，实际上这种方式并不比rtos在调度上逊色太多。当然，由于linux的内核比较重，因此与RTOS相比，还有内核调度上的一些开销。&lt;/p&gt;
+
+&lt;p&gt;此外，linux上要运行PX4，要打开内核抢占（实现软实时），打实时性补丁（实现硬实时）的，虽然PX4官方没提到，但是其提供的在树莓派上运行的一个OS，实际上是已经打过补丁的了。&lt;/p&gt;
+
+&lt;h2 id=&quot;函数声明变量类型备查&quot;&gt;函数声明、变量类型备查&lt;/h2&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BlockingQueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_wq_manager_create_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nullptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BlockingList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WorkQueue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_wq_manager_wqs_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nullptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//当前正在的执行的work queues，如果某个workqueue不再需要执行，会被移出这个队列&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;work_process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wqueue_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wqueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lock_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 实际的workqueue 处理函数&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wqueue_s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g_work&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NWORKERS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;px4_sem_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_work_lock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NWORKERS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wqueue_s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g_hrt_work&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stacksize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int8_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;relative_priority&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// relative to max&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_configurations&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rate_ctrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:rate_ctrl&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1952&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// PX4 inner loop highest priority&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctrl_alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:ctrl_alloc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// PX4 control allocation, same priority as rate_ctrl&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SPI0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:SPI0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SPI1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:SPI1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SPI2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:SPI2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SPI3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:SPI3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SPI4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:SPI4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SPI5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:SPI5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SPI6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:SPI6&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;I2C0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:I2C0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;I2C1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:I2C1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;I2C2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:I2C2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;I2C3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:I2C3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;I2C4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:I2C4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2336&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// PX4 att/pos controllers, highest priority after sensors.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nav_and_controllers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:nav_and_controllers&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2240&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INS0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:INS0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INS1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:INS1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INS2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:INS2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INS3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:INS3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hp_default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:hp_default&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1900&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uavcan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:uavcan&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3624&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UART0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:UART0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1632&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UART1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:UART1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1632&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UART2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:UART2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1632&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UART3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:UART3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1632&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UART4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:UART4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1632&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UART5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:UART5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1632&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UART6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:UART6&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1632&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UART7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:UART7&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1632&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UART8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:UART8&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1632&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UART_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:UART_UNKNOWN&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1632&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lp_default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:lp_default&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1920&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:test1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constexpr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wq_config_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wq:test2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// namespace wq_configurations&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pthread_create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+                 &lt;span class=&quot;n&quot;&gt;pthread_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;restrict&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tidp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//新创建的线程ID指向的内存单元。&lt;/span&gt;
+                 &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pthread_attr_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;restrict&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//线程属性，默认为NULL&lt;/span&gt;
+                 &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start_rtn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//新创建的线程从start_rtn函数的地址开始运行&lt;/span&gt;
+                 &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;restrict&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//默认为NULL。若上述函数需要参数，将参数放入结构中并将地址作为arg传入。&lt;/span&gt;
+                  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">作为顶顶大名的飞控，PX4实际上支持在linux下直接运行的，因此可以不必再外接pixhawk。</summary></entry><entry><title type="html">一些备忘</title><link href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/2021/10/31/yi-xie-bei-wang.html" rel="alternate" type="text/html" title="一些备忘" /><published>2021-10-31T11:46:24+08:00</published><updated>2021-10-31T11:46:24+08:00</updated><id>https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/2021/10/31/yi-xie-bei-wang</id><content type="html" xml:base="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/2021/10/31/yi-xie-bei-wang.html">&lt;ul&gt;
+  &lt;li&gt;以后如果自己做航模上的电调，可以考虑采用TI的F28027，48 引脚，内部固化了观测器。&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">以后如果自己做航模上的电调，可以考虑采用TI的F28027，48 引脚，内部固化了观测器。</summary></entry><entry><title type="html">送几本书</title><link href="https://ncerzzk.github.io/2021/04/05/song-ji-ben-shu.html" rel="alternate" type="text/html" title="送几本书" /><published>2021-04-05T18:24:26+08:00</published><updated>2021-04-05T18:24:26+08:00</updated><id>https://ncerzzk.github.io/2021/04/05/song-ji-ben-shu</id><content type="html" xml:base="https://ncerzzk.github.io/2021/04/05/song-ji-ben-shu.html">&lt;p&gt;作为历年京东图书买200-100的受害者，除了电子书以外，还买了一点实体书&lt;/p&gt;
+
+&lt;p&gt;快毕业了，把这些书都送了，希望物尽其用，书单如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;手把手教你设计CPU——RISC-v处理器&lt;/li&gt;
+  &lt;li&gt;Programming Ruby 1.9&amp;amp;2.0&lt;/li&gt;
+  &lt;li&gt;Rails5 敏捷开发&lt;/li&gt;
+  &lt;li&gt;Ruby 元编程&lt;/li&gt;
+  &lt;li&gt;Verilog 数字系统设计&lt;/li&gt;
+  &lt;li&gt;卡尔曼滤波原理及应用仿真&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;还有一些小说和教材：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;流浪地球&lt;/li&gt;
+  &lt;li&gt;商博良&lt;/li&gt;
+  &lt;li&gt;吴承恩捉妖记&lt;/li&gt;
+  &lt;li&gt;电力拖动自动控制系统&lt;/li&gt;
+  &lt;li&gt;工程材料&lt;/li&gt;
+  &lt;li&gt;概率论与数理统计&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">作为历年京东图书买200-100的受害者，除了电子书以外，还买了一点实体书</summary></entry><entry><title type="html">Nuttx学习</title><link href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/24/Nuttx-xue-xi.html" rel="alternate" type="text/html" title="Nuttx学习" /><published>2021-01-24T21:28:41+08:00</published><updated>2021-01-24T21:28:41+08:00</updated><id>https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/24/Nuttx-xue-xi</id><content type="html" xml:base="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/24/Nuttx-xue-xi.html">&lt;p&gt;Nuttx是一个开源的RTOS，PX4中用的操作系统就是它，据手册描述，坚持POSIX兼容，因此可以当作一个简单版的RTOS linux来学习。&lt;/p&gt;
+
+&lt;h2 id=&quot;启动过程分析以stm32为例&quot;&gt;启动过程分析(以STM32为例)&lt;/h2&gt;
+
+&lt;p&gt;’’’
+__Start(定义于:stm32_start.c)
+  /* Configure the UART so that we can get debug output as soon as possible &lt;em&gt;/
+  stm32_clockconfig();
+  stm32_fpuconfig();
+  stm32_lowsetup();
+  stm32_gpioinit();
+  /&lt;/em&gt; Clear .bss.  We’ll do this inline (vs. calling memset) just to be&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;certain that there are no issues with the state of global variables.
+   */&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;for (dest = _START_BSS; dest &amp;lt; _END_BSS; )
+    {
+      *dest++ = 0;  // 手动将BSS段清空，BSS段用于放置全局变量，没有初始化的全局变量必须都为0
+    }&lt;/p&gt;
+
+&lt;p&gt;for (src = _DATA_INIT, dest = _START_DATA; dest &amp;lt; _END_DATA; )
+    {
+      *dest++ = *src++;   // 复制数据段
+    }&lt;/p&gt;
+
+&lt;p&gt;’’’&lt;/p&gt;</content><author><name></name></author><summary type="html">Nuttx是一个开源的RTOS，PX4中用的操作系统就是它，据手册描述，坚持POSIX兼容，因此可以当作一个简单版的RTOS linux来学习。</summary></entry><entry><title type="html">近期硬件上的设计失误记录</title><link href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/22/jin-qi-ying-jian-shang-de-she-ji-shi-wu-ji-lu.html" rel="alternate" type="text/html" title="近期硬件上的设计失误记录" /><published>2021-01-22T20:50:17+08:00</published><updated>2021-01-22T20:50:17+08:00</updated><id>https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/22/jin-qi-ying-jian-shang-de-she-ji-shi-wu-ji-lu</id><content type="html" xml:base="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/22/jin-qi-ying-jian-shang-de-she-ji-shi-wu-ji-lu.html">&lt;h2 id=&quot;飞控板的开关电路问题v11&quot;&gt;飞控板的开关电路问题(V1.1)&lt;/h2&gt;
+
+&lt;h3 id=&quot;问题导致&quot;&gt;问题导致&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;开关失效，开关未作用，不该导通的地方就导通了&lt;/li&gt;
+  &lt;li&gt;开关瞬间会烧单片机，要嘛烧飞控的，要嘛烧驱动板的&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;原因分析&quot;&gt;原因分析&lt;/h3&gt;
+
+&lt;p&gt;电路中有两个地，电池地和开关后的地（简称开关地）&lt;/p&gt;
+
+&lt;p&gt;飞控上的大部分芯片都是连接到开关地（直接或者通过0R电阻）开关地由开关，控制MOS导通来控制开关地是否接入电池地，开关地用来给驱动板供电&lt;/p&gt;
+
+&lt;p&gt;而飞控和驱动板之间通过SCK,CSN,MO,MI,G，连接在一起。这里的G是飞控的开关地。由于SCK这些引脚内部是连到单片机中的，实际上相当于这些引脚经过一个二极管反向连接到单片机地（即电池地），因此将飞控和驱动板连接后，即使开关没有作用，电池地和开关地也会几乎连在一起。几乎的意思是说是由两边单片机的二级管导致的等效连在一起。而一旦打开开关，开关地会连到电池地上，导致电压有个突变，这个突变就容易将单片机烧了。&lt;/p&gt;
+
+&lt;p&gt;实测烧了3片f405&lt;/p&gt;
+
+&lt;p&gt;相关电路：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/shiwu1.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/shiwu2.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;错误分析原理图：
+&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/shiwufenxi.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;驱动板与飞控板通信期间spi频繁受到干扰&quot;&gt;驱动板与飞控板通信期间，SPI频繁受到干扰&lt;/h2&gt;
+
+&lt;p&gt;SPI受到干扰后的软件恢复方式在上篇文章已经说了，但是由于硬件上的问题，导致受到干扰的频率比正常情况下大得多，即使可以通过软件上恢复，也极大影响了电机的正常运行。&lt;/p&gt;
+
+&lt;p&gt;原因主要是：SPI通信接口的地连到了功率地上，导致电机电流一变化，就容易干扰SPI正常通信&lt;/p&gt;
+
+&lt;p&gt;解决方式比较简单，在PCB上割断原来连到PGND上的线，刚好该引脚附近就有信号地的铜皮，直接将其刮开，然后短上即可。飞控板一侧同理。&lt;/p&gt;</content><author><name></name></author><summary type="html">飞控板的开关电路问题(V1.1)</summary></entry><entry><title type="html">STM32从机SPI通信的CRC、错位问题</title><link href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/20/STM32-cong-ji-SPI-tong-xin-de-CRC-cuo-wei-wen-ti.html" rel="alternate" type="text/html" title="STM32从机SPI通信的CRC、错位问题" /><published>2021-01-20T22:11:44+08:00</published><updated>2021-01-20T22:11:44+08:00</updated><id>https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/20/STM32-cong-ji-SPI-tong-xin-de-CRC-cuo-wei-wen-ti</id><content type="html" xml:base="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/20/STM32-cong-ji-SPI-tong-xin-de-CRC-cuo-wei-wen-ti.html">&lt;p&gt;最近在调飞机，飞控需要发送电机转速命令给驱动板，使用SPI协议。之前在学校的时候我已经写好一个SPI_Slave的协议，用于STM32 主从通信。&lt;/p&gt;
+
+&lt;p&gt;基于该协议，可以实现主机读取、写入从机的某些变量（相当于某些SPI协议芯片的的寄存器），从而修改驱动板中关于速度等等变量，通过直接修改串口的Rx_buffer等变量，还可以实现SPI转串口，从而通过飞控直接发送串口命令给驱动板。&lt;/p&gt;
+
+&lt;p&gt;但回来实际使用的时候发现，稍微提高一下转速，电机就会卡住、或者疯转，总之再也无法收到SPI命令。但是如果低速或者不变速运行，不会发生错误。&lt;/p&gt;
+
+&lt;p&gt;于是这两天都在调试这个问题。&lt;/p&gt;
+
+&lt;p&gt;一开始我以为是我的协议过于臃肿了，毕竟为了实现读取某个变量，需要主机先发送要读|写的变量Index，然后发送要写入的指或者接收从机发来的数据。而主控发送一个封包，需要修改占空比、相位、加减速占空比三个变量，每修改一个变量之间还需要一定的延时。
+又或者是CSN拉低之后，等待的时间太少就直接发起通信了，从机还没反应过来。&lt;/p&gt;
+
+&lt;p&gt;基于这些猜测，我重新写了个SPI_Slave_Fast，直接使用固定长度的13字节封包来进行通信。从机也就是驱动板使用SPI的DMA来发送和接收，主机直接使用轮询发送接收。但是测试后发现问题依旧，只是SPI出错后，不会疯转了，电机直接停止（也不是卡住）。&lt;/p&gt;
+
+&lt;p&gt;由于想要保证驱动板接收的命令或者数据的正确性，我开启了CRC校验，出现这个问题后，以为是CRC校验错了，导致什么不可恢复。于是先将CRC去掉了，问题依旧。猜测是否是发生了溢出（OVR），因为调试的时候发现进入SPI中断的时候，溢出标志位都为1，据手册讲，如果发生了溢出，在清除溢出标志位之前，DR寄存器的值不会更新。尽管在HAL库的SPI中断已经清除了标志位，还是开始在各种地方疯狂清除溢出标志位，收效甚微。后面分析应该不是发生了OVR，调试的时候发生OVR是因为单步调试使DR寄存器来不及读出，从而导致溢出。全速跑的时候在SPI中断打了log也支持这一推理。&lt;/p&gt;
+
+&lt;p&gt;排除溢出后，突然想到之前在STM32 SPI DMA CRC等关键词时，有人提到错位的问题。仔细思考了一下，发现极有可能是这个问题。在无CRC的情况下，多接收或者少接收了几个SCLK。假设一共要收13个字节，从机多收了几个SCLK，那么在13个字节还没收完的时候，它就觉得自己收完了，开始触发DMA完成中断。而我在DMA完成中断中又开启DMA的下一轮接收，因此周而复始，会永远多收了几个SCLK，导致数据不对。&lt;/p&gt;
+
+&lt;p&gt;开始搜索相关问题，发现有相同问题的人不少，但是鲜有人提出解决方法。&lt;/p&gt;
+
+&lt;p&gt;ST中文社区的一个哥们给了我不少启发，原帖地址：
+https://www.stmcu.org.cn/module/forum/thread-611901-1-1.html&lt;/p&gt;
+
+&lt;p&gt;根据之前的分析，不能直接在DMA完成的时候直接又把DMA开了，因为此时可能已经多收或者漏收了几个SCLK。需要在发现数据错误的时候进行恢复，恢复完再重开DMA。如果不开CRC的话，是无法方便发现数据错误的，可能只能在机毁人亡的时候才发现。而开启CRC的话，数据不对会触发SPI错误中断。因此在错误中断回调中稍微立了个标志位：&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint8_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SPI_Slave_Err&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;HAL_SPI_ErrorCallback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SPI_HandleTypeDef&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hspi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hspi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SPI1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;uprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;CRC!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;__HAL_SPI_CLEAR_CRCERRFLAG&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hspi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;__HAL_SPI_CLEAR_OVRFLAG&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hspi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// 在HAL的SPI中断中实际上已经处理过了，但是有可能清空OVR后关闭中断前，又来SPI数据，导致又溢出了，因此这里需要再清一下&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;SPI_Slave_Err&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// 主要是立个标志，让我们知道数据错了&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在CSN的中断中处理错误&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SPI_Slave_Fast_CSN_Handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint8_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//flag 代表是上升沿中断(1)还是下降沿中断(0)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SPI_Slave_Err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__HAL_SPI_GET_FLAG&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hspi1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SPI_FLAG_BSY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RESET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 必须在SPI没在通信的过程中处理，否则下次还是错误&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;HAL_SPI_DeInit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hspi1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;HAL_SPI_Init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hspi1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;__HAL_SPI_CLEAR_OVRFLAG&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hspi1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;HAL_SPI_TransmitReceive_DMA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SPI_Use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Tx_Buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rx_Buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;SPI_Slave_Err&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;FOC_Flag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Rx_Buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;memcpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Base_Duty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rx_Buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;memcpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Duty_Amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rx_Buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;memcpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Phi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rx_Buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;TX_Data_Install&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;HAL_SPI_TransmitReceive_DMA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SPI_Use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Tx_Buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rx_Buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//uprintf(&quot;n&quot;);&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//uprintf(&quot;%d %f %f %f \r\n&quot;,FOC_Flag,Base_Duty,Duty_Amp,Phi);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这样修改之后，就能从SPI错位错误中恢复过来了。&lt;/p&gt;
+
+&lt;p&gt;再分析之前用SPI_SLAVE协议为什么是疯转，而SPI_SLAVE_FAST协议是直接停止。主要原因是SPI_SLAVE_FAST中，第一个字节来标志电机的启动，为1就启动，为0就停止。如果为0，那么后面发的什么东西都无所谓了。而发生错位错误的话，基本上就是把1给移位移到后面去了，导致第一个字节收的都是0，于是电机就停了。&lt;/p&gt;
+
+&lt;p&gt;而SPI_SLAVE协议中，电机启动和停止只在某个地方启动停止一次，之后就单纯修改占空比等等了，因此收到错误数据疯转很正常。&lt;/p&gt;
+
+&lt;p&gt;留念一下当时的分析草稿，当时万念俱灰，都没心思好好写字了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/stm32crc.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">最近在调飞机，飞控需要发送电机转速命令给驱动板，使用SPI协议。之前在学校的时候我已经写好一个SPI_Slave的协议，用于STM32 主从通信。</summary></entry><entry><title type="html">VESC测量电感的方式分析</title><link href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/04/VESC-ce-liang-dian-gan-de-fang-shi-fen-xi.html" rel="alternate" type="text/html" title="VESC测量电感的方式分析" /><published>2021-01-04T14:40:21+08:00</published><updated>2021-01-04T14:40:21+08:00</updated><id>https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/04/VESC-ce-liang-dian-gan-de-fang-shi-fen-xi</id><content type="html" xml:base="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2021/01/04/VESC-ce-liang-dian-gan-de-fang-shi-fen-xi.html">&lt;p&gt;测量程序入口：&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mcpwm_foc_measure_res_ind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f_sw_old&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_f_sw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kp_old&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_current_kp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ki_old&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_current_ki&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_f_sw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_current_kp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_current_ki&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;kt&quot;&gt;uint32_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SYSTEM_CORE_CLOCKA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_f_sw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_SAMP_TOP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MCPWM_FOC_CURRENT_SAMP_OFFSET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i_last&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 测量出一个大致的期望电流&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 这个期望电流大概是在1V的电压下，电机的电流（无反电动势）&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l_current_max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mcpwm_foc_measure_resistance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;i_last&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i_last&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;i_last&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l_current_max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#ifdef HW_AXIOM_FORCE_HIGH_CURRENT_MEASUREMENTS
+&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;i_last&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l_current_max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 用刚刚测量出的期望电流去测量电阻和电感，第二个参数是采样次数&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mcpwm_foc_measure_resistance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i_last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ind&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mcpwm_foc_measure_inductance_current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i_last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_f_sw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f_sw_old&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_current_kp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kp_old&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_current_ki&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ki_old&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SYSTEM_CORE_CLOCK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_f_sw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_SAMP_TOP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MCPWM_FOC_CURRENT_SAMP_OFFSET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;接下来,跳进主要函数mcpwm_foc_measure_inductance_current里看看：&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mcpwm_foc_measure_inductance_current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curr_goal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f_sw_old&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_f_sw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_f_sw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 注意这里FOC的频率变成了3k&lt;/span&gt;
+
+	&lt;span class=&quot;kt&quot;&gt;uint32_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SYSTEM_CORE_CLOCK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_f_sw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_SAMP_TOP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MCPWM_FOC_CURRENT_SAMP_OFFSET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;duty_last&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 注意这里的i 并不是指代电流，而是指占空比&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 这里占空比从2%开始递增，到50%结束，每次增大1.5倍&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 如果电机电流大于上面给的期望电流，那么就跳出，保存此时的占空比作为期望占空比&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+		&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i_tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;mcpwm_foc_measure_inductance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i_tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;duty_last&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i_tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curr_goal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// 使用刚刚测量好的期望占空比来实际测量电感&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 再重复一下，在电机加上该占空比的电压，可以使电机电流大致等于期望电流&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ind&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mcpwm_foc_measure_inductance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;duty_last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_f_sw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f_sw_old&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SYSTEM_CORE_CLOCK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_f_sw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_SAMP_TOP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MCPWM_FOC_CURRENT_SAMP_OFFSET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可以看到，电感值是在mcpwm_foc_measure_inductance中计算的，继续跳入&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mcpwm_foc_measure_inductance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;duty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_current_tot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_voltage_tot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample_num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;measure_inductance_duty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;duty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;c1&quot;&gt;// Disable timeout&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;systime_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeout_get_timeout_msec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tout_c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeout_get_brake_current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;timeout_reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;timeout_configure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;60000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;mc_interface_lock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;CURRENT_FILTER_OFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to_cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;measure_inductance_now&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// 这里只是设置了一下标志位，采样的地方不在这里&lt;/span&gt;
+
+		&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;chThdSleepMicroseconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 100us&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;to_cnt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 100us * 50000 = 5s&lt;/span&gt;
+				&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;measure_inductance_now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 总采样时间如果超过5s，跳出&lt;/span&gt;
+
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+			&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;CURRENT_FILTER_ON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;c1&quot;&gt;// Enable timeout&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;timeout_configure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tout_c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;mc_interface_unlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg_current&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_current_tot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample_num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg_voltage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_voltage_tot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample_num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TIM1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ARR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;measure_inductance_duty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SYSTEM_CORE_CLOCK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MCPWM_FOC_INDUCTANCE_SAMPLE_CNT_OFFSET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MCPWM_FOC_INDUCTANCE_SAMPLE_RISE_COMP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SYSTEM_CORE_CLOCK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// ARR / CLOCK = T(周期，频率的倒数)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 这里他减去了两个补偿时间，分别是MCPWM_FOC_INDUCTANCE_SAMPLE_CNT_OFFSET = 10&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// MCPWM_FOC_INDUCTANCE_SAMPLE_RISE_COMP = 50&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 具体这两个时间是指什么下面再仔细讲&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg_current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_voltage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg_current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1e6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;找到真实采样的地方，就是ADC的采样中断那里(mcpwm_foc_adc_int_handler)：&lt;/p&gt;
+
+&lt;p&gt;整个函数太长了，截取重要的部分：&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;measure_inductance_now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 在非电感采样模式下&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#ifdef HW_HAS_PHASE_SHUNTS
+&lt;/span&gt;		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foc_sample_v0_v7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is_v7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#else
+&lt;/span&gt;		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_v7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// 判断当前是上溢中断还是下溢中断，正常情况应该在上管关闭（下管导通）的时候采样&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// 因此这里is_v7代表的情况是，上管导通,这里的v7的意思是指七步SVPWM中的第七状态&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这一部分就在整个函数的入口处，主要就是判断一下当前是不是V7时间段，众所周知，一般情况下电流采样应该在V0时间段采样。而由于本杰明中配置定时器的中央对齐模式时，并没有配置重复计数器，因此每一个周期会有两次中断，分别是上溢中断和下溢中断。这个代码就是判断当前到底是处于哪个中断的，如果在非电感采样模式下，且处于V7（上溢中断），则直接返回。&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;measure_inductance_now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_v7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// is_v7 代表上管导通&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+		&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inductance_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint32_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;duty_cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint32_t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TIM1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ARR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;measure_inductance_duty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint32_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;samp_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;duty_cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MCPWM_FOC_INDUCTANCE_SAMPLE_CNT_OFFSET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+        &lt;span class=&quot;c1&quot;&gt;// 注意这里更新了电流的采样点，将其往前挪了MCPWM_FOC_INDUCTANCE_SAMPLE_CNT_OFFSET个定时器的CLK&lt;/span&gt;
+
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inductance_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_DUTY_SAMP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;samp_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;start_pwm_hw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inductance_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_DUTY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;duty_cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;duty_cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 打开AC上桥，B下桥，导通时间duty_cnt&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inductance_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_current_tot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curr1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FAC_CURRENT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 测量A的电流&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_voltage_tot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GET_INPUT_VOLTAGE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 测量电源电压&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample_num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_DUTY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inductance_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_DUTY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;duty_cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;duty_cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 打开BC上桥，A下桥,导通时间duty_cnt&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inductance_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_current_tot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curr0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FAC_CURRENT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 测量C电流&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_voltage_tot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GET_INPUT_VOLTAGE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample_num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_DUTY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inductance_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#ifdef HW_HAS_3_SHUNTS
+&lt;/span&gt;			&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_DUTY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;duty_cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;duty_cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#else
+&lt;/span&gt;			&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_DUTY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;duty_cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 打开C上桥，AB下桥&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inductance_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#ifdef HW_HAS_3_SHUNTS
+&lt;/span&gt;			&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_current_tot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curr2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FAC_CURRENT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#else
+&lt;/span&gt;			&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_current_tot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curr0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FAC_CURRENT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curr1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FAC_CURRENT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 测量B电流&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;			&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg_voltage_tot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GET_INPUT_VOLTAGE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample_num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;stop_pwm_hw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;TIMER_UPDATE_SAMP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MCPWM_FOC_CURRENT_SAMP_OFFSET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inductance_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;inductance_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;m_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;measure_inductance_now&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 一次循环结束，采样了三次&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;inductance_state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;现在可以知道，VESC中测量电感的方式了：&lt;/p&gt;
+
+&lt;p&gt;利用公式：U=L*(di/dt) ，利用短脉冲电压，测量该电压下，电感的电流。需要注意的是，实际上电机线圈还有电阻，因此完整的公式应该是：&lt;/p&gt;
+
+&lt;p&gt;U=L&lt;em&gt;(di/dt) + I&lt;/em&gt;R，电阻一般是mR级，再加上电流较小，因此本杰明直接忽略掉电阻的影响可能误差也不是很大。&lt;/p&gt;
+
+&lt;p&gt;再来讨论一下上面说的减去的补偿时间：
+MCPWM_FOC_INDUCTANCE_SAMPLE_CNT_OFFSET(10) 和  MCPWM_FOC_INDUCTANCE_SAMPLE_RISE_COMP(50)&lt;/p&gt;
+
+&lt;p&gt;前者在设置电流采样点的时候和计算最终dt的时候都用到了，设置采样点的时候将其往前挪，我自己的推测是：&lt;/p&gt;
+
+&lt;p&gt;本杰明的电流采样通道优先级低于反电动势的采样通道，因此在采样电流前，需要先采样反电动势，这样会导致等电流开始采样的时候，已经过了一段时间，导致电流已经开始变小，从而影响电流的精度。
+但这个推测的问题在于，如果要补偿的话，也应该补偿：(15+12)个ADCCLK，15是设置的ADC采样周期个数，12是ADC转换的周期个数，再加上本杰明设置的ADCCLK为42MHZ，而定时器频率为168MHZ,因此显然应该补偿(15+12)*4左右才对。&lt;/p&gt;
+
+&lt;p&gt;另一个补偿时间是MCPWM_FOC_INDUCTANCE_SAMPLE_RISE_COMP,因为其中带了个Rise，我猜测这是为了补偿MOS的打开延迟，包括STM32引脚拉高到DRV8302输出高，到MOS实际导通之间的延迟。这个时间可能是本杰明测出来的。&lt;/p&gt;</content><author><name></name></author><summary type="html">测量程序入口：</summary></entry><entry><title type="html">3D打印机的入门与维护</title><link href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/11/04/3D-da-yin-ji-de-ru-men-yu-wei-hu.html" rel="alternate" type="text/html" title="3D打印机的入门与维护" /><published>2020-11-04T14:54:47+08:00</published><updated>2020-11-04T14:54:47+08:00</updated><id>https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/11/04/3D-da-yin-ji-de-ru-men-yu-wei-hu</id><content type="html" xml:base="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/11/04/3D-da-yin-ji-de-ru-men-yu-wei-hu.html">&lt;p&gt;队里的3D打印机修好了，这里总结一下3D打印机的一些入门知识和常见问题的解决方式，当然，我折腾3D打印机的时间也不久，大家参考着看。&lt;/p&gt;
+
+&lt;p&gt;希望大家都能尽量掌握3D打印机的用法。3D打印机需要常常使用和维护，否则精度下降严重，打印质量也会很差。不要担心把打印机用坏，用坏了修就行了。&lt;/p&gt;
+
+&lt;p&gt;另外，从队里机构的角度来讲，不要太依赖打印件，重要机构该送出去加工就送出去加工，该雕刻雕刻。机构设计要用心，不要指望机构没设计好，想用3D打印打印点小机构补救来耍小聪明。&lt;/p&gt;
+
+&lt;h3 id=&quot;软件与上位机&quot;&gt;软件与上位机&lt;/h3&gt;
+
+&lt;p&gt;我们的打印机是优造智能的，但由于内部的固件实际上是Marlin开源固件，因此我们可以使用Cura来控制，而不是用优造智能的修改版。Cura在官网可以下载。&lt;/p&gt;
+
+&lt;p&gt;安装完毕后，可以在设置中，将语言修改为简体中文。&lt;/p&gt;
+
+&lt;p&gt;在Cura中增加打印机，队里的打印机是三角洲结构的，英文名称是delta，在打印机列表中找到delta printer。&lt;/p&gt;
+
+&lt;p&gt;设置打印机的长宽为155，高度为205，其他设置可以保持不变（喷头直径0.4，材料直径1.75mm)&lt;/p&gt;
+
+&lt;p&gt;Marlin固件与电脑的连接使用CH340串口芯片，因此电脑需安装CH340驱动。&lt;/p&gt;
+
+&lt;h3 id=&quot;fdm&quot;&gt;FDM&lt;/h3&gt;
+
+&lt;p&gt;FDM指熔融沉积，3D打印机大多都是这种成形方式。&lt;/p&gt;
+
+&lt;p&gt;其原理：加热喷头在计算机的控制下，根据产品零件的截面轮廓信息，作X-Y平面运动，热塑性丝状材料由供丝机构送至热熔喷头，并在喷头中加热和熔化成半液态，然后被挤压出来，有选择性的涂覆在工作台上，快速冷却后形成一层大约0.127mm厚的薄片轮廓。一层截面成型完成后工作台下降一定高度，再进行下一层的熔覆，好像一层层”画出”截面轮廓，如此循环，最终形成三维产品零件。(复制自百科)&lt;/p&gt;
+
+&lt;p&gt;当然，也有其他成型方式，如光固化等。但光固化的打印机一般都较贵。&lt;/p&gt;
+
+&lt;h3 id=&quot;pla冷打&quot;&gt;PLA冷打&lt;/h3&gt;
+
+&lt;p&gt;所谓冷打，与热打相对应。热打是通过热床，来保证模型底层的温度在60℃左右（对于PLA而言），来防止翘边。否则由于材料的热胀冷缩特性，翘边常常会发生。
+由于很多3D打印机并没有加配热床，因此渐渐发明了冷打的技术。通过一些方式：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在底面涂固体胶&lt;/li&gt;
+  &lt;li&gt;使用软平台&lt;/li&gt;
+  &lt;li&gt;适当压低&lt;/li&gt;
+  &lt;li&gt;首层慢速打印&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;等等，也可以取得不错的效果。具体如何防止翘边在后面讨论。&lt;/p&gt;
+
+&lt;h3 id=&quot;三角洲&quot;&gt;三角洲&lt;/h3&gt;
+&lt;p&gt;三角洲又称为并联臂，是现在市面上很常见的一种3D打印机结构类型，采用的是并联式运动结构，上往下看机器大致呈一个三角形。&lt;/p&gt;
+
+&lt;p&gt;三角洲基本特点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;远程挤出（为了最大地减少喷头的重量，减少移动惯性）&lt;/li&gt;
+  &lt;li&gt;并联臂，打圆会比XY型平面移动更精确。&lt;/li&gt;
+  &lt;li&gt;打印速度快&lt;/li&gt;
+  &lt;li&gt;空间利用率较低，可打较高的器件，底面积较大的不好打&lt;/li&gt;
+  &lt;li&gt;调平较为麻烦&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;喷嘴直径层高&quot;&gt;喷嘴直径、层高&lt;/h3&gt;
+
+&lt;p&gt;喷嘴直径现在默认是0.4mm，相当于打印机突出的丝宽度就是0.4mm。而层高则表示3D打印每一层的高度，层高调小，意味着相同高度下，层数变多，打印件也会更扎实，当然，速度就慢了。&lt;/p&gt;
+
+&lt;p&gt;0.4mm的喷嘴可调的层高在0.1mm-0.3mm左右。使用更小的喷嘴可以提高XY的精度，但是打印速度就会相应变慢，Z轴精度则由层高控制。&lt;/p&gt;
+
+&lt;h3 id=&quot;调平&quot;&gt;调平&lt;/h3&gt;
+
+&lt;p&gt;打印机需要将平台调平，以防止有些地方高，有些地方低，打出来材料成型不均匀，且容易翘边。队里打印机的调平方式：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;将XYZ回归零点，此时（X0，Y0，Z255）&lt;/li&gt;
+  &lt;li&gt;在CURA上，或者用显示屏旋钮，将Z下降至0.3（为什么是0.3？因为CURA生成的G代码就是从0.3高度处开始打的，具体可以随便打开一个生成的G代码看看）&lt;/li&gt;
+  &lt;li&gt;平台由三个螺栓控制调平，依次控制XY将喷头移动到距离三个螺栓较近的地方，然后放上A4纸，调节与喷头最近的螺栓，使A4纸可以在平台和喷头间自由移动，并且有一点摩擦力&lt;/li&gt;
+  &lt;li&gt;三个地方调整完毕后，将喷头移植中间，继续放上A4纸，调整三个螺栓，使A4纸可以自由移动+有一点摩擦力&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;切片&quot;&gt;切片&lt;/h3&gt;
+
+&lt;p&gt;我们通过SW保存的格式为STL文件，该文件仅通过多面体来定义模型。对于3D打印机而言，它并不能识别这么复杂的东西，它只能识别G代码，即告诉它每个步进电机该走多远距离。&lt;/p&gt;
+
+&lt;p&gt;因此，当我们输出STL之后，需要使用切片软件（如CURA）来对模型进行切片，从而转化3D打印机认识的G代码。G代码有多种，3D打印机常用的G代码一般是Marlin格式的。Marlin是一个
+3D打印机的开源固件，现在除了支持3D打印机以外，也支持CNC等。&lt;/p&gt;
+
+&lt;p&gt;下面介绍一些常用的切片设置：&lt;/p&gt;
+
+&lt;h4 id=&quot;支撑&quot;&gt;支撑&lt;/h4&gt;
+
+&lt;p&gt;对于打印件，我们一般根据3D打印机的成形方式来设计，以最大可能的减少支撑。当然，很多时候由于模型的关系，不得不加支撑
+支撑分为两种，一种是普通支撑，一种是树形支撑。&lt;/p&gt;
+
+&lt;p&gt;普通支撑与打印平常的层差不多，只是打得比较快，比较马虎，毕竟不需要精度，同时切片软件会在支撑与实际模型中增加一点距离，方便打印完毕之后拆下支撑。
+但是由于种种原因，经常这个普通支撑非常难拆，导致一用力就可能破坏模型。&lt;/p&gt;
+
+&lt;p&gt;另一种支撑是树形支撑，树形支撑顾名思义，就是树枝树杈状的支撑。使用树形支撑可以最大程度的减小支撑面积，加快打印速度，更重要的是树形支撑比较好拆。&lt;/p&gt;
+
+&lt;p&gt;CURA中开启树形支撑的方式，右上角打印设置中，点击自定义，搜索 “树形”，然后在 实验室（即实验功能） 中，开启树形支撑，然后就可以在支撑类型中选择树形了。&lt;/p&gt;
+
+&lt;h4 id=&quot;模型摆放&quot;&gt;模型摆放&lt;/h4&gt;
+
+&lt;p&gt;导入STL之后，可以通过Cura左边的按钮来控制模型哪个面作为底面，找到某个角度，使之生成的支撑最少，一般就是最佳角度。&lt;/p&gt;
+
+&lt;h4 id=&quot;附着&quot;&gt;附着&lt;/h4&gt;
+
+&lt;p&gt;如果模型与底面的接触面积太小，打印过程中可能会由于粘的不牢，导致模型被喷头粘走（毕竟喷头温度200℃左右，可以融化材料）。勾选附着之后，切片软件会自动在首层生成相应的附着，
+增大接触面积 。等打印结束后，可以将附着拆掉。（与支撑有相似之处）&lt;/p&gt;
+
+&lt;h4 id=&quot;水平拓展&quot;&gt;水平拓展&lt;/h4&gt;
+
+&lt;p&gt;由于FDM技术的特性，打印出来的孔常常会比设计图上的小。可以通过在设计图上把孔改大，但这样太麻烦，不同的3D打印机，不同的材料，要扩大的尺寸可能不一样。
+而且可能有时候也会忘记，导致装配时出现各种问题。&lt;/p&gt;
+
+&lt;p&gt;可以在切片软件中设置水平拓展，设置为负值，如-0.1mm，这样打印出来的孔就会比不设置水平拓展的值稍大。一般设置为-0.1或者-0.2左右。&lt;/p&gt;
+
+&lt;h3 id=&quot;brim&quot;&gt;Brim&lt;/h3&gt;
+
+&lt;p&gt;一般的切片软件都会有默认设置的Brim，在模型外围生成一小段边沿，用于检查平台与喷头的距离、喷头吐丝是否正常、模型粘连情况等等。由于打印机刚加热完毕后，喷头前端可能还未满，需要挤出机再往里挤出一点材料，才能正常出丝。如果没有Brim直接开始打印，就会导致模型刚开始的一些地方没有正常吐丝。&lt;/p&gt;
+
+&lt;p&gt;在CURA中，可以设置Brim的最小长度，可以稍微调大一点。&lt;/p&gt;
+
+&lt;h4 id=&quot;常见问题解决和注意事项&quot;&gt;常见问题解决和注意事项&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;不出丝：
+    &lt;ul&gt;
+      &lt;li&gt;检查打印平台和喷头的距离是否太近，太近会导致不出丝。此时可以升起喷头，预热完喷头后，手动设置挤出机看是否可以出丝&lt;/li&gt;
+      &lt;li&gt;若手动设置挤出机仍不能出丝，则不是距离问题。若是远程挤出机，则可能是由于之前断料之后，新加的料与断了的料在进入喷头的时候，没有挨着，挤出机只能挤新料，对旧料无法控制。而新料无法将旧料挤出，导致这个问题。此时可以将导管这个接头拧下（如下图），同时令挤出机挤出一段料（长度需足够直接将料压进喷头），手动将料压进喷头。近程挤出机可以直接手动新料压进喷头，一般没有这个问题。
+        &lt;ul&gt;
+          &lt;li&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/guangzi.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;若以上仍没解决，则可能是堵头。此时在机器中手动将喷头预热至最高温度（230-250），同时控制挤出机挤出，看看能否将其挤出。有时候这样可以挤出，但很多时候堵头并不是在喷头处堵住，而是在喷头入口处堵住，导致加热喷头并不能将堵住的料融化。&lt;/li&gt;
+  &lt;li&gt;如果不能，可以考虑使用热风枪，手动加热喷头。需要注意，此操作比较危险，容易将其他线缆烧坏。建议直接将喷头拆下，看看具体是哪里堵住，直接将其剪断即可。&lt;/li&gt;
+  &lt;li&gt;首层与平台不粘
+    &lt;ul&gt;
+      &lt;li&gt;平台与喷头距离太远，调整距离为一张A4纸+稍有摩擦的距离&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;翘边
+    &lt;ul&gt;
+      &lt;li&gt;多涂胶，适当压低平台&lt;/li&gt;
+      &lt;li&gt;给打印机加热床（比较麻烦）&lt;/li&gt;
+      &lt;li&gt;打印大件的时候，可以在还未翘边的时候，手动给四角点上热熔胶。（需看准打印机路径，谨慎、快速操作）&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;打出来的圆不圆，或者误差较大
+    &lt;ul&gt;
+      &lt;li&gt;一般是某个轴的同步带松了，调整张紧&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;由于热胀冷缩，打印机喷头预热的时候，会少量吐丝，此时应该用镊子将其清理掉，以防开始打印的时候影响模型造成粘连&lt;/li&gt;
+  &lt;li&gt;PLA材料不能受力别着，长时间别着（大概几个小时），会变脆，可能会在打印过程中断裂。因此购买材料的时候要把材料理顺。&lt;/li&gt;
+  &lt;li&gt;PLA材料推荐淘宝店：墨丝、兰博、易生（较贵），PLA加热温度185-200℃，最好首层高温慢打，其他层温度可以稍微调低。这些都可以在cura中设置。&lt;/li&gt;
+  &lt;li&gt;步进电机脉冲数计算：
+    &lt;ul&gt;
+      &lt;li&gt;同步轮GT2 20齿 步进电机步距角1.8° 步进电机驱动16细分&lt;/li&gt;
+      &lt;li&gt;可知步进电机走一圈需要200步，则驱动需要给出200*16=3200个脉冲&lt;/li&gt;
+      &lt;li&gt;同步轮转一圈走20（齿）X 2mm（节距） = 40mm&lt;/li&gt;
+      &lt;li&gt;因此，同步轮走1mm需要的脉冲数为 = 3200脉冲/40mm = 80脉冲/mm&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">队里的3D打印机修好了，这里总结一下3D打印机的一些入门知识和常见问题的解决方式，当然，我折腾3D打印机的时间也不久，大家参考着看。</summary></entry><entry><title type="html">研究生期间折腾过的玩具总结</title><link href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/10/21/yan-jiu-sheng-qi-jian-zhe-teng-guo-de-wan-ju-zong-jie.html" rel="alternate" type="text/html" title="研究生期间折腾过的玩具总结" /><published>2020-10-21T15:02:47+08:00</published><updated>2020-10-21T15:02:47+08:00</updated><id>https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/10/21/yan-jiu-sheng-qi-jian-zhe-teng-guo-de-wan-ju-zong-jie</id><content type="html" xml:base="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/10/21/yan-jiu-sheng-qi-jian-zhe-teng-guo-de-wan-ju-zong-jie.html">&lt;p&gt;北邮做硬件的人实在太少了，平时基本上也只是自己在玩，一直想找找有没有对DIY飞行器阿这些奇怪东西感兴趣的组织，但没有找到。马上就要毕业了，
+在这里总结一下这几年玩过的一些项目吧，大部分都没有做完，如果有学弟学妹想做一些这方面的大创，或许可以找到一些灵感。&lt;/p&gt;
+
+&lt;h2 id=&quot;纸飞机&quot;&gt;纸飞机&lt;/h2&gt;
+
+&lt;p&gt;一个带动力的纸飞机，由空心杯电机驱动，由两个微型舵机控制舵面。
+&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/zhifeiji.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/zhifeiji2.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这个算是完成度最高的一个项目了吧，飞机已经基本能飞了，某年春节的时候带回家了，想抽空调调，结果被亲戚家的小朋友把电源插反了。后面一直没时间修，就逐渐坑了。
+基本没啥用的项目，唯一一个用处就是好玩。飞翼布局飞机的控制算法还挺有意思的。&lt;/p&gt;
+
+&lt;p&gt;衍生项目：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;MiniFlyControl:https://github.com/Ncerzzk/Mini_FlyControl&lt;/li&gt;
+  &lt;li&gt;遥控器：https://github.com/Ncerzzk/RemoteControl&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;三轴两轴云台&quot;&gt;三轴/两轴云台&lt;/h2&gt;
+
+&lt;p&gt;本来想装在飞机上的，想着DJI能做到，自己DIY应该也能做到，至多就是体积没办法做到那么小罢了。网上开源的云台如SimpleBGC等，一般都不带编码器，导致电机效率不高，发热量较高。找同学设计了结构，为了方便调试，现在已经拆得只剩下一个电机了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/yuntai.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;衍生项目：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;FOC无刷电机驱动器：https://github.com/Ncerzzk/Brushless_Driver_Nosensor&lt;/li&gt;
+  &lt;li&gt;如何使用无刷电机播放音乐：https://www.bilibili.com/video/BV1x7411x7gB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;双旋翼无人机&quot;&gt;双旋翼无人机&lt;/h2&gt;
+
+&lt;p&gt;灵感来自于DJI原大佬YY硕的一篇文章：https://zhuanlan.zhihu.com/p/35862380，采用两个舵机，直接旋转两个桨盘来改变升力的大小。YY硕文章中忽略了Y轴俯仰力矩，想用其他工程方式来解决该结构无法提供俯仰力矩的问题，在评论中及其他论文论证了，只要飞机的重心低于舵机的旋转中心，还是可以以此获取一个可靠的俯仰力矩的。因此选用这个题目来作为我的毕设，可惜后来由于种种原因改成其他题目了（在延毕的边缘疯狂试探），也就没有继续往下做了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/shuangxuanyi.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/shuangxuanyi1.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;衍生项目：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;无人机力学仿真：https://github.com/Ncerzzk/UAV_Sim（恰逢哈工大被禁用matlab的消息传出，想试试不用matlab，纯手撸能不能做点仿真工作）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;某奇怪的直升机&quot;&gt;某奇怪的直升机&lt;/h2&gt;
+
+&lt;p&gt;一直以来都想玩玩直升机，但是由于直升机的倾斜器结构太复杂了，已经超出我掌握的幼儿园机械知识了。后来从油管上一些视频得到了灵感，设计了这么一个倾斜器。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/zhishengji.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;直接使用两个舵机拉动连杆，使整个电机发生倾斜，从而使整个螺旋桨的桨盘整体发生改变，从而改变升力的方向。至于电机反扭距，在尾巴再装个小电机就行了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/zhishengji.gif&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在围攻里测试过，机构还是达到目的的。
+由于后面忙着某个项目的答辩，最终也坑了，也懒得再重新捡起来。感觉应该是能飞的。&lt;/p&gt;
+
+&lt;h2 id=&quot;图传&quot;&gt;图传&lt;/h2&gt;
+
+&lt;p&gt;航模界用的图传很多都是模拟图传，主要是比较便宜，延迟低。数字图传一般来说都很贵（除非那种玩具用的WIFI图传）。因此有一段时间一直想给我的飞机折腾个图传（虽然各种飞机都没怎么飞起来呢），后来找到了一个开源项目：Wifibroadcast。&lt;/p&gt;
+
+&lt;p&gt;一般便宜的WIFI图传都是直接运行在AP模式，连上之后直接用TCP或者UDP协议来传数据。缺点在于这种方式需要接收机和发送机之间保持WIFI连接，断开重连延迟贼高，体验不好。&lt;/p&gt;
+
+&lt;p&gt;这个项目让网卡运行在Inject模式和monitor模式，二者无需建立连接，因此延迟可以达到一个较低的水平。(100ms左右)作者的演讲可以在这里找到:https://media.ccc.de/v/36c3-10630-wifibroadcast
+但由于这个项目支持的最小硬件为树莓派Zero，对于一个微型的无人机来说，还是大了一点。因此想自己将其移植自己画的一个小板子上，去掉多余的接口。芯片采用全志的V3s，自带编解码，只需要画上摄像头接口和网卡接口就行了。&lt;/p&gt;
+
+&lt;p&gt;不过由于对linux网络编程和Linux下的驱动编写不熟，因此这个项目也是一直停留在有生之年计划中。&lt;/p&gt;</content><author><name></name></author><summary type="html">北邮做硬件的人实在太少了，平时基本上也只是自己在玩，一直想找找有没有对DIY飞行器阿这些奇怪东西感兴趣的组织，但没有找到。马上就要毕业了， 在这里总结一下这几年玩过的一些项目吧，大部分都没有做完，如果有学弟学妹想做一些这方面的大创，或许可以找到一些灵感。</summary></entry></feed>

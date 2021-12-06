@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>ARM学习笔记5——Flash、MMU | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="ARM学习笔记5——Flash、MMU" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="FLASH" />
+<meta property="og:description" content="FLASH" />
+<link rel="canonical" href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/arm/2020/04/18/ARM-xue-xi-bi-ji-5.html" />
+<meta property="og:url" content="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/arm/2020/04/18/ARM-xue-xi-bi-ji-5.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-18T17:50:32+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/arm/2020/04/18/ARM-xue-xi-bi-ji-5.html"},"url":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/arm/2020/04/18/ARM-xue-xi-bi-ji-5.html","headline":"ARM学习笔记5——Flash、MMU","dateModified":"2020-04-18T17:50:32+08:00","datePublished":"2020-04-18T17:50:32+08:00","description":"FLASH","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://ncerzzk.github.io/feed.xml" title="Huangzzk's Blog" /><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9a0d201458675d03a87e467407e4889b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/aboutme/">关于</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <style type="text/css">
+.css_btn_class {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #dcdcdc;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffffff), color-stop(100%, #f6f6f6) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
+	background:-ms-linear-gradient( top, #ffffff 5%, #f6f6f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
+	background-color:#ffffff;
+	color:#666666;
+	display:inline-block;
+	text-shadow:1px 1px 0px #ffffff;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	box-shadow:inset 1px 1px 0px 0px #ffffff;
+}.css_btn_class:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background-color:#f6f6f6;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+.comment_username{
+font-size:14px;
+margin-left:5px;
+}
+.comment_time{
+font-size:14px;	
+	float:right;
+	margin-right:5px;
+}
+.comment{
+	list-style:none;
+}
+.comment_username{
+	color: #24292e;
+	text-decoration: none;
+	}
+	.comment_user_img{
+	float:left;
+}
+.comment_box{
+	margin-left:40px;
+    color: #24292e;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+}
+.comment_content{
+margin:10px 10px 10px 10px;
+}
+
+#comment{
+	margin-top:30px;
+}
+
+.comment{
+	margin-top:30px;
+}
+
+/* CSS按钮生成器 */
+</style>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">ARM学习笔记5——Flash、MMU</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-04-18T17:50:32+08:00" itemprop="datePublished">Apr 18, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="flash">FLASH</h2>
+
+<h3 id="nor-flash">NOR Flash</h3>
+
+<ul>
+  <li>可以随机读（像内存一样，意味着可以执行代码），但无法随机写（需要整块写）</li>
+  <li>有专门的地址线 数据线</li>
+</ul>
+
+<h3 id="nand-flash">NAND Flash</h3>
+
+<ul>
+  <li>没有专门的地址线 数据线，发送指令、数据、地址都使用总线</li>
+  <li>擦除、写入速度比NOR flash快</li>
+</ul>
+
+<p>一般来说，由于NOR FLASH可以执行代码，因此常用来作为BIOS等用途。</p>
+
+<p>在STM32中，内置FLSAH应该也是NOR FLASH。</p>
+
+<p>因为其在启动文件中，有一段汇编代码是将bin中data段（也就是代码部分）复制到内存中执行，而
+这段汇编代码显然是在FLASH中执行的。</p>
+
+<pre><code class="language-asm">  movs r1, #0
+  b LoopCopyDataInit
+
+CopyDataInit:
+  ldr r3, =_sidata
+  ldr r3, [r3, r1]
+  str r3, [r0, r1]
+  adds r1, r1, #4
+
+LoopCopyDataInit:     /* 复制bin文件中data段的数据到内存 */
+  ldr r0, =_sdata
+  ldr r3, =_edata
+  adds r2, r0, r1
+  cmp r2, r3
+  bcc CopyDataInit
+  ldr r2, =_sbss
+  b LoopFillZerobss
+</code></pre>
+
+<p>那么，如果不复制是否可以呢？</p>
+
+<p>不行。arm的程序镜像（Image)，也就是烧录的bin文件中，包含RO段、RW段和ZI段。
+由于ZI段全是0，因此实际上在bin文件中并没有包含ZO段，只是烧录的时候会将没用到的地方全写成0。</p>
+
+<p>而RO段则是Read only的意思，RO段中包含指令和常量。</p>
+
+<p>RW段则是Read Write的意思，RW段中包含变量。而在我们随便一个C程序中，基本上都要使用变量，而上面也说了
+内置FLASH可以随机读，并不能随机写，也就是你只能读取变量的值，并不能改变，那不就是常量嘛</p>
+
+<p>因此，如果不将程序复制到SRAM中，程序是无法正常运行的，当然了，如果写个1+1这种全是常量的语句，也是可以运行的，但是意义不大。</p>
+
+<h2 id="mmu内存管理单元">MMU（内存管理单元）</h2>
+
+<p>对于32位的CPU而言，寻址空间为0-0xFFFF FFFF(4GB)。而实际的器件内存可能只有1GB。</p>
+
+<p>通过MMU，可以将虚拟内存地址映射到物理内存地址，可能有多个虚拟内存地址映射到同一块物理内存，也可能有
+虚拟内存地址并没有映射到物理内存上（等用到的时候再分配）</p>
+
+<h3 id="mva-va-pa">MVA VA PA</h3>
+
+<p>VA:Virtual Address
+MVA:Modified Virtual Address
+PA:Physical Address</p>
+
+<p>对于CPU而言，它发出的都是VA（当然了，得在MMU启动之后，在MMU启动之前，CPU操作的都是物理地址）
+在VA转化为PA之前，它会先转化为MVA（硬件自动完成）（MMU只能看得见MVA）</p>
+
+<p>在arm9中，VA转为MVA的算法为：</p>
+
+<ul>
+  <li>如果VA小于32M，则会 <code class="highlighter-rouge">VA|（PID&lt;&lt;25)</code></li>
+  <li>如果VA大于32M，则<code class="highlighter-rouge">MVA=VA</code></li>
+</ul>
+
+<p>用这种方式，可以加快切换进程的速度，这样两个进程假设VA都是0，但由于进程PID不同则MVA也不同，映射的物理地址也不同。</p>
+
+<p>这里有个问题，为什么是32M（2^25)，是因为这里取了PID的低7位来参与运算，如果只取PID的低4位，那么就是256M(2^28)了。</p>
+
+
+  </div><!--
+	<a href="https://github.com/Ncerzzk/Myblog/issues/96" class="css_btn_class">添加留言</a>
+	-->
+	
+<div id="comment">
+<li class="comment">
+	
+	<img class="comment_user_img"  height="40" width="40" src="https://avatars2.githubusercontent.com/u/9284611?v=4"></img>
+	<div class="comment_box">
+	<a class="comment_username" href="#">Username</a>
+	<span class="comment_time">Comment at 2019.5.13</span>
+	<div class="comment_content">Here is the Content</div>
+	</div>
+</li>
+</div>
+		
+	
+  <a class="u-url" href="/%E6%8A%80%E6%9C%AF/arm/2020/04/18/ARM-xue-xi-bi-ji-5.html" hidden></a>
+</article>
+
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+</script>
+
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).hide();
+  });
+});
+var h=$("#comment").html();
+var user="Ncerzzk";
+var repo="Myblog";
+var issueid="96";
+$("#comment").html("");
+$.getJSON("https://api.github.com/repos/"+user+"/"+repo+"/issues/"+issueid+"/comments", function(json){
+  for(i in json){
+	  $("#comment").append(h);
+	  $(".comment_username:last").text(json[i].user.login);
+	  $(".comment_username:last").attr("href",json[i].user.html_url);
+	  $(".comment_content:last").text(json[i].body);
+	  $(".comment_time:last").text(json[i].created_at);
+	  $(".comment_user_img:last").attr("src",json[i].user.avatar_url);
+  }
+});
+</script>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Hello,world!</p>
+      </div>
+    </div>
+	<div>
+		<a href="http://beian.miit.gov.cn/">闽ICP备20002143号</a>
+	</div>
+  </div>
+
+</footer>
+</body>
+<script>
+  window.onload=function (){
+    var content = document.getElementsByTagName("html")[0].innerHTML;
+    content = content.replace(/博客|Blog|blog/g,"");
+    console.log(content);
+
+    document.getElementsByTagName("html")[0].innerHTML = content; 
+  }
+</script>
+</html>

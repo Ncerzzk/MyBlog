@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>用scala写一个基本五级流水线CPU(三)增加R型指令 | Huangzzk’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="用scala写一个基本五级流水线CPU(三)增加R型指令" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="本次更新的代码可参考：" />
+<meta property="og:description" content="本次更新的代码可参考：" />
+<link rel="canonical" href="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/06/28/yong-scala-xie-yi-ge-ji-ben-wu-ji-liu-shui-xian-CPU-san-zeng-jia-R-xing-zhi-ling.html" />
+<meta property="og:url" content="https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/06/28/yong-scala-xie-yi-ge-ji-ben-wu-ji-liu-shui-xian-CPU-san-zeng-jia-R-xing-zhi-ling.html" />
+<meta property="og:site_name" content="Huangzzk’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-28T12:01:45+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/06/28/yong-scala-xie-yi-ge-ji-ben-wu-ji-liu-shui-xian-CPU-san-zeng-jia-R-xing-zhi-ling.html"},"url":"https://ncerzzk.github.io/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/06/28/yong-scala-xie-yi-ge-ji-ben-wu-ji-liu-shui-xian-CPU-san-zeng-jia-R-xing-zhi-ling.html","headline":"用scala写一个基本五级流水线CPU(三)增加R型指令","dateModified":"2020-06-28T12:01:45+08:00","datePublished":"2020-06-28T12:01:45+08:00","description":"本次更新的代码可参考：","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://ncerzzk.github.io/feed.xml" title="Huangzzk's Blog" /><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9a0d201458675d03a87e467407e4889b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Huangzzk&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/aboutme/">关于</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <style type="text/css">
+.css_btn_class {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #dcdcdc;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffffff), color-stop(100%, #f6f6f6) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
+	background:-ms-linear-gradient( top, #ffffff 5%, #f6f6f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
+	background-color:#ffffff;
+	color:#666666;
+	display:inline-block;
+	text-shadow:1px 1px 0px #ffffff;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	box-shadow:inset 1px 1px 0px 0px #ffffff;
+}.css_btn_class:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background-color:#f6f6f6;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+.comment_username{
+font-size:14px;
+margin-left:5px;
+}
+.comment_time{
+font-size:14px;	
+	float:right;
+	margin-right:5px;
+}
+.comment{
+	list-style:none;
+}
+.comment_username{
+	color: #24292e;
+	text-decoration: none;
+	}
+	.comment_user_img{
+	float:left;
+}
+.comment_box{
+	margin-left:40px;
+    color: #24292e;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+}
+.comment_content{
+margin:10px 10px 10px 10px;
+}
+
+#comment{
+	margin-top:30px;
+}
+
+.comment{
+	margin-top:30px;
+}
+
+/* CSS按钮生成器 */
+</style>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">用scala写一个基本五级流水线CPU(三)增加R型指令</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-06-28T12:01:45+08:00" itemprop="datePublished">Jun 28, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>本次更新的代码可参考：</p>
+
+<p>https://github.com/Ncerzzk/SimpleCPU/tree/deeb0217751f32bda5adf748b60cf528296466a6</p>
+
+<p>前面的文章中已经添加了一条最基本的ORI指令（I型指令），然而指令系统目前还很不完善，如果要增加指令的话，还需要改动大量代码。</p>
+
+<p>因此，本文开始着手进行指令系统的优化修改，着重思考几个问题：</p>
+
+<ul>
+  <li>增加指令所需修改的地方尽量少</li>
+  <li>有一些指令如and 和 andi ，一个是R型指令，一个I型指令，在译码阶段是不同的，但是到了执行阶段，这两个应用的是同一个操作，如何优化？</li>
+</ul>
+
+<h2 id="ex优化">EX优化</h2>
+
+<p>针对第二个问题，在之前指令枚举的基础上，增加一些新的指令枚举：指令类型枚举、指令功能码FUNC枚举（针对R型指令）、指令操作码OP枚举（针对I型指令），指令运算类型枚举，除了原本的LOGIC以外，还增加了ALU（算数运算）。</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">object</span> <span class="nc">InstTypeEnum</span> <span class="k">extends</span> <span class="nc">SpinalEnum</span><span class="o">{</span>
+  <span class="k">val</span> <span class="nv">R</span><span class="o">,</span><span class="n">I</span><span class="o">,</span><span class="n">J</span> <span class="k">=</span> <span class="nf">newElement</span><span class="o">()</span>
+  <span class="c1">// R型指令的高6位为0(有例外），靠低6位区分功能</span>
+  <span class="c1">// I型指令直接靠高6位区分功能</span>
+<span class="o">}</span>
+
+<span class="k">object</span> <span class="nc">InstFUNCEnum</span> <span class="k">extends</span> <span class="nc">SpinalEnum</span><span class="o">{</span> <span class="c1">// 指令功能码枚举</span>
+  <span class="k">val</span> <span class="nv">AND</span><span class="o">,</span><span class="nc">OR</span><span class="o">,</span><span class="nc">XOR</span><span class="o">,</span><span class="nc">NOR</span><span class="k">=</span> <span class="nf">newElement</span><span class="o">()</span>
+  <span class="k">val</span> <span class="nv">SLL</span><span class="o">,</span><span class="nc">SRL</span><span class="o">,</span><span class="nc">SRA</span><span class="o">,</span><span class="nc">SLLV</span><span class="o">,</span><span class="nc">SRLV</span><span class="o">,</span><span class="nc">SRAV</span> <span class="k">=</span> <span class="nf">newElement</span><span class="o">()</span>
+  <span class="n">defaultEncoding</span> <span class="k">=</span> <span class="nc">SpinalEnumEncoding</span><span class="o">(</span><span class="s">"static"</span><span class="o">)(</span>
+    <span class="nc">AND</span> <span class="o">-&gt;</span> <span class="mh">0x24</span> <span class="o">,</span>
+    <span class="nc">OR</span> <span class="o">-&gt;</span> <span class="mh">0x25</span><span class="o">,</span>
+    <span class="nc">XOR</span> <span class="o">-&gt;</span><span class="mh">0x26</span><span class="o">,</span>
+    <span class="nc">NOR</span> <span class="o">-&gt;</span><span class="mh">0x27</span><span class="o">,</span>
+
+    <span class="nc">SLL</span><span class="o">-&gt;</span><span class="mh">0x0</span><span class="o">,</span>
+    <span class="nc">SRL</span><span class="o">-&gt;</span><span class="mh">0x2</span><span class="o">,</span>
+    <span class="nc">SRA</span><span class="o">-&gt;</span><span class="mh">0x3</span><span class="o">,</span>
+    <span class="nc">SLLV</span><span class="o">-&gt;</span><span class="mh">0x4</span><span class="o">,</span>
+    <span class="nc">SRLV</span><span class="o">-&gt;</span><span class="mh">0x6</span><span class="o">,</span>
+    <span class="nc">SRAV</span><span class="o">-&gt;</span><span class="mh">0x7</span>
+  <span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">object</span> <span class="nc">InstOPEnum</span> <span class="k">extends</span> <span class="nc">SpinalEnum</span><span class="o">{</span>  <span class="c1">// 指令操作码枚举</span>
+  <span class="k">val</span> <span class="nv">ORI</span><span class="o">,</span><span class="nc">ANDI</span><span class="o">,</span><span class="nc">XORI</span><span class="o">,</span><span class="nc">ADDI</span><span class="o">,</span><span class="nc">ADDIU</span><span class="o">,</span><span class="nc">SLTI</span><span class="o">,</span><span class="nc">SLTIU</span><span class="k">=</span> <span class="nf">newElement</span><span class="o">()</span>
+
+  <span class="n">defaultEncoding</span> <span class="k">=</span> <span class="nc">SpinalEnumEncoding</span><span class="o">(</span><span class="s">"static"</span><span class="o">)(</span>
+    <span class="nc">ORI</span> <span class="o">-&gt;</span> <span class="mh">0xD</span> <span class="o">,</span><span class="c1">// 001101</span>
+    <span class="nc">ANDI</span> <span class="o">-&gt;</span> <span class="mh">0xC</span><span class="o">,</span>
+    <span class="nc">XORI</span> <span class="o">-&gt;</span><span class="mh">0xE</span><span class="o">,</span>
+    <span class="nc">ADDI</span> <span class="o">-&gt;</span><span class="mh">0x8</span><span class="o">,</span>
+    <span class="nc">ADDIU</span><span class="o">-&gt;</span><span class="mh">0x9</span><span class="o">,</span>
+    <span class="nc">SLTI</span> <span class="o">-&gt;</span> <span class="mh">0xA</span><span class="o">,</span>
+    <span class="nc">SLTIU</span><span class="o">-&gt;</span><span class="mh">0xB</span>
+  <span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">object</span> <span class="nc">OpEnum</span> <span class="k">extends</span> <span class="nc">SpinalEnum</span><span class="o">{</span>
+  <span class="k">val</span> <span class="nv">LOGIC</span><span class="o">,</span><span class="nc">ALU</span> <span class="k">=</span> <span class="nf">newElement</span><span class="o">()</span>
+  <span class="k">val</span> <span class="nv">funcs</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span>
+    <span class="o">(</span><span class="nc">LOGIC</span><span class="o">,</span><span class="nv">OPLogic</span><span class="o">.</span><span class="py">caculate</span> <span class="k">_</span><span class="o">),</span>
+    <span class="o">(</span><span class="nc">ALU</span><span class="o">,</span><span class="nv">OPArith</span><span class="o">.</span><span class="py">caculate</span> <span class="k">_</span><span class="o">)</span>
+  <span class="o">)</span>
+
+  <span class="k">def</span> <span class="nf">caculate</span><span class="o">(</span><span class="n">op</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">opsel</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">oprnd1</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">oprnd2</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">left</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">={</span>
+    <span class="nf">for</span> <span class="o">(</span><span class="n">i</span><span class="k">&lt;-</span> <span class="n">funcs</span><span class="o">){</span>
+      <span class="nf">when</span><span class="o">(</span><span class="n">op</span><span class="o">===</span><span class="nv">i</span><span class="o">.</span><span class="py">_1</span><span class="o">.</span><span class="py">asBits</span><span class="o">.</span><span class="py">resized</span><span class="o">){</span>
+        <span class="nv">i</span><span class="o">.</span><span class="py">_2</span><span class="o">(</span><span class="n">opsel</span><span class="o">,</span><span class="n">oprnd1</span><span class="o">,</span><span class="n">oprnd2</span><span class="o">,</span><span class="n">left</span><span class="o">)</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<hr />
+
+<p>针对指令运算类型，如LOGIC和ALU，都增加了一个caculate方法，用于将运算类型和对应的操作绑定起来，这样在EX阶段就不需要再针对每个指令、或者每个运算类型，来写相应的操作了，因为操作已经在枚举中绑定了。</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">trait</span> <span class="nc">OPWithFunc</span><span class="o">{</span>
+  <span class="k">val</span> <span class="nv">funcs</span><span class="k">:</span><span class="kt">List</span><span class="o">[(</span><span class="kt">SpinalEnumElement</span><span class="o">[</span><span class="k">_</span><span class="o">]</span>,<span class="o">(</span><span class="kt">Bits</span>,<span class="kt">Bits</span><span class="o">)</span><span class="k">=&gt;</span><span class="kt">Bits</span><span class="o">)]</span>
+
+  <span class="k">def</span> <span class="nf">caculate</span><span class="o">(</span><span class="n">opsel</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">oprnd1</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">oprnd2</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">left</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)={</span>
+    <span class="nf">for</span><span class="o">(</span><span class="n">i</span> <span class="k">&lt;-</span> <span class="n">funcs</span><span class="o">){</span>
+      <span class="nf">when</span><span class="o">(</span><span class="n">opsel</span> <span class="o">===</span> <span class="nv">i</span><span class="o">.</span><span class="py">_1</span><span class="o">.</span><span class="py">asBits</span><span class="o">.</span><span class="py">resized</span><span class="o">){</span>
+        <span class="n">left</span> <span class="o">:=</span> <span class="nv">i</span><span class="o">.</span><span class="py">_2</span><span class="o">(</span><span class="n">oprnd1</span><span class="o">,</span><span class="n">oprnd2</span><span class="o">)</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+
+<span class="k">object</span> <span class="nc">OPArith</span> <span class="k">extends</span> <span class="nc">SpinalEnum</span> <span class="k">with</span> <span class="nc">OPWithFunc</span><span class="o">{</span>
+  <span class="k">val</span> <span class="nv">ADDU</span><span class="o">,</span><span class="nc">SUBU</span> <span class="k">=</span> <span class="nf">newElement</span><span class="o">()</span>
+  <span class="k">val</span> <span class="nv">SLTI</span><span class="o">,</span><span class="nc">SLTIU</span> <span class="k">=</span> <span class="nf">newElement</span><span class="o">()</span>
+
+  <span class="k">val</span> <span class="nv">funcs</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span>
+    <span class="o">(</span><span class="nc">ADDU</span><span class="o">,(</span><span class="n">a</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">b</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)</span><span class="k">=&gt;</span> <span class="o">(</span><span class="nv">a</span><span class="o">.</span><span class="py">asUInt</span> <span class="o">+</span> <span class="nv">b</span><span class="o">.</span><span class="py">asUInt</span><span class="o">).</span><span class="py">asBits</span><span class="o">),</span>
+    <span class="o">(</span><span class="nc">SUBU</span><span class="o">,(</span><span class="n">a</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">b</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)</span><span class="k">=&gt;</span> <span class="o">(</span><span class="nv">a</span><span class="o">.</span><span class="py">asUInt</span> <span class="o">-</span> <span class="nv">b</span><span class="o">.</span><span class="py">asUInt</span><span class="o">).</span><span class="py">asBits</span><span class="o">),</span>
+    <span class="c1">// SLTI =&gt; Source Less than Immediate</span>
+    <span class="o">(</span><span class="nc">SLTIU</span><span class="o">,(</span><span class="n">a</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">b</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)</span><span class="k">=&gt;</span> <span class="o">(</span><span class="nv">a</span><span class="o">.</span><span class="py">asUInt</span> <span class="o">&lt;</span> <span class="nv">b</span><span class="o">.</span><span class="py">asUInt</span><span class="o">)?</span><span class="nf">B</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">32</span> <span class="n">bits</span><span class="o">)|</span><span class="nf">B</span><span class="o">(</span><span class="mi">0</span><span class="o">)),</span>
+    <span class="o">(</span><span class="nc">SLTI</span><span class="o">,(</span><span class="n">a</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">b</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="nv">a</span><span class="o">.</span><span class="py">asSInt</span> <span class="o">&lt;</span> <span class="nv">b</span><span class="o">.</span><span class="py">asSInt</span><span class="o">)?</span><span class="nf">B</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">32</span> <span class="n">bits</span><span class="o">)|</span><span class="nf">B</span><span class="o">(</span><span class="mi">0</span><span class="o">))</span>
+  <span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">object</span> <span class="nc">OPLogic</span> <span class="k">extends</span> <span class="nc">SpinalEnum</span> <span class="k">with</span> <span class="nc">OPWithFunc</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">OR</span><span class="o">,</span><span class="nc">AND</span><span class="o">,</span><span class="nc">XOR</span> <span class="k">=</span> <span class="nf">newElement</span><span class="o">()</span>
+  <span class="k">val</span> <span class="nv">funcs</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span>
+    <span class="o">(</span><span class="nc">OR</span><span class="o">,(</span><span class="n">a</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">b</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)</span><span class="k">=&gt;</span> <span class="n">a</span> <span class="o">|</span> <span class="n">b</span><span class="o">),</span>
+    <span class="o">(</span><span class="nc">AND</span><span class="o">,(</span><span class="n">a</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">b</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)</span><span class="k">=&gt;</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="o">),</span>
+    <span class="o">(</span><span class="nc">XOR</span><span class="o">,(</span><span class="n">a</span><span class="k">:</span><span class="kt">Bits</span><span class="o">,</span><span class="n">b</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)</span><span class="k">=&gt;</span><span class="n">a</span> <span class="o">^</span> <span class="n">b</span><span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+<hr />
+
+<p>这样一来，EX模块就可以进一步优化，因为操作都已经写在枚举中了，EX模块仅需调用即可：</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">EX</span> <span class="k">extends</span> <span class="nc">Component</span><span class="o">{</span>
+  <span class="k">val</span> <span class="nv">lastStage</span><span class="k">=</span> <span class="k">new</span> <span class="nc">IDOut</span><span class="o">().</span><span class="py">flip</span><span class="o">()</span>
+  <span class="k">val</span> <span class="nv">exOut</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">EXOut</span>
+
+  <span class="nv">exOut</span><span class="o">.</span><span class="py">writeReg</span> <span class="o">:=</span> <span class="nv">lastStage</span><span class="o">.</span><span class="py">writeReg</span>
+  <span class="nv">exOut</span><span class="o">.</span><span class="py">writeRegAddr</span> <span class="o">:=</span> <span class="nv">lastStage</span><span class="o">.</span><span class="py">writeRegAddr</span>
+  <span class="nv">exOut</span><span class="o">.</span><span class="py">writeData</span> <span class="o">:=</span><span class="mi">0</span>
+
+  <span class="nv">OpEnum</span><span class="o">.</span><span class="py">caculate</span><span class="o">(</span><span class="nv">lastStage</span><span class="o">.</span><span class="py">op</span><span class="o">,</span><span class="nv">lastStage</span><span class="o">.</span><span class="py">opSel</span><span class="o">,</span><span class="nv">lastStage</span><span class="o">.</span><span class="py">opRnd1</span><span class="o">,</span><span class="nv">lastStage</span><span class="o">.</span><span class="py">opRnd2</span><span class="o">,</span><span class="nv">exOut</span><span class="o">.</span><span class="py">writeData</span><span class="o">)</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>与之前想必，EX模块精简了不少，以后增加新指令时，EX模块也不需要改动，仅需在上面的枚举中增加相应功能及操作即可。</p>
+
+<h2 id="id优化">ID优化</h2>
+
+<p>针对译码模块，也要进行相应优化。增加了R型指令后，新的译码逻辑为：</p>
+
+<ul>
+  <li>判断指令类型是R型还是I型
+    <ul>
+      <li>针对指令类型，做出不同的操作
+        <ul>
+          <li>设置是否读取寄存器（如I型，只读取一个寄存器。R型，要读取两个寄存器）</li>
+          <li>设置读取的寄存器的地址</li>
+          <li>设置写入寄存器地址（I型写入的寄存器地址是rt，R型写入寄存器的地址是rd）</li>
+          <li>根据指令的功能码（R型）或者操作码（I型），译出给后级（EX）的操作码(OP)和子操作码（OPSel)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>主要修改：</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nf">when</span><span class="o">(</span><span class="nv">IDS</span><span class="o">.</span><span class="py">getInstType</span><span class="o">(</span><span class="nv">lastStage</span><span class="o">.</span><span class="py">inst</span><span class="o">)===</span><span class="nv">InstTypeEnum</span><span class="o">.</span><span class="py">I</span><span class="o">){</span>
+    <span class="k">val</span> <span class="nv">targetReg</span><span class="k">=</span> <span class="nv">lastStage</span><span class="o">.</span><span class="py">inst</span><span class="o">(</span><span class="mi">16</span> <span class="n">to</span> <span class="mi">20</span><span class="o">)</span>
+    <span class="k">val</span> <span class="nv">sourceReg</span> <span class="k">=</span> <span class="nv">lastStage</span><span class="o">.</span><span class="py">inst</span><span class="o">(</span><span class="mi">21</span> <span class="n">to</span> <span class="mi">25</span><span class="o">)</span>
+    <span class="k">val</span> <span class="nv">instOp</span> <span class="k">=</span> <span class="nv">IDS</span><span class="o">.</span><span class="py">OPof</span><span class="o">(</span><span class="nv">lastStage</span><span class="o">.</span><span class="py">inst</span><span class="o">)</span>
+
+    <span class="nf">for</span> <span class="o">(</span><span class="n">i</span><span class="k">&lt;-</span> <span class="nv">IDS</span><span class="o">.</span><span class="py">instsI</span><span class="o">){</span>
+      <span class="nf">when</span><span class="o">(</span><span class="nv">i</span><span class="o">.</span><span class="py">instOP</span><span class="o">.</span><span class="py">asBits</span><span class="o">.</span><span class="py">resize</span><span class="o">(</span><span class="nv">instOp</span><span class="o">.</span><span class="py">getWidth</span><span class="o">)===</span><span class="n">instOp</span><span class="o">){</span>
+        <span class="nv">idOut</span><span class="o">.</span><span class="py">op</span> <span class="o">:=</span> <span class="nv">i</span><span class="o">.</span><span class="py">decodeOP</span><span class="o">.</span><span class="py">asBits</span><span class="o">.</span><span class="py">resized</span>
+        <span class="nv">idOut</span><span class="o">.</span><span class="py">opSel</span> <span class="o">:=</span> <span class="nv">i</span><span class="o">.</span><span class="py">decodeOPSel</span><span class="o">.</span><span class="py">asBits</span><span class="o">.</span><span class="py">resized</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="nv">idOut</span><span class="o">.</span><span class="py">writeRegAddr</span> <span class="o">:=</span> <span class="n">targetReg</span>
+    <span class="nv">idOut</span><span class="o">.</span><span class="py">writeReg</span> <span class="o">:=</span> <span class="nc">True</span>
+    <span class="nv">regHeap</span><span class="o">.</span><span class="py">readEns</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="nc">True</span>
+    <span class="nv">regHeap</span><span class="o">.</span><span class="py">readEns</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="nc">False</span>
+    <span class="nv">regHeap</span><span class="o">.</span><span class="py">readAddrs</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span><span class="n">sourceReg</span>
+  <span class="o">}</span><span class="nf">elsewhen</span><span class="o">(</span><span class="nv">IDS</span><span class="o">.</span><span class="py">getInstType</span><span class="o">(</span><span class="nv">lastStage</span><span class="o">.</span><span class="py">inst</span><span class="o">)===</span><span class="nv">InstTypeEnum</span><span class="o">.</span><span class="py">R</span><span class="o">){</span>
+    <span class="k">val</span> <span class="nv">targetReg</span><span class="k">=</span> <span class="nv">lastStage</span><span class="o">.</span><span class="py">inst</span><span class="o">(</span><span class="mi">16</span> <span class="n">to</span> <span class="mi">20</span><span class="o">)</span>  <span class="c1">//rt</span>
+    <span class="k">val</span> <span class="nv">sourceReg</span><span class="k">=</span> <span class="nv">lastStage</span><span class="o">.</span><span class="py">inst</span><span class="o">(</span><span class="mi">21</span> <span class="n">to</span> <span class="mi">25</span><span class="o">)</span>  <span class="c1">//rs</span>
+    <span class="k">val</span> <span class="nv">destinationReg</span> <span class="k">=</span> <span class="nv">lastStage</span><span class="o">.</span><span class="py">inst</span><span class="o">(</span><span class="mi">11</span> <span class="n">to</span> <span class="mi">15</span><span class="o">)</span>  <span class="c1">//rd</span>
+
+    <span class="k">val</span> <span class="nv">FUNC</span> <span class="k">=</span> <span class="nv">IDS</span><span class="o">.</span><span class="py">FUNCof</span><span class="o">(</span><span class="nv">lastStage</span><span class="o">.</span><span class="py">inst</span><span class="o">)</span>
+    <span class="nf">for</span><span class="o">(</span><span class="n">i</span><span class="k">&lt;-</span> <span class="nv">IDS</span><span class="o">.</span><span class="py">instsR</span><span class="o">){</span>
+      <span class="nf">when</span><span class="o">(</span><span class="nc">FUNC</span> <span class="o">===</span> <span class="nv">i</span><span class="o">.</span><span class="py">instFUNC</span><span class="o">.</span><span class="py">resized</span><span class="o">){</span>
+        <span class="nv">idOut</span><span class="o">.</span><span class="py">op</span> <span class="o">:=</span> <span class="nv">i</span><span class="o">.</span><span class="py">decodeOP</span><span class="o">.</span><span class="py">resized</span>
+        <span class="nv">idOut</span><span class="o">.</span><span class="py">opSel</span> <span class="o">:=</span> <span class="nv">i</span><span class="o">.</span><span class="py">deCodeOpSel</span><span class="o">.</span><span class="py">resized</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="nv">idOut</span><span class="o">.</span><span class="py">writeRegAddr</span> <span class="o">:=</span> <span class="n">destinationReg</span>
+    <span class="nv">idOut</span><span class="o">.</span><span class="py">writeReg</span> <span class="o">:=</span> <span class="nc">True</span>
+    <span class="nv">regHeap</span><span class="o">.</span><span class="py">readEns</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="nc">True</span>
+    <span class="nv">regHeap</span><span class="o">.</span><span class="py">readEns</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="nc">True</span>
+    <span class="nv">regHeap</span><span class="o">.</span><span class="py">readAddrs</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span><span class="n">sourceReg</span>
+    <span class="nv">regHeap</span><span class="o">.</span><span class="py">readAddrs</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">:=</span><span class="n">targetReg</span>
+  <span class="o">}</span>
+</code></pre></div></div>
+
+<p>为了实现以上的目的，还添加了相应的数据结构：</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">object</span> <span class="nc">IDS</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="nf">OPof</span><span class="o">(</span><span class="n">inst</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)</span><span class="k">=</span> <span class="nv">inst</span><span class="o">.</span><span class="py">takeHigh</span><span class="o">(</span><span class="mi">6</span><span class="o">)</span>
+  <span class="k">def</span> <span class="nf">FUNCof</span><span class="o">(</span><span class="n">inst</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)</span> <span class="k">=</span> <span class="nv">inst</span><span class="o">.</span><span class="py">take</span><span class="o">(</span><span class="mi">6</span><span class="o">)</span>
+
+  <span class="k">def</span> <span class="nf">getInstType</span><span class="o">(</span><span class="n">inst</span><span class="k">:</span><span class="kt">Bits</span><span class="o">)</span><span class="k">:</span> <span class="kt">SpinalEnumCraft</span><span class="o">[</span><span class="kt">InstTypeEnum.</span><span class="k">type</span><span class="o">]</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="o">(</span><span class="nc">OPof</span><span class="o">(</span><span class="n">inst</span><span class="o">)===</span><span class="nf">B</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">6</span> <span class="n">bits</span><span class="o">)</span> <span class="o">||</span> <span class="o">(</span><span class="nc">OPof</span><span class="o">(</span><span class="n">inst</span><span class="o">)===</span><span class="nf">B</span><span class="o">(</span><span class="s">"6'b011100"</span><span class="o">)))?</span>
+      <span class="nv">InstTypeEnum</span><span class="o">.</span><span class="py">R</span> <span class="o">|</span> <span class="nv">InstTypeEnum</span><span class="o">.</span><span class="py">I</span>
+  <span class="o">}</span>
+
+  <span class="k">val</span> <span class="nv">instsI</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nc">InstI</span><span class="o">(</span><span class="nv">InstOPEnum</span><span class="o">.</span><span class="py">ORI</span><span class="o">,</span><span class="nv">OpEnum</span><span class="o">.</span><span class="py">LOGIC</span><span class="o">,</span><span class="nv">OPLogic</span><span class="o">.</span><span class="py">OR</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nc">InstI</span><span class="o">(</span><span class="nv">InstOPEnum</span><span class="o">.</span><span class="py">ANDI</span><span class="o">,</span><span class="nv">OpEnum</span><span class="o">.</span><span class="py">LOGIC</span><span class="o">,</span><span class="nv">OPLogic</span><span class="o">.</span><span class="py">AND</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nc">InstI</span><span class="o">(</span><span class="nv">InstOPEnum</span><span class="o">.</span><span class="py">XORI</span><span class="o">,</span><span class="nv">OpEnum</span><span class="o">.</span><span class="py">LOGIC</span><span class="o">,</span><span class="nv">OPLogic</span><span class="o">.</span><span class="py">XOR</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nc">InstI</span><span class="o">(</span><span class="nv">InstOPEnum</span><span class="o">.</span><span class="py">ADDIU</span><span class="o">,</span><span class="nv">OpEnum</span><span class="o">.</span><span class="py">ALU</span><span class="o">,</span><span class="nv">OPArith</span><span class="o">.</span><span class="py">ADDU</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nc">InstI</span><span class="o">(</span><span class="nv">InstOPEnum</span><span class="o">.</span><span class="py">SLTI</span><span class="o">,</span><span class="nv">OpEnum</span><span class="o">.</span><span class="py">ALU</span><span class="o">,</span><span class="nv">OPArith</span><span class="o">.</span><span class="py">SLTI</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nc">InstI</span><span class="o">(</span><span class="nv">InstOPEnum</span><span class="o">.</span><span class="py">SLTIU</span><span class="o">,</span><span class="nv">OpEnum</span><span class="o">.</span><span class="py">ALU</span><span class="o">,</span><span class="nv">OPArith</span><span class="o">.</span><span class="py">SLTIU</span><span class="o">)</span>
+  <span class="o">)</span>
+
+  <span class="k">val</span> <span class="nv">instsR</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nc">InstR</span><span class="o">(</span><span class="nv">InstFUNCEnum</span><span class="o">.</span><span class="py">AND</span><span class="o">,</span><span class="nv">OpEnum</span><span class="o">.</span><span class="py">LOGIC</span><span class="o">,</span><span class="nv">OPLogic</span><span class="o">.</span><span class="py">AND</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nc">InstR</span><span class="o">(</span><span class="nv">InstFUNCEnum</span><span class="o">.</span><span class="py">OR</span><span class="o">,</span><span class="nv">OpEnum</span><span class="o">.</span><span class="py">LOGIC</span><span class="o">,</span><span class="nv">OPLogic</span><span class="o">.</span><span class="py">OR</span><span class="o">)</span>
+  <span class="o">)</span>
+
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">InstI</span><span class="o">(</span><span class="n">s</span><span class="k">:</span><span class="kt">SpinalEnumElement</span><span class="o">[</span><span class="k">_</span><span class="o">]*){</span>  <span class="c1">// I型指令类</span>
+  <span class="k">val</span> <span class="nv">arr</span><span class="k">=</span> <span class="nv">s</span><span class="o">.</span><span class="py">toList</span>
+  <span class="nf">assert</span><span class="o">(</span><span class="nv">arr</span><span class="o">.</span><span class="py">length</span><span class="o">==</span><span class="mi">3</span><span class="o">)</span>
+  <span class="k">var</span> <span class="n">instOP</span> <span class="k">=</span> <span class="nf">arr</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="py">asBits</span>   <span class="c1">// 指令的指令码，与MIPS指令集相关</span>
+  <span class="k">val</span> <span class="nv">decodeOP</span> <span class="k">=</span> <span class="nf">arr</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="py">asBits</span>  <span class="c1">// 译码后的指令，与CPU实现相关，即OpEnum中的值</span>
+  <span class="k">val</span> <span class="nv">decodeOPSel</span> <span class="k">=</span> <span class="nf">arr</span><span class="o">(</span><span class="mi">2</span><span class="o">).</span><span class="py">asBits</span> <span class="c1">// 译码后的指令子功能码，与CPU实现相关</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">InstR</span><span class="o">(</span><span class="n">s</span><span class="k">:</span><span class="kt">SpinalEnumElement</span><span class="o">[</span><span class="k">_</span><span class="o">]*){</span>  <span class="c1">// R型指令类</span>
+  <span class="k">val</span> <span class="nv">arr</span><span class="k">=</span><span class="nv">s</span><span class="o">.</span><span class="py">toList</span>
+  <span class="nf">assert</span><span class="o">(</span><span class="nv">arr</span><span class="o">.</span><span class="py">length</span><span class="o">==</span><span class="mi">3</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">instFUNC</span> <span class="k">=</span> <span class="nf">arr</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="py">asBits</span>
+  <span class="k">val</span> <span class="nv">decodeOP</span> <span class="k">=</span> <span class="nf">arr</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="py">asBits</span>
+  <span class="k">val</span> <span class="nv">deCodeOpSel</span> <span class="k">=</span> <span class="nf">arr</span><span class="o">(</span><span class="mi">2</span><span class="o">).</span><span class="py">asBits</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="测试">测试</h2>
+
+<p>测试代码：</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">addiu</span> <span class="err">$</span><span class="mi">1</span><span class="p">,</span> <span class="err">$</span><span class="mi">0</span><span class="p">,</span> <span class="mh">0x1100</span>
+    <span class="n">addiu</span> <span class="err">$</span><span class="mi">2</span><span class="p">,</span> <span class="err">$</span><span class="mi">0</span><span class="p">,</span> <span class="mh">0x0111</span>
+    <span class="n">and</span>   <span class="err">$</span><span class="mi">3</span><span class="p">,</span> <span class="err">$</span><span class="mi">1</span> <span class="p">,</span><span class="err">$</span><span class="mi">2</span>
+    <span class="n">or</span>    <span class="err">$</span><span class="mi">4</span><span class="p">,</span> <span class="err">$</span><span class="mi">1</span><span class="p">,</span> <span class="err">$</span><span class="mi">2</span>
+</code></pre></div></div>
+
+<p>波形图：
+<img src="https://raw.githubusercontent.com/Ncerzzk/MyBlog/master/img/cpu3.jpg" alt="此处输入图片的描述" /></p>
+
+
+  </div><!--
+	<a href="https://github.com/Ncerzzk/Myblog/issues/122" class="css_btn_class">添加留言</a>
+	-->
+	
+<div id="comment">
+<li class="comment">
+	
+	<img class="comment_user_img"  height="40" width="40" src="https://avatars2.githubusercontent.com/u/9284611?v=4"></img>
+	<div class="comment_box">
+	<a class="comment_username" href="#">Username</a>
+	<span class="comment_time">Comment at 2019.5.13</span>
+	<div class="comment_content">Here is the Content</div>
+	</div>
+</li>
+</div>
+		
+	
+  <a class="u-url" href="/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6/2020/06/28/yong-scala-xie-yi-ge-ji-ben-wu-ji-liu-shui-xian-CPU-san-zeng-jia-R-xing-zhi-ling.html" hidden></a>
+</article>
+
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+</script>
+
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).hide();
+  });
+});
+var h=$("#comment").html();
+var user="Ncerzzk";
+var repo="Myblog";
+var issueid="122";
+$("#comment").html("");
+$.getJSON("https://api.github.com/repos/"+user+"/"+repo+"/issues/"+issueid+"/comments", function(json){
+  for(i in json){
+	  $("#comment").append(h);
+	  $(".comment_username:last").text(json[i].user.login);
+	  $(".comment_username:last").attr("href",json[i].user.html_url);
+	  $(".comment_content:last").text(json[i].body);
+	  $(".comment_time:last").text(json[i].created_at);
+	  $(".comment_user_img:last").attr("src",json[i].user.avatar_url);
+  }
+});
+</script>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Huangzzk&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Huangzzk&#39;s Blog</li><li><a class="u-email" href="mailto:e.255mail#gmail.com">e.255mail#gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Ncerzzk"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Ncerzzk</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Hello,world!</p>
+      </div>
+    </div>
+	<div>
+		<a href="http://beian.miit.gov.cn/">闽ICP备20002143号</a>
+	</div>
+  </div>
+
+</footer>
+</body>
+<script>
+  window.onload=function (){
+    var content = document.getElementsByTagName("html")[0].innerHTML;
+    content = content.replace(/博客|Blog|blog/g,"");
+    console.log(content);
+
+    document.getElementsByTagName("html")[0].innerHTML = content; 
+  }
+</script>
+</html>
