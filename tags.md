@@ -145,7 +145,6 @@
 [PX4的传感器数据读取流程](https://github.com/Ncerzzk/MyBlog/blob/master/articles/PX4的传感器数据读取流程.md)
 [PX4的linux调度](https://github.com/Ncerzzk/MyBlog/blob/master/articles/PX4的linux调度.md)
 ### 日记
-[鸡毛飞上天](https://github.com/Ncerzzk/MyBlog/blob/master/articles/鸡毛飞上天.md)
 [预备队](https://github.com/Ncerzzk/MyBlog/blob/master/articles/预备队.md)
 [近期面试记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/近期面试记录.md)
 [说说最近 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/说说最近.md)
@@ -171,9 +170,10 @@
 [来日三周](https://github.com/Ncerzzk/MyBlog/blob/master/articles/injapan.md)
 [Arm嵌入式近期一些记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/Arm嵌入式近期一些记录.md)
 [223 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/223.md)
+[2.16日记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/216日记.md)
 [218219 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/218219.md)
 [217死去活来 ](https://github.com/Ncerzzk/MyBlog/blob/master/articles/217.md)
-[2.16日记](https://github.com/Ncerzzk/MyBlog/blob/master/articles/216日记.md)
+[鸡毛飞上天](https://github.com/Ncerzzk/MyBlog/blob/master/articles/鸡毛飞上天.md)
 ### 
 [送几本书](https://github.com/Ncerzzk/MyBlog/blob/master/articles/送几本书.md)
 [近期面试记录](https://github.com/Ncerzzk/MyBlog/blob/master/articles/近期面试记录.md)

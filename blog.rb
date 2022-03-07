@@ -2,7 +2,6 @@ require 'net/http'
 require 'open-uri'
 require 'find'
 require 'pathname'
-require 'ruby-pinyin'
 require File.expand_path('../article.rb', __FILE__)
 Encoding.default_external = Encoding.find('utf-8')
 

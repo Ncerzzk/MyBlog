@@ -1,8 +1,5 @@
 require 'find'
 
-require 'ruby-pinyin'
-
-require File.expand_path('../issue.rb', __FILE__)
 
 class Article
   attr_reader :tags,:time,:file_name,:title
