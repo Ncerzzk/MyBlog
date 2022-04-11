@@ -93,6 +93,12 @@ class Blog
     end
   end
 
+  def update_WP(articles)
+    articles.each do |a|
+      a.create_wp_posts
+    end
+  end
+
   def update_to_jekyll(articles)
     articles.each do |article|
       newcontent=article.get_jekyll_content

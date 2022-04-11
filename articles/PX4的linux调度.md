@@ -429,3 +429,133 @@ int pthread_create(
                  void *restrict arg //默认为NULL。若上述函数需要参数，将参数放入结构中并将地址作为arg传入。
                   );
 ```
+
+---
+
+2022.4.10更新
+
+之前对于PX4的调度方式，实际上还没完全弄清楚，且有一些误解，但基本是正确的：
+
+每个work_queue对应一个线程，全局初始化了三个work_queue，分别是hp,lp 和hrt。其中，hrt是为了ScheleduledWorkItem而实现的。
+
+另外，还有一个WorkQueueManager，这个线程也是最高优先级的。由于上面这些`wq_INS0, wq_SPI0` 这些work_queue是在运行时才建立的，因此使用WorkQueueManager来管理。
+
+需要注意，在PX4中，work_queue 和 WorkQueue是两个东西，work_queue一般只有三个，即HPWORK,LPWORK和HRTWORK，这些是通过 work_queue.c 来实现的。这种工作队列的调度，是根据delay_time/deadline来进行的。
+也就是上文所说的，比较一下是否到当前某个任务的deadline了，如果到了，执行，否则就继续休眠。
+
+至于WorkQueue，是另一种工作队列，这种工作队列并没有时间这个概念，而是只要他的执行队列不为空，就拿出来执行。具体可以看下面代码。这种巩固走队列实现在px4_work_queue目录下，如WorkQueue.cpp等。
+
+这些WorkQueue的建立方式：
+
+```cpp
+int ret_create = pthread_create(&thread, &attr, WorkQueueRunner, (void *)wq);
+```
+其中`wq`就是某个`wq_config_t`，如`wq_SPI0`。
+
+WorkQueueRunner 中再调用具体的WorkQueue的Run函数：
+
+```cpp
+static void *
+WorkQueueRunner(void *context)
+{
+	wq_config_t *config = static_cast<wq_config_t *>(context);
+	WorkQueue wq(*config);
+
+	// add to work queue list
+	_wq_manager_wqs_list->add(&wq);
+
+	wq.Run();
+
+	// remove from work queue list
+	_wq_manager_wqs_list->remove(&wq);
+
+	return nullptr;
+}
+```
+
+为什么这里要加个`WorkQueueRunner`再封装一层，而不是直接调用`wq.Run`呢，主要是为了在`wq.Run`执行结束后，能进行`remove`操作，如果`wq.Run`自己作为一个线程，那么它结束的时候就悄无声息结束了，无法将其移除。
+
+work_queue中的基本单位是WorkItem。
+
+其基本运行调用方式是：
+
+```cpp
+void WorkQueue::Run()
+{
+	while (!should_exit()) {
+		// loop as the wait may be interrupted by a signal
+		do {} while (px4_sem_wait(&_process_lock) != 0);
+
+		work_lock();
+
+		// process queued work
+		while (!_q.empty()) {
+			WorkItem *work = _q.pop();
+
+			work_unlock(); // unlock work queue to run (item may requeue itself)
+			work->RunPreamble();
+			work->Run();
+			// Note: after Run() we cannot access work anymore, as it might have been deleted
+			work_lock(); // re-lock
+		}
+
+#if defined(ENABLE_LOCKSTEP_SCHEDULER)
+
+		if (_q.empty()) {
+			px4_lockstep_unregister_component(_lockstep_component);
+			_lockstep_component = -1;
+		}
+
+#endif // ENABLE_LOCKSTEP_SCHEDULER
+
+		work_unlock();
+	}
+
+	PX4_DEBUG("%s: exiting", _config.name);
+}
+```
+
+在队列为空的时候，会在_process_lock这里停下来，因为这个信号量初始化为0。等到有Item 通过Add加入后，会post这个信号量，使其往下执行：
+
+```cpp
+void WorkQueue::Add(WorkItem *item)
+{
+	work_lock();
+
+	_q.push(item);
+	work_unlock();
+
+	SignalWorkerThread();
+}
+
+void WorkQueue::SignalWorkerThread()
+{
+	int sem_val;
+
+	if (px4_sem_getvalue(&_process_lock, &sem_val) == 0 && sem_val <= 0) {
+		px4_sem_post(&_process_lock);
+	}
+}
+```
+
+此外，还有一个特殊的WorkItem类型，叫做：`ScheduledWorkItem`，该类型额外实现了：
+
+```cpp
+bool 	Scheduled ()
+ 
+void 	ScheduleDelayed (uint32_t delay_us)
+ 
+void 	ScheduleOnInterval (uint32_t interval_us, uint32_t delay_us=0)
+ 
+void 	ScheduleAt (hrt_abstime time_us)
+ 
+void 	ScheduleClear ()
+```
+
+基本的`WorkItem`的调度函数仅有一个`ScheduleNow`，用来马上再调度一次本Item。`ScheduledWorkItem` 额外实现的这些调度函数，是配合hrt实现的，基本思路就是
+hrt_workqueue中，跑一个`hrt_tim_isr`（当然，这个是模拟的，在nuttx中可能是硬件中断），一直来检测是否有item的deadline到了，如果到了，就调用`ScheduleNow`，
+将其加入`WorkQueue`中处理。
+
+
+
+

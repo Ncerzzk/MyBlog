@@ -1,8 +1,14 @@
 require 'find'
+require "wordpress_client"
+require "json"
+require "date"
+require 'kramdown'
 
 
+require File.expand_path('../test.rb', __FILE__)
 class Article
-  attr_reader :tags,:time,:file_name,:title
+  attr_reader :tags,:time,:file_name,:title, :content
+
   def initialize(file_name,title=nil)
     @file_name=file_name
     @tags=self.get_tags
@@ -13,6 +19,7 @@ class Article
     @text=self.update_time # 增加时间信息，如果已有直接返回
     self.update_img_mark
     @time=self.get_time
+    @content=self.get_content
     if !title 
       @title=File.basename(file_name,".md")
     else
@@ -57,8 +64,14 @@ class Article
     #  text=~/ctime:.+?\|([0-9]+?)\n/
     #  $1.to_i
     #end
-    @text=~/ctime:.+?\|([0-9]+?)\n/
+    #ctime:2017-08-16 23:37:54 +0800|1502897874
+    @text=~/ctime:.+?\|([0-9]+)/
     $1.to_i
+  end
+
+  def get_content
+    @text=~/---(.+)/m
+    $1
   end
 
   def update_time
@@ -140,6 +153,17 @@ issue_id: #{issueid}
     end
   end
 
+  def read_WP_file
+    File.open("wordpress.csv","r+") do |f|
+      text=f.read
+      if text==""
+        text="{}"
+      end
+
+      yield  eval(text),f
+    end    
+  end
+
 
   def get_jekyll_filename
     t=Time.at(@time.to_i)
@@ -148,13 +172,52 @@ issue_id: #{issueid}
     temptitle=PinYin.permlink(temptitle)
     "#{t.year}-#{t.month}-#{t.day}-#{temptitle}.markdown"
   end
+
+  def create_wp_posts
+    tag_ids=[]
+    @tags.each do |i|
+      if !i.strip.empty?
+        tag_ids.push Wordpress.addtag(i.strip)
+      end
+    end
+
+    data = {
+      title: @title,
+      status: 'draft', 
+      content: @content, #Kramdown::Document.new(@content).to_html,
+      date:Time.at(@time).to_datetime.to_s,
+      tags:tag_ids.join(',')
+    }
+
+    p "create wp posts:#{@title} with tags #{@tags}"
+
+    read_WP_file do |posts_data,file|
+      if posts_data.has_key?(@time)
+        id=posts_data[@time]
+        data[:id]=id
+        p "the article #{@title} exist!"
+        # Wordpress.client.update_post(id,data)
+      else
+        id=Wordpress.client.create_post(data).id
+        posts_data[@time]=id
+        file.rewind
+        file.write(posts_data.to_s) 
+      end
+    end
+  end
 end
 
 
+=begin
+a=Article.new("articles/ArduPilot中串口的复用.md")
+#YYYY-MM-DDTHH:MM:SS
+p Time.at(a.time)
+p a.tags
+p a.time
+a.create_wp_posts
+=end
 
-#a=Article.new("关于2017年电设四旋翼的一些反思和总结.md")
 #a.get_tags
 #puts a.tags
 #puts a.tags.length
 #a=Article.new("articles/217.md")
-

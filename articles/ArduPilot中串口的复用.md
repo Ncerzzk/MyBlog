@@ -11,9 +11,13 @@ ardupilot中因为项目太庞大，初看串口的复用很是疑惑。
 所有需要从串口中读取数据的设备，一般要实现一个Backend类（后端类）的子类，用于与底层打交道。如`AP_Beacon_Pozyx`继承自`AP_Beacon_Backend`。
 
 同时，这个底层设备类的构造函数中，还要传入一个`AP_SerialManager`类的对象的引用，实际上使用的时候就是传入全局的串口管理对象
-``` AP_SerialManager serial_manager; //定义在rover.h中```
+
+```c
+AP_SerialManager serial_manager; //定义在rover.h中
+```
 
 `AP_SerialManger` 负责管理整机使用的所有串口，其初始化是这样的：
+
 ```
 void AP_SerialManager::init()
 {
@@ -38,11 +42,13 @@ void AP_SerialManager::init()
             state[i].uart->begin(map_baudrate(state[i].baud),                           AP_SERIALMANAGER_MAVLINK_BUFSIZE_RX, AP_SERIALMANAGER_MAVLINK_BUFSIZE_TX);
         break;
     }
+}
 ```
 
 回到刚刚说的要用到串口的设备，在初始化函数中，因为已经传入了全局的串口管理对象，此时只要在串口管理对象中搜索与当前这个设备对应的协议即可。
 
 一个pozyx的例子：
+
 ```
 AP_Beacon_Pozyx::AP_Beacon_Pozyx(AP_Beacon &frontend, AP_SerialManager &serial_manager) :
     AP_Beacon_Backend(frontend),
@@ -54,11 +60,9 @@ AP_Beacon_Pozyx::AP_Beacon_Pozyx(AP_Beacon &frontend, AP_SerialManager &serial_m
     }
 }
 ```
+
 uart是一个指向串口对象的指针，如果找到了响应的协议，那么uart即指向对应串口，否则uart的默认值是nullptr。
 
 在各个设备的update函数中，读取串口数据之前，需要先检查以下uart是否为空指针，如果为空指针直接返回。
 
 这样的话，整个项目对串口的管理就很灵活，当因为某种需要修改某个串口为它用之时，只需在SerialManger文件，及相关宏定义中，修改某个串口对应的协议即可，然后新设备即可使用这个串口。旧设备也不会再读取这个串口，因为对旧设备而言，此时uart已经是空指针了，在update中会直接返回，不会出现两个设备同时读取一个串口的情况。
-
-
-
