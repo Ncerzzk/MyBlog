@@ -12,6 +12,4 @@ a.update_content(as)
 
 a.update_tag as
 a.update_WP as
-#a.update_to_jekyll as
 
-system("bash update_jekyll_git.sh")
